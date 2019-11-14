@@ -435,7 +435,7 @@
 			"Pages": [
 				{
 					"title": "Главная",
-					"url": "/"
+					"url": "index.html"
 				},
 				{
 					"title": "Каталог",
