@@ -1,0 +1,169 @@
+extends template
+
+prepend page
+  - var layout = 'default';
+  - var currentPage = 'ui';
+  - var pageTitle = false;
+  - var pageDesc = false;
+  - var pageImg = false;
+
+block content
+  .page(class="page--" + currentPage)
+    #forms.row
+      .l-container
+        .page__heading.tp-heading--big Контролы
+        .page__content
+          .l-flex
+            .l-col-6
+              +fieldInput('demo-inp-0', 'Ваше имя')(type="text", name="first-name")
+              +fieldInput('demo-inp-1', 'Ваше имя')(type="text", name="first-name", disabled)
+              +fieldInput('demo-inp-2', 'Ваше имя', false, 'Введите существующее имя')(type="text", name="first-name")
+              +fieldInput('demo-inp-3', '+7(———)——— ————', 'Ваш телефон', false)(type="tel", name="tel")
+            .l-col-6
+              +fieldSelect('demo-sel', locations, 'Выберите город')
+              .l-flex-middle
+                .l-col
+                  +fieldSelect('demo-sort', sort).js-sort(data-theme="sort")
+                .l-col
+                  +fieldSelect('demo-size', filters.size.fields)(data-theme="small")
+                .l-col
+                  +popupField('1')
+                    +fieldIncrement('demo-popup-sum')(value="1" min="0")
+            .l-col-3
+              +fieldRadio('demo-rd-0', 'Доставка курьером')(name="demo-delivery")
+              +fieldRadio('demo-rd-1', 'Забрать в магазине')(name="demo-delivery")
+            .l-col-3
+              +fieldCheckbox('demo-cb-0', 'Праздничное')(name="demo-dresses")
+              +fieldCheckbox('demo-cb-1', 'На выпускной')(name="demo-dresses")
+            .l-col-3
+              +fieldIncrement('demo-sum')(value="1" min="0")
+            .l-col-3
+              +fieldRange('demo-price')(data-min="0", data-max="30000", data-step="500", data-postfix="&nbsp;₽")
+    .separator
+    #buttons.row
+      .l-container
+        .page__heading.tp-heading--big Кнопки
+        .page__content
+          .l-flex-4_md-2_sm-1
+            .l-col
+              code .btn
+              button.btn.btn--default Добавить в корзину
+            .l-col
+              code .btn--text.btn--big
+              button.btn.btn--text.btn--big Регистрация
+            .l-col
+              code .btn--small
+              button.btn.btn--small Применить
+            .l-col
+              code .btn--text
+              a.btn.btn--text(href='#') Очистить
+            .l-col
+              code .btn:disabled
+              button.btn.btn--default(disabled) Добавить в корзину
+            .l-col
+              code .btn--text.btn--big:disabled
+              button.btn.btn--text.btn--big(disabled) Регистрация
+            .l-col
+              code .btn--small:disabled
+              button.btn.btn--small(disabled) Применить
+            .l-col
+              code .btn--text:disabled
+              a.btn.btn--text(href='#', disabled) Очистить
+            .l-col
+              code .btn--full
+              button.btn.btn--full Добавить в корзину
+            .l-col
+              code .btn--circle
+              button.btn.btn--circle.btn--light
+                +icon('angle-left')
+              button.btn.btn--circle
+                +icon('angle-right')
+              button.btn.btn--circle(disabled)
+                +icon('angle-right')
+            .l-col
+              code .btn--circle.btn--big
+              button.btn.btn--circle.btn--big
+                +icon('heart')
+              button.btn.btn--circle.btn--big(disabled)
+                +icon('heart')
+            .l-col
+              code .btn--circle.btn--big.btn--light
+              button.btn.btn--circle.btn--big.btn--light
+                +icon('heart')
+              button.btn.btn--circle.btn--big.btn--light(disabled)
+                +icon('heart')
+          .l-flex-2_sm-1
+            .l-col.bg--black(style="padding-top: 20px")
+              code .btn--text-light
+              button.btn.btn--text-light Купить
+            .l-col.bg--light(style="padding-top: 20px")
+              code .btn--text
+              button.btn.btn--text Купить
+    .separator
+    #grid.row
+      .l-container
+        .page__heading.tp-heading--big Сетка
+        .page__content
+          .l-flex_md-8_sm-4
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+            .l-col
+              div(style='background: rgba(255, 0, 0, 0.1); height: 129px')
+    .separator
+    #icons.row
+      .l-container
+        .page__heading.tp-heading--big Иконки
+        .page__content.tp-body--large
+          .l-flex-10
+            for item in ['angle-left', 'angle-right', 'angle-up', 'angle-down', 'arrow-back', 'arrow-forward', 'select-arrow','check', 'double-check', 'close']
+              .l-col
+                .demo-icon.tp-text--center
+                  .demo-icon__box.tp-body--big
+                    +icon(item)
+                  .demo-icon__title.tp-body--base !{item}
+          .l-flex-10
+            for item in ['vk', 'fb', 'inst', 'tw', 'tg', 'ok']
+              .l-col
+                .demo-icon.tp-text--center
+                  .demo-icon__box.tp-body--big
+                    +icon(item)
+                  .demo-icon__title.tp-body--base !{item}
+          .l-flex-10
+            for item in ['burger', 'cart', 'heart', 'home', 'location', 'user', 'search', 'mail', 'phone']
+              .l-col
+                .demo-icon.tp-text--center
+                  .demo-icon__box.tp-body--big
+                    +icon(item)
+                  .demo-icon__title.tp-body--base !{item}
+          .l-flex-10
+            for item in ['sort', 'sort-invert', 'filter', 'plus', 'minus', 'more']
+              .l-col
+                .demo-icon.tp-text--center
+                  .demo-icon__box.tp-body--big
+                    +icon(item)
+                  .demo-icon__title.tp-body--base !{item}
+    .separator
+    #notifications.row
+      .l-container
+        .page__heading.tp-heading--big Уведомления
+        .page__content
+          for item, key in notifications
+            +notification(item.title, item.text, true, item.icon, key)

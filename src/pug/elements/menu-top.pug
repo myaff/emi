@@ -1,0 +1,11 @@
+include ../mixins
+.row.separator.l-hidden-md-down
+  .l-container
+    .top
+      .search.js--search
+        +icon('search')
+      .main-nav.nav
+        .nav__list
+          for item in navs.main
+            .nav__item(class=item.current ? 'current' : '')
+              a.nav__link(href=item.url) !{item.title}

@@ -1,0 +1,60 @@
+
+<div class="modal" id="search-modal">
+  <div class="modal__window bg--dark">
+    <div class="modal__head">
+      <div class="modal__back">
+        <button class="btn btn--square btn-modal-back">
+          <svg class="icon">
+            <use xlink:href="#arrow-back"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__headings">
+        <div class="modal__title">Поиск</div>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="search">
+        <div class="field form__field search__field">
+          <label class="field__label" for="search">
+            <input class="field__input" id="search" placeholder="Просто начните вводить" type="search" name="search"/>
+          </label>
+          <div class="field-error">false</div>
+          <div class="search__btn">
+            <button class="btn btn--square btn--light btn-search-field">
+              <svg class="icon">
+                <use xlink:href="#arrow-forward"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="search__results">
+          <!-- include ../elements/search-result-products-->
+          <!-- include ../elements/search-result-products-big-->
+          <div class="search-results-empty">
+            <div class="l-flex">
+              <div class="l-col-5_md-6_sm-12">
+                <div class="search-results-empty__text tp-heading--big">Похоже у нас такого нет, но может вам понравится что-то в наших подборках, или&nbsp;загляните в каталог</div>
+                <div class="search-results-empty__btn"><a class="btn btn--light" href="catalog.html">Перейти в каталог</a></div>
+              </div>
+              <div class="l-col-7_md-6_sm-12">
+                <div class="search-results-empty__kits">
+                  <div class="l-flex-2_ms-1">
+                    <div class="l-col">
+                      <div class="kit" style="background-image: url(&quot;build/img/inst/2.jpg&quot;)"><a class="kit__link" href="#">
+                          <div class="text tp-heading--medium">Выходные с&nbsp;любимым</div></a></div>
+                    </div>
+                    <div class="l-col">
+                      <div class="kit" style="background-image: url(&quot;build/img/inst/3.jpg&quot;)"><a class="kit__link" href="#">
+                          <div class="text tp-heading--medium">И&nbsp;на&nbsp;пляж и&nbsp;в&nbsp;ресторан</div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="modal" id="reset-modal">
+  <div class="modal__window bg--dark">
+    <div class="modal__head">
+      <div class="modal__back">
+        <button class="btn btn--square btn-modal-back">
+          <svg class="icon">
+            <use xlink:href="#arrow-back"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__headings">
+        <div class="modal__title">Восстановить пароль</div>
+        <div class="modal__alt"><a class="btn-modal-alt" href="#" data-target="#signin-modal">Вернуться к авторизации</a></div>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="reset auth">
+        <form class="auth__form">
+          <div class="auth__desc tp-body--base tp-text--light">
+            <p>Введите email, указанный при регистрации. На него мы вышлем инструкции по восстановлению пароля.</p>
+          </div>
+          <div class="field form__field">
+            <label class="field__label" for="reset-modal-email">
+              <input class="field__input" id="reset-modal-email" placeholder="Ваш E-mail" type="email" name="email"/>
+            </label>
+            <div class="field-error"></div>
+          </div>
+        </form>
+        <div class="auth__actions">
+          <button class="btn btn--light btn--full btn-reset">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

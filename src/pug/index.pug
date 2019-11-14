@@ -1,0 +1,30 @@
+extends template
+
+prepend page
+	- var layout = 'default';
+	- var currentPage = 'home';
+	- var pageTitle = false;
+	- var pageDesc = false;
+	- var pageImg = false;
+
+block content
+	include parts/elements/menu-top
+	.page(class="page--" + currentPage)
+		include parts/elements/baner-section
+		+carouselSection('Новинки', 'swiper-products', '#show-more-link').bg--light
+			for product in products
+				.swiper-slide
+					+productCard(product)
+			for product in products
+				.swiper-slide
+					+productCard(product)
+			for product in products
+				.swiper-slide
+					+productCard(product)
+		include parts/elements/lookbook-section
+		+carouselSection('Выбери нужное', 'swiper-categories').bg--light
+			for category in categories
+				.swiper-slide
+					+categoryCard(category)
+		include parts/elements/instagram-section
+		include parts/elements/text-section

@@ -1,0 +1,83 @@
+.footer {
+  width 100%
+
+  &__top {
+    padding: r(40) 0 r(20);
+
+    @media $display-breakpoints.md-and-down {
+      padding: r(24) 0 r(8);
+    }
+  }
+  &__bottom {
+    padding: r(24) 0 r(4);
+
+    @media $display-breakpoints.md-and-down {
+      padding-top: r(24);
+    }
+
+    a {
+      color: $color--white;
+
+      {hover-focus-active} {
+        color: $color--white;
+      }
+    }
+  }
+
+  &__logo {
+    @media $display-breakpoints.md-and-down {
+      padding: r(24) 0;
+    }
+    a {
+      display block
+      width: r(58);
+      height: r(32);
+    }
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__contacts {
+    @media $display-breakpoints.lg-and-up {
+      margin-left: r(-40);
+    }
+  }
+
+  .phone,
+  .email {
+    display: flex;
+    align-items: center;
+    margin-bottom: r(24);
+
+    &:last-child {
+      margin-bottom 0;
+    }
+    .icon{
+      width: r(24);
+      height: r(24);
+      display: inline-block;
+      margin-right: r(16);
+    }
+    &__link {
+      color: $color--white;
+      opacity: 0.86;
+      font-size: r(20);
+      line-height: 1.2;
+      text-decoration: none;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__socials {
+    @media $display-breakpoints.lg-and-up {
+      margin-top: r(120);
+    }
+    @media $display-breakpoints.md-and-down {
+      padding: r(24) 0;
+    }
+  }
+}

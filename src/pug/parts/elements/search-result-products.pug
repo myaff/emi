@@ -1,0 +1,7 @@
+include ../../mixins
+.search-results-products
+  .search-results-products__list
+    .l-flex
+      for item in products
+        .l-col-3_sm-6
+          +productCard(item).search-results-products__item

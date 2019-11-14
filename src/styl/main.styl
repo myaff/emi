@@ -1,0 +1,65 @@
+@import 'vars.styl';
+if $use-fonts {
+  @import 'fonts.styl';
+}
+@import './tools/mixins.styl';
+if $use-grid {
+  @import './grid/gridlex.styl';
+  @import './base/hiddens.styl';
+}
+if $show-demomenu {
+  @import './navs/demomenu.styl'
+}
+@import './plugins/plugins.styl';
+@import './base/normalize.styl';
+@import './base/layout.styl';
+if $use-spacing {
+  @import './base/spacing.styl';
+}
+@import './base/typography.styl';
+@import './base/icon.styl';
+@import './base/animation.styl';
+@import './base/buttons.styl';
+@import './base/forms.styl';
+if $use-modal {
+  @import './base/modal.styl';
+}
+
+@import './components/header.styl';
+@import './components/footer.styl';
+@import './components/nav.styl';
+@import './components/social.styl';
+@import './components/breadcrumbs.styl';
+@import './components/pagination.styl';
+@import './components/tabs.styl';
+@import './components/accordion.styl';
+@import './components/product-card.styl';
+@import './components/category-card.styl';
+@import './components/popup.styl';
+@import './components/notifications.styl';
+@import './components/mini-product.styl';
+@import './components/auth.styl';
+@import './components/search.styl';
+@import './components/filter.styl';
+
+// sections
+
+@import './sections/carousel-section.styl'
+@import './sections/text-section.styl'
+@import './sections/instagram-section.styl'
+@import './sections/lookbook-section.styl'
+@import './sections/baner-section.styl'
+
+// pages
+
+@import './pages/page.styl';
+@import './pages/home.styl';
+@import './pages/catalog.styl';
+@import './pages/product-detail.styl';
+@import './pages/cart.styl';
+@import './pages/order.styl';
+@import './pages/company.styl';
+@import './pages/clients.styl';
+@import './pages/shops.styl';
+@import './pages/profile.styl';
+@import './pages/lookbook.styl';

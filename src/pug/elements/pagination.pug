@@ -1,0 +1,12 @@
+include ../mixins
+.row
+  .l-container
+    .pagination
+      .pagination__list
+        for i in [1, 2, 3, 4, 5]
+          a.pagination__link(href="#", class= i === 1 ? 'current' : '')
+            .tp-body--base !{i}
+      .pagination__total
+        .tp-body--small Вы посмотрели 10 из 236 товаров
+      .pagination__btn
+        .btn Показать еще

@@ -1,0 +1,42 @@
+.popup {
+  absolute();
+  width: r(436);
+  background: $color--white;
+  box-shadow: 0 r(8) r(20) 0 rgba($color--black, 0.24);
+  z-index: 99;
+  display none;
+
+  @media $display-breakpoints.ms-and-down {
+    width: 100vw;
+  }
+
+  &__inner {
+    padding: 0 r(24);
+
+    @media $display-breakpoints.ms-and-down {
+      padding: 0 r(20);
+    }
+  }
+
+  &__head {
+    padding: r(20) 0;
+    border-bottom 1px solid $color--grey;
+    flexy(space-between, center);
+  }
+  &__title {
+    color: $color--black_light;
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+    }
+  }
+  &__foot {
+    padding: r(24) 0;
+
+    @media $display-breakpoints.ms-and-down {
+      padding: r(20) 0;
+    }
+  }
+}
+
+@import '../popups/basket-popup.styl'

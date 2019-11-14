@@ -1,0 +1,49 @@
+include ../../mixins
+.row.lookbook.bg--dark
+  .page-head
+    .page-head__content
+      .page-head__collection SS – 19
+      .page-head__title Aura
+      .page-head__desc Платье трапецивидного силуэта. Короткий рукав-"крыло". На&nbsp;спинке застежка в&nbsp;виде "капли" с&nbsp;воздушной петлей и&nbsp;пуговицей. По&nbsp;низу двойной присборенный волан. Спинка длиннее полочки.
+    .page-head__img(style="background-image: url('build//img/looks/1.jpg')")
+  .page-content
+    .lookbook__block--1
+      .lookbook__img.lookbook__img--1: img(src="build/img/lookbook/1.jpg")
+      .lookbook__img.lookbook__img--2: img(src="build/img/lookbook/2.jpg")
+      .lookbook__text.lookbook__text--1
+        .title
+          i Изящность 
+          | в&nbsp;каждой детали
+        .text Платье трапецивидного силуэта. Короткий рукав-"крыло". На&nbsp;спинке застежка в&nbsp;виде "капли" с&nbsp;воздушной петлей и&nbsp;пуговицей. По&nbsp;низу двойной присборенный волан. Спинка длиннее полочки.
+    .lookbook__block--2
+      .lookbook__img.lookbook__img--3: img(src="build/img/lookbook/3.jpg")
+    .lookbook__block--3
+      .lookbook__img.lookbook__img--4: img(src="build/img/lookbook/4.jpg")
+      .lookbook__img.lookbook__img--5: img(src="build/img/lookbook/5.jpg")
+      .lookbook__text.lookbook__text--2
+        .title
+          i Изящность 
+          | в&nbsp;каждой детали
+    .lookbook__block--4
+      .lookbook__img.lookbook__img--6: img(src="build/img/lookbook/6.jpg")
+      .lookbook__img.lookbook__img--7: img(src="build/img/lookbook/7.jpg")
+    .lookbook__block--5
+      .lookbook__img.lookbook__img--8: img(src="build/img/lookbook/8.jpg")
+    .lookbook__block--6
+      .lookbook__img.lookbook__img--9: img(src="build/img/lookbook/9.jpg")
+      .lookbook__img.lookbook__img--10: img(src="build/img/lookbook/10.jpg")
+.row.lookbook-kits.bg--dark
+  .l-container
+    .l-flex-middle
+      .l-col-6_md-5_sm-12
+        .lookbook-kits__title Ищите больше новых образов в&nbsp;наших подборках
+      .l-col-6_md-7_sm-12
+        .lookbook-kits__carousel
+          +carousel(false, false, false).swiper-lookbook-kit
+            for i in kits.ls
+              .swiper-slide
+                .kit
+                  .kit__img(style=`background-image: url("${i.img}")`)
+                  .kit__content.tp-text--center
+                    .title !{i.title}
+                    a.btn.btn--text-light(href=i.url) Посмотреть и купить

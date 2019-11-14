@@ -1,0 +1,14 @@
+section.text-section.row.bg--light
+  .l-container
+    .text-section__heading
+      h3.tp-heading--medium Важный момент в жизни каждой женщины
+    .text-section__text
+      .l-flex-noBottom
+        .l-col-6_sm-12
+          for item, i in seotext
+            if i < 2
+              p.tp-body--smaller !{item}
+        .l-col-6.l-hidden-sm-down
+          for item, i in seotext
+            if i > 1
+              p.tp-body--smaller !{item}

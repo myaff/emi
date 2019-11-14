@@ -1,0 +1,8 @@
+section.lookbook-section
+  .l-container
+    a.lookbook-section__link(href=lookbook.url)
+      .lookbook-section__imgs
+        for item in lookbook.imgs
+          .lookbook-section__col
+            .lookbook-section__img(style=`background-image: url("${item}")`)
+      .lookbook-section__heading !{lookbook.title}

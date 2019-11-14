@@ -1,0 +1,65 @@
+.page--shops {
+  .page {
+    &__content {
+      margin-bottom: r(80);
+      @media $display-breakpoints.sm-and-down {
+        margin-bottom: r(32);
+      }
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: r(50);
+      }
+    }
+  }
+}
+
+.shops {
+  &__map {
+    height: r(440);
+    background: $color--light;
+
+    @media $display-breakpoints.sm-only {
+      margin: 0 (-1 * $grid-gutter-md);
+    }
+  }
+  &__list {
+    margin-bottom: r(16);
+
+    @media $display-breakpoints.sm-and-down {
+      margin-bottom: r(12);
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(4);
+    }
+  }
+}
+
+.shop-item {
+
+  @media $display-breakpoints.ms-and-down {
+    [class*=col] + [class*=col] & {
+      padding-top: $grid-gutter-ms;
+      border-top 1px solid $color--grey;
+    }
+  }
+  
+  &__title {
+    margin-bottom: r(16);
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(16);
+      margin-bottom: 0;
+    }
+  }
+  &__address,
+  &__workhours {
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(12);
+      margin-top: 1em;
+    }
+    .title {
+      @media $display-breakpoints.sm-and-up {
+        display none;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+include ../../mixins
+section.baner-section.row
+  +carousel(false, true, false).swiper-baner
+    for baner in baners
+      .swiper-slide
+        .baner(class= baner.desc ? 'baner--half' : 'baner--full')
+          .baner__img(style=`background-image: url("${baner.img}")`)
+          .baner__content
+            if baner.collection
+              .baner__collection !{baner.collection}
+            if baner.title
+              .baner__heading !{baner.title}
+            if baner.desc
+              .baner__desc.tp-body--small.tp-text--center: i !{baner.desc}
+            if baner.action
+              .baner__action
+                a.btn(href=baner.action.url, class=baner.action.style) !{baner.action.title}

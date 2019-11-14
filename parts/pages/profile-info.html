@@ -1,0 +1,167 @@
+
+<div class="row">
+  <div class="l-container-medium">
+    <div class="page__heading">
+      <h1 class="tp-heading--large">Профиль</h1>
+    </div>
+    <div class="page__nav">
+      <nav class="nav accordion-nav">
+        <div class="nav__list">
+          <div class="nav__item"><a class="nav__link" href="profile-orders.html">Мои заказы</a>
+            <div class="nav__arrow">
+              <svg class="icon">
+                <use xlink:href="#angle-down"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="nav__item"><a class="nav__link" href="profile-favorites.html">Избранное</a>
+            <div class="nav__arrow">
+              <svg class="icon">
+                <use xlink:href="#angle-down"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="nav__item current"><a class="nav__link" href="profile-info.html">Информация</a>
+            <div class="nav__arrow">
+              <svg class="icon">
+                <use xlink:href="#angle-down"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="page__content profile-info">
+      <div class="profile-info__section profile-info-section profile-info__section--personal">
+        <div class="profile-info__head">
+          <div class="profile-info__title tp-heading--big">Личные данные</div>
+          <div class="profile-info__change tp-text--light">
+            <button class="btn btn--plain btn-profile-info-change">Изменить</button>
+          </div>
+        </div>
+        <div class="profile-info__content">
+          <div class="profile-info__block section-filling">
+            <div class="profile-info__block-inner">
+              <form class="profile-info__form">
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-personal-name">
+                    <input class="field__input" id="profile-info-personal-name" placeholder="Ваше имя" type="text" name="name" value="Митрофанова Анна"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-personal-tel">
+                    <input class="field__input" id="profile-info-personal-tel" placeholder="+7(———)——— ————" type="tel" name="tel" value="+7(876)766 8899"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-personal-email">
+                    <input class="field__input" id="profile-info-personal-email" placeholder="Ваш E-mail" type="email" name="email" value="nezabudka_96@mail.ru"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+              </form>
+              <div class="profile-info__btn">
+                <div class="btn btn--full btn-profile-info-save">Сохранить изменения</div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-info__block section-result">
+            <div class="profile-info__block-inner">
+              <div class="profile-info__text tp-body--small">
+                <div class="str-result tp-body--small name">Митрофанова Анна</div>
+                <div class="str-result tp-body--small tel">+7(876)766 8899</div>
+                <div class="str-result tp-body--small email">nezabudka_96@mail.ru</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-info__section profile-info-section profile-info__section--address">
+        <div class="profile-info__head">
+          <div class="profile-info__title tp-heading--big">Адрес</div>
+          <div class="profile-info__change tp-text--light">
+            <button class="btn btn--plain btn-profile-info-change">Изменить</button>
+          </div>
+        </div>
+        <div class="profile-info__content">
+          <div class="profile-info__block section-filling">
+            <div class="profile-info__block-inner">
+              <form class="profile-info__form">
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-address-location">
+                    <input class="field__input" id="profile-info-address-location" placeholder="Город" type="text" name="location" value="Москва"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-address-region">
+                    <input class="field__input" id="profile-info-address-region" placeholder="Регион" type="text" name="region" value="Московская область"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-address-postal-code">
+                    <input class="field__input" id="profile-info-address-postal-code" placeholder="Почтовый индекс" type="text" name="postal-code" value="611 011"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-address-address">
+                    <input class="field__input" id="profile-info-address-address" placeholder="Адрес" type="text" name="address" value="Проспект мира д.69 ст 1 кв 768"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+              </form>
+              <div class="profile-info__btn">
+                <div class="btn btn--full btn-profile-info-save">Сохранить изменения</div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-info__block section-result">
+            <div class="profile-info__block-inner">
+              <div class="profile-info__text tp-body--small">
+                <div class="str-result tp-body--small location">Москва</div>
+                <div class="str-result tp-body--small region">Московская область</div>
+                <div class="str-result tp-body--small postal-code">611 011</div>
+                <div class="str-result tp-body--small address">Проспект мира д.69 ст 1 кв 768</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="profile-info__section profile-info-section profile-info__section--password">
+        <div class="profile-info__head">
+          <div class="profile-info__title tp-heading--big">Изменение пароля</div>
+        </div>
+        <div class="profile-info__content">
+          <div class="profile-info__block">
+            <div class="profile-info__block-inner">
+              <div class="profile-info__desc">
+                <p class="tp-body--base">Вы в любой момент можете изменить ваш пароль, чтобы обеспечить безопасность вашей учетной записи</p>
+              </div>
+              <form class="profile-info__form">
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-password-old-password">
+                    <input class="field__input" id="profile-info-password-old-password" placeholder="Старый пароль" type="password" name="old-password"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+                <div class="field form__field">
+                  <label class="field__label" for="profile-info-password-new-password">
+                    <input class="field__input" id="profile-info-password-new-password" placeholder="Новый пароль" type="password" name="new-password"/>
+                  </label>
+                  <div class="field-error"></div>
+                </div>
+              </form>
+              <div class="profile-info__btn">
+                <div class="btn btn-change-pass" disabled="disabled">Изменить пароль</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,146 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large !{order.title}
+    .page__content.order
+      .l-flex-noBottom
+        .l-col-8_sm-12
+          .order-step.order-step--personal
+            - var step = order.steps[0];
+            .order-step__head
+              .order-step__title.tp-heading--big 1. !{step.title}
+              .order-step__change.tp-text--light
+                button.btn.btn--plain.btn-order-step-change Изменить
+            .order-step__content
+              .order-step__section.section-filling
+                .section-filling__sign
+                  .order-step__text
+                    p.tp-body--base Войдите или зарегистриуйтесь, чтобы сохранить информацию о&nbsp;текущем заказе
+                  .l-flex-2_ms-1-middle-noBottom
+                    .l-col
+                      a.btn.btn--full.btn-modal(href="#", data-target="#signin-modal") Войти
+                    .l-col
+                      a.btn.btn--text.btn--big.btn--full.btn-modal(href="#", data-target="#signup-modal") Регистрация
+                .separator
+                .section-filling__form
+                  .order-step__text
+                    p.tp-body--base Если Вы ранее не совершали покупки на сайте, мы создадим вам аккаунт и пришлем информацию на указанный адрес электронной почты
+                  form.form
+                    for item in step.fields
+                      if item.type === 'checkbox'
+                        +fieldCheckbox(`order-${item.name}`, item.label, 'order-step__text')(name=item.name)
+                      else
+                        +fieldInput(`order-${item.name}`, item.placeholder, item.label)(type=item.type, name=item.name)
+                    .btn.btn--full.btn-order-step-save Сохранить и продолжить
+              .order-step__section.section-result
+                .section-result__inner
+                  .order-step__text.tp-body--small
+                    .str-result.name
+                      span.last-name
+                      | &nbsp;
+                      span.first-name
+                    .str-result.tel
+                    .str-result.email
+          .order-step.order-step--delivery.disabled
+            - var step = order.steps[1];
+            .order-step__head
+              .order-step__title.tp-heading--big 2. !{step.title}
+              .order-step__change.tp-text--light
+                button.btn.btn--plain.btn-order-step-change Изменить
+            .order-step__content
+              .order-step__section.section-filling
+                .section-filling__form
+                  form.form
+                    for variant, i in step.vars
+                      .delivery-variant
+                        +fieldRadio(`order-delivery-${i}`, variant.title, 'delivery-ctrl')(name='delivery', value=variant.value)
+                          .field__note !{variant.note}
+                        if variant.type === 'form'
+                          .delivery-content
+                            .delivery-variant__form
+                              for item in step.fields
+                                +fieldInput(`order-delivery-${item.name}`, item.placeholder)(type=item.type, name=item.name)
+                        else
+                          .delivery-content
+                            .delivery-shops
+                              .delivery-shops__location
+                                +fieldSelect(`order-delivery-location-sel-${i}`, locations, 'Выберите город').delivery-location-select
+                              .delivery-shops__content
+                                .delivery-shops__map.delivery-map
+                                .delivery-shops__list.custom-scroll
+                                  for items, key in shops
+                                    for item in items
+                                      .delivery-shops__item.delivery-shop(data-location=key)
+                                        .delivery-shop__content
+                                          .delivery-shop__info
+                                            .delivery-shop__title.tp-body--base !{item.title}
+                                            .delivery-shop__address.tp-body--smaller !{item.address}
+                                            .delivery-shop__terms.tp-body--smaller.tp-text--light Срок хранения заказа: 7 дней
+                                            .delivery-shop__conds
+                                              .delivery-price.tp-body--smaller Бесплатно
+                                              .delivery-date.tp-body--smaller.tp-text--light 10 июля, вторник
+                                            .delivery-shop__check
+                                              +icon('check')
+                                          .delivery-shop__details.details
+                                            .delivery-shop__desc.tp-body--smaller Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя
+                                            .delivery-shop__workhours
+                                              .tp-body--smaller.tp-text--light Время работы
+                                              .workhours.tp-body--smaller !{item.workhours}
+                    .delivery-btn
+                      .btn.btn--full.btn-order-step-save Доставить по этому адресу
+              .order-step__section.section-result
+                .section-result__inner
+                    .order-step__text.tp-body--small
+                      .str-result.tp-body--base: b.delivery
+                      .str-result.location
+                      .str-result.region
+                      .str-result.postal-code
+                      .str-result.address
+          .order-step.order-step--payment.disabled
+            - var step = order.steps[2];
+            .order-step__head
+              .order-step__title.tp-heading--big 3. !{step.title}
+              .order-step__change.tp-text--light
+                button.btn.btn--plain.btn-order-step-change Изменить
+            .order-step__content
+              .order-step__section.section-filling
+                .section-filling__form
+                  form.form
+                    for item, i in step.fields
+                      .payment-variant
+                        +fieldRadio(`order-payment-${i}`, item.title, 'payment-ctrl')(name='payment', value=item.title)
+                          .field__note !{item.note}
+                    .order-btn
+                      .btn.btn--full.btn-order-submit Оформить заказ
+        .l-col-4_sm-12
+          .order-basket.bg--light
+            .order-basket__head
+              .order-basket__title.tp-heading--big 2 товара
+            .order-basket__body
+              .order-basket__products
+                for item in basket.products
+                  .order-basket__product.order-product
+                    .order-product__img(style=`background-image: url("${item.img}")`)
+                      a.order-product__img-link(href=item.url)
+                    .order-product__content
+                      .order-product__info
+                        .order-product__art.tp-body--small.tp-text--light !{item.art}
+                        .order-product__title.tp-heading--medium
+                          a(href=item.url) !{item.title}
+                        .order-product__price.tp-body--medium !{item.price}
+                      .order-product__actions
+                        .order-product__params
+                          for param in item.params
+                            .order-product__param.tp-body--small
+                              .title.tp-text--light !{param.title}:
+                              .val !{param.val}
+            .order-basket__foot
+              .order-basket__total
+                for item in basket.page.total.details
+                  .order-basket__details
+                    .title.tp-body--base !{item.title}
+                    .val.tp-body--base !{item.val}
+            .order-basket__result
+              .title.tp-body--big !{basket.page.total.title}
+              .sum.tp-body--big !{basket.page.total.sum}

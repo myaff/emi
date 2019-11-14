@@ -1,0 +1,1483 @@
+{
+	"settings": {
+		"scripts": {
+			"head": [
+				"build/js/vendor/jquery-3.2.1.min.js",
+				"build/js/vendor/jquery.ba-throttle-debounce.js",
+				"https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js",
+				"build/img/svg/sprite.js"
+			],
+			"temp": [
+				"https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCv0MAFow31tpX0tcPa5OatGH2sZxARZdM",
+				"build/js/vendor/jquery.mousewheel.min.js",
+				"https://api-maps.yandex.ru/2.1/?apikey=41b512d5-2a9e-49e4-b030-fe9705e7e841&lang=ru_RU",
+				"build/js/vendor/jquery.touchSwipe.min.js",
+				"https://yastatic.net/share2/share.js",
+				"build/js/vendor/jquery.fullpage.min.js",
+				"build/js/vendor/TweenMax.min.js"
+			],
+			"foot": [
+				"build/js/vendor/inputmask.min.js",
+				"build/js/vendor/inputmask.extensions.js",
+				"build/js/vendor/jquery.inputmask.min.js",
+				"build/js/vendor/jquery.mCustomScrollbar.concat.min.js",
+				"build/js/vendor/select2.full.min.js",
+				"build/js/vendor/ion.rangeslider.min.js",
+				"build/js/vendor/swiper.min.js"
+			]
+		},
+		"styles": {
+			"head": [
+				"https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i|Rubik:400,400i,500&display=swap"
+			],
+			"temp": [
+			]
+		},
+		"socials": [
+			{
+				"title": "Вконтакте",
+				"icon": "vk",
+				"url": "#"
+			},
+			{
+				"title": "Facebook",
+				"icon": "fb",
+				"url": "#"
+			},
+			{
+				"title": "Instagram",
+				"icon": "inst",
+				"url": "#"
+			}
+		],
+		"share": "facebook,vkontakte,odnoklassniki",
+		"ogDefaults": {
+			"title": "Emi",
+			"description": "OG Description",
+			"image": "OG Image"
+		}
+	},
+	"info": {
+		"logo": {
+			"src": "build/img/logo.png",
+			"srcLight": "build/img/logo_white.png",
+			"alt": "Emi"
+		},
+		"contacts": {
+			"phone": {
+				"title": "8-800-550-58-20",
+				"icon": "phone",
+				"href": "tel:88005505820"
+			},
+			"email": {
+				"title": "hello@emibrand.ru",
+				"icon": "mail",
+				"href": "mailto:hello@emibrand.ru"
+			}
+		},
+		"copy": "© 2018 Emibrand. Все права защищены",
+		"legals": {
+			"title": "Политика конфиденциальности",
+			"url": "#"
+		}
+	},
+	"navs": {
+		"top": [
+			{
+				"title": "Магазины",
+				"url": "#"
+			},
+			{
+				"title": "Оплата и доставка",
+				"url": "#"
+			}
+		],
+		"footer": [
+			[
+				{
+					"title": "Клиентам",
+					"url": "#"
+				},
+				{
+					"title": "Доставка",
+					"url": "delivery.html"
+				},
+				{
+					"title": "Оплата",
+					"url": "payment.html"
+				},
+				{
+					"title": "Возврат",
+					"url": "refund.html"
+				},
+				{
+					"title": "Помощь",
+					"url": "faq.html"
+				}
+			],
+			[
+				{
+					"title": "Компания",
+					"url": "#"
+				},
+				{
+					"title": "О бренде Emi",
+					"url": "about.html"
+				},
+				{
+					"title": "Вакансии",
+					"url": "vacancy.html"
+				},
+				{
+					"title": "Партнерам",
+					"url": "#"
+				}
+			]
+		],
+		"main": {
+			"top": [
+				{
+					"title": "Новинки",
+					"url": "#",
+					"icon": "heart"
+				},
+				{
+					"title": "Одежда",
+					"url": "clothes",
+					"icon": "heart",
+					"current": true,
+					"sections": {
+						"cats": {
+							"heading": {
+								"title": "Вся одежда",
+								"url": "#"
+							},
+							"ls": [
+								{
+									"title": "Блузы",
+									"url": "#",
+									"total": "88"
+								},
+								{
+									"title": "Топы",
+									"url": "#",
+									"total": "14"
+								},
+								{
+									"title": "Брюки",
+									"url": "#",
+									"total": "68"
+								},
+								{
+									"title": "Джинсы",
+									"url": "#",
+									"total": "11"
+								},
+								{
+									"title": "Платья",
+									"url": "#",
+									"total": "78"
+								},
+								{
+									"title": "Трикотаж",
+									"url": "#",
+									"total": "59"
+								},
+								{
+									"title": "Футболки",
+									"url": "#",
+									"total": "0"
+								},
+								{
+									"title": "Жилеты",
+									"url": "#",
+									"total": "14"
+								},
+								{
+									"title": "Куртки",
+									"url": "#",
+									"total": "34"
+								},
+								{
+									"title": "Плащи и пальто",
+									"url": "#",
+									"total": "34"
+								},
+								{
+									"title": "Свитшоты",
+									"url": "#",
+									"total": "2"
+								},
+								{
+									"title": "Жакеты",
+									"url": "#",
+									"total": "30"
+								}
+							]
+						},
+						"cols": {
+							"heading": {
+								"title": "Коллекции",
+								"url": "#"
+							},
+							"ls": [
+								{
+									"title": "Aura SS - 19",
+									"url": "#"
+								},
+								{
+									"title": "Immersion SS - 19",
+									"url": "#"
+								},
+								{
+									"title": "Blisfull SS - 19",
+									"url": "#"
+								}
+							]
+						},
+						"kits": {
+							"heading": {
+								"title": "Подборки"
+							},
+							"ls": [
+								{
+									"title": "Вечерние платья",
+									"url": "#",
+									"img": "build/img/inst/2.jpg"
+								},
+								{
+									"title": "И на пляж и в ресторан",
+									"url": "#",
+									"img": "build/img/inst/3.jpg"
+								}
+							]
+						}
+					}
+				},
+				{
+					"title": "Обувь",
+					"url": "#",
+					"icon": "heart"
+				},
+				{
+					"title": "Аксессуары",
+					"url": "acsessoirs",
+					"icon": "heart",
+					"sections": {
+						"cats": {
+							"heading": {
+								"title": "Все аксессуары",
+								"url": "#"
+							},
+							"ls": [
+								{
+									"title": "Бижутерия",
+									"url": "#",
+									"total": "358"
+								},
+								{
+									"title": "Палантины",
+									"url": "#",
+									"total": "45"
+								},
+								{
+									"title": "Ремни",
+									"url": "#",
+									"total": "30"
+								},
+								{
+									"title": "Сумки",
+									"url": "#",
+									"total": "113"
+								},
+								{
+									"title": "Шапки",
+									"url": "#",
+									"total": "5"
+								},
+								{
+									"title": "Шарфы",
+									"url": "#",
+									"total": "10"
+								},
+								{
+									"title": "Шляпы",
+									"url": "#",
+									"total": "7"
+								}
+							]
+						}
+					}
+				},
+				{
+					"title": "Коллекции",
+					"url": "#",
+					"icon": "heart"
+				},
+				{
+					"title": "Скидки",
+					"url": "#",
+					"icon": "heart"
+				}
+			],
+			"bottom": [
+				[
+					{
+						"title": "Магазины",
+						"url": "shops.html"
+					},
+					{
+						"title": "Доставка",
+						"url": "delivery.html"
+					},
+					{
+						"title": "Оплата",
+						"url": "payment.html"
+					},
+					{
+						"title": "Возврат",
+						"url": "refund.html"
+					},
+					{
+						"title": "Помощь",
+						"url": "faq.html"
+					}
+				],
+				[
+					{
+						"title": "О бренде Emi",
+						"url": "about.html"
+					},
+					{
+						"title": "Вакансии",
+						"url": "vacancy.html"
+					},
+					{
+						"title": "Партнерам",
+						"url": "#"
+					}
+				]
+			]
+		},
+		"company": [
+			{
+				"title": "Компания",
+				"url": "about.html"
+			},
+			{
+				"title": "Вакансии",
+				"url": "vacancy.html"
+			},
+			{
+				"title": "Контакты",
+				"url": "contacts.html"
+			}
+		],
+		"clients": [
+			{
+				"title": "Оплата",
+				"url": "payment.html"
+			},
+			{
+				"title": "Доставка",
+				"url": "delivery.html"
+			},
+			{
+				"title": "Возврат",
+				"url": "refund.html"
+			},
+			{
+				"title": "Помощь",
+				"url": "faq.html"
+			}
+		],
+		"profile": [
+			{
+				"title": "Мои заказы",
+				"url": "profile-orders.html"
+			},
+			{
+				"title": "Избранное",
+				"url": "profile-favorites.html"
+			},
+			{
+				"title": "Информация",
+				"url": "profile-info.html"
+			}
+		],
+		"demo": {
+			"UI": [
+				{
+					"title": "UI",
+					"url": "ui.html"
+				},
+				{
+					"title": "Forms",
+					"url": "ui.html#forms"
+				},
+				{
+					"title": "Buttons",
+					"url": "ui.html#buttons"
+				},
+				{
+					"title": "Grid",
+					"url": "ui.html#grid"
+				},
+				{
+					"title": "Icons",
+					"url": "ui.html#icons"
+				},
+				{
+					"title": "Notifications",
+					"url": "ui.html#notifications"
+				}
+			],
+			"Pages": [
+				{
+					"title": "Главная",
+					"url": "/"
+				},
+				{
+					"title": "Каталог",
+					"url": "catalog.html"
+				},
+				{
+					"title": "Lookbook",
+					"url": "lookbook.html"
+				},
+				{
+					"title": "Lookbook Каталог",
+					"url": "lookbook-catalog.html"
+				},
+				{
+					"title": "Товар детальная",
+					"url": "product-detail.html"
+				},
+				{
+					"title": "Корзина",
+					"url": "cart.html"
+				},
+				{
+					"title": "Офомление заказа",
+					"url": "order.html"
+				},
+				{
+					"title": "Компания",
+					"url": "about.html"
+				},
+				{
+					"title": "Вакансии",
+					"url": "vacancy.html"
+				},
+				{
+					"title": "Контакты",
+					"url": "contacts.html"
+				},
+				{
+					"title": "Оплата",
+					"url": "payment.html"
+				},
+				{
+					"title": "Доставка",
+					"url": "delivery.html"
+				},
+				{
+					"title": "Возврат",
+					"url": "refund.html"
+				},
+				{
+					"title": "Помощь",
+					"url": "faq.html"
+				},
+				{
+					"title": "Магазины",
+					"url": "shops.html"
+				},
+				{
+					"title": "Мои заказы",
+					"url": "profile-orders.html"
+				},
+				{
+					"title": "Избранное",
+					"url": "profile-favorites.html"
+				},
+				{
+					"title": "Информация",
+					"url": "profile-info.html"
+				}
+			]
+		}
+	},
+	"products": [
+		{
+			"img": "build/img/catalog/1.jpg",
+			"title": "Короткое хлопковое платье",
+			"price": {
+				"current": "9 600 ₽"
+			},
+			"url": "#",
+			"favorite": true
+		},
+		{
+			"img": "build/img/catalog/2.jpg",
+			"title": "Короткое хлопковое платье",
+			"price": {
+				"current": "9 600 ₽"
+			},
+			"url": "#"
+		},
+		{
+			"img": "build/img/catalog/3.jpg",
+			"title": "Короткое хлопковое платье",
+			"price": {
+				"current": "9 600 ₽",
+				"old": "9 600 ₽"
+			},
+			"sale": "- 30 %",
+			"url": "#"
+		},
+		{
+			"img": "build/img/catalog/4.jpg",
+			"title": "Короткое хлопковое платье",
+			"price": {
+				"current": "9 600 ₽"
+			},
+			"url": "#"
+		}
+	],
+	"kits": {
+		"heading": {
+			"title": "Подборки"
+		},
+		"ls": [
+			{
+				"title": "Выходные с&nbsp;любимым",
+				"url": "#",
+				"img": "build/img/inst/2.jpg"
+			},
+			{
+				"title": "И&nbsp;на&nbsp;пляж и&nbsp;в&nbsp;ресторан",
+				"url": "#",
+				"img": "build/img/inst/3.jpg"
+			}
+		]
+	},
+	"detail": {
+		"title": "Платье женское",
+		"art": "04.098",
+		"price": {
+			"current": "9 600 ₽"
+		},
+		"imgs": [
+			"build/img/detail/1.jpg",
+			"build/img/detail/2.jpg",
+			"build/img/detail/3.jpg",
+			"build/img/detail/4.jpg"
+		],
+		"tabs": [
+			{
+				"title": "Описание",
+				"content": "Платье трапецивидного силуэта. Короткий рукав-\"крыло\". <br>На спинке застежка в виде \"капли\" с воздушной петлей и пуговицей. По низу двойной присборенный волан. Спинка длиннее полочки."
+			},
+			{
+				"title": "Характеристики",
+				"content": "Характеристики"
+			},
+			{
+				"title": "Модель",
+				"content": "Модель"
+			}
+		],
+		"params": [
+			{
+				"title": "Состав:",
+				"value": "Хлопок 100%"
+			}
+		],
+		"offers": {
+			"size": {
+				"title": "Размер:",
+				"ofs": [
+					{
+						"title": "42(164-80-92)",
+						"value": 1
+					},
+					{
+						"title": "44(164-88-96)",
+						"value": 1
+					},
+					{
+						"title": "44(170-88-96)",
+						"value": 2
+					},
+					{
+						"title": "46(164-90-100)",
+						"value": 0
+					},
+					{
+						"title": "46(170-90-100)",
+						"value": 0
+					},
+					{
+						"title": "48(170-99-200)",
+						"value": 0
+					}
+				]
+			}
+		},
+		"sizes": {
+			"title": "Платья",
+			"desc": "Вам понадобится провести измерения с помощью сантиметровой ленты. Для определения подходящего размера необходимо соотнести полученные измерения с размерами в таблице",
+			"cols": [
+				"RUS",
+				"Грудь",
+				"Талия",
+				"Бедра"
+			],
+			"ls": [
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				],
+				[
+					"42",
+					"80 – 85",
+					"63 – 66",
+					"90 – 93"
+				]
+			]
+		}
+	},
+	"categories": [
+		{
+			"title": "Платья",
+			"url": "#",
+			"img": "build/img/categories/1.jpg"
+		},
+		{
+			"title": "Юбки",
+			"url": "#",
+			"img": "build/img/categories/2.jpg"
+		},
+		{
+			"title": "Брюки",
+			"url": "#",
+			"img": "build/img/categories/3.jpg"
+		},
+		{
+			"title": "Топы",
+			"url": "#",
+			"img": "build/img/categories/4.jpg"
+		},
+		{
+			"title": "Жакеты",
+			"url": "#",
+			"img": "build/img/categories/5.jpg"
+		},
+		{
+			"title": "Свитшоты",
+			"url": "#",
+			"img": "build/img/categories/6.jpg"
+		}
+	],
+	"subcategories": [
+		"Вечерние платья",
+		"Платья на выпускной",
+		"Платья для вечеринок",
+		"Облегающие платья"
+	],
+	"seotext": [
+		"Хорал продолжает композиционный мимезис. Беспристрастный анализ любого творческого акта показывает, что канон органичен. Бессознательное, в первом приближении, готично имитирует комплекс агрессивности. Мистерия, в том числе, дает резкий холерик, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Интерпретация характерна.",
+		"Культурная аура произведения готично образует определенный хтонический миф, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Флобер, описывая нервный припадок Эммы Бовари, переживает его сам: притча выстраивает непосредственный канон.",
+		"Символический метафоризм многопланово имитирует суггестивный гений. Одиночество многопланово иллюстрирует канон биографии, однако само по себе состояние игры всегда амбивалентно. Аллегория образует декаданс, так Г.Корф формулирует собственную антитезу.",
+		"Интерпретация характерна. Культурная аура произведения готично образует определенный хтонический миф, таким образом, сходные законы контрастирующего развития характерны и для процессов в психике. Флобер, описывая нервный припадок Эммы Бовари, переживает его сам: притча выстраивает непосредственный канон."
+	],
+	"instagram": [
+		{
+			"url": "#",
+			"img": "build/img/inst/1.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/2.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/3.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/4.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/5.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/6.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/7.jpg"
+		},
+		{
+			"url": "#",
+			"img": "build/img/inst/8.jpg"
+		}
+	],
+	"lookbook": {
+		"title": "Lookbook",
+		"url": "#",
+		"imgs": [
+			"build/img/looks/1.jpg",
+			"build/img/looks/2.jpg"
+		]
+	},
+	"baners": [
+		{
+			"title": "Aura",
+			"collection": "SS - 19",
+			"img": "build/img/looks/1.jpg",
+			"action": {
+				"title": "Купить сейчас",
+				"style": "btn--text-light",
+				"url": "#"
+			}
+		},
+		{
+			"title": "Aura",
+			"collection": "SS - 19",
+			"desc": "Платье трапецивидного силуэта. Короткий рукав-\"крыло\". На спинке застежка в виде \"капли\" с воздушной петлей и пуговицей. По низу двойной присборенный волан. Спинка длиннее полочки.",
+			"img": "build/img/looks/1.jpg",
+			"action": {
+				"title": "Купить сейчас",
+				"style": "btn--small",
+				"url": "#"
+			}
+		}
+	],
+	"basket": {
+		"products": [
+			{
+				"title": "Короткое хлопковое платье",
+				"url": "#",
+				"art": "04.052",
+				"img": "build/img/catalog/1.jpg",
+				"price": "9 600 ₽",
+				"params": {
+					"color": {
+						"title": "Цвет",
+						"val": "Разноцветный"
+					},
+					"size": {
+						"title": "Размер",
+						"val": "XS"
+					},
+					"sum": {
+						"title": "Количество",
+						"val": "1"
+					}
+				}
+			},
+			{
+				"title": "Льняное платье миди",
+				"url": "#",
+				"art": "12.015",
+				"img": "build/img/catalog/2.jpg",
+				"price": "12 300 ₽",
+				"params": {
+					"color": {
+						"title": "Цвет",
+						"val": "Белый"
+					},
+					"size": {
+						"title": "Размер",
+						"val": "XS"
+					},
+					"sum": {
+						"title": "Количество",
+						"val": "1"
+					}
+				}
+			}
+		],
+		"popup": {
+			"title": "В корзине 2 товара",
+			"total": {
+				"title": "Товары",
+				"num": "23 900 ₽"
+			},
+			"link": {
+				"title": "Перейти в корзину",
+				"url": "#"
+			}
+		},
+		"notification": {
+			"title": "Товар добавлен в корзину",
+			"link": {
+				"title": "Перейти в корзину",
+				"url": "#"
+			}
+		},
+		"page": {
+			"title": "Моя корзина",
+			"total": {
+				"title": "Итого к оплате",
+				"titleShort": "Итого",
+				"sum": "23 900 ₽",
+				"details": [
+					{
+						"title": "Товары",
+						"val": "23 900 ₽"
+					},
+					{
+						"title": "Доставка",
+						"val": "Бесплатно"
+					}
+				]
+			}
+		}
+	},
+	"order": {
+		"title": "Офомление заказа",
+		"steps": [
+			{
+				"title": "Личные данные",
+				"fields": [
+					{
+						"type": "text",
+						"name": "first-name",
+						"label": false,
+						"placeholder": "Ваше имя"
+					},
+					{
+						"type": "text",
+						"name": "last-name",
+						"label": false,
+						"placeholder": "Ваше Фамилия"
+					},
+					{
+						"type": "tel",
+						"name": "tel",
+						"label": false,
+						"placeholder": "+7(———)——— ————"
+					},
+					{
+						"type": "email",
+						"name": "email",
+						"label": false,
+						"placeholder": "Ваш E-mail"
+					},
+					{
+						"type": "checkbox",
+						"name": "agreement",
+						"label": "Нажимая кнопку «Сохранить и продолжить» вы соглашаетесь с&nbsp;<a href=\"#\"> условиями обработки данных</a>"
+					}
+				]
+			},
+			{
+				"title": "Доставка",
+				"vars": [
+					{
+						"title": "Доствка курьером",
+						"value": "Доставка по адресу",
+						"note": "Бесплатно, 5 – 7 дней",
+						"type": "form"
+					},
+					{
+						"title": "Доставка в пункт самовывоза",
+						"value": "Доставка в пункт самовывоза",
+						"note": "Бесплатно, 1 – 3 дня",
+						"type": "map"
+					},
+					{
+						"title": "Забрать в магазине",
+						"value": "Доставка в магазин",
+						"note": "Бесплатно, 4 июня , Понедельник",
+						"type": "map"
+					}
+				],
+				"fields": [
+					{
+						"type": "text",
+						"name": "location",
+						"label": false,
+						"placeholder": "Город"
+					},
+					{
+						"type": "text",
+						"name": "region",
+						"label": false,
+						"placeholder": "Регион"
+					},
+					{
+						"type": "text",
+						"name": "postal-code",
+						"label": false,
+						"placeholder": "Почтовый индекс"
+					},
+					{
+						"type": "text",
+						"name": "address",
+						"label": false,
+						"placeholder": "Адрес"
+					}
+				]
+			},
+			{
+				"title": "Оплата",
+				"fields": [
+					{
+						"title": "Оплатить онлайн",
+						"note": "Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем: МИР, VISA, MasterCard"
+					},
+					{
+						"title": "Наличными или картой при получении",
+						"note": "Оплатить свой заказ вы можете при получении через терминал или наличными курьеру"
+					}
+				]
+			}
+		]
+	},
+	"locations": [
+		{
+			"title": "Москва",
+			"val": "msk",
+			"selected": false
+		},
+		{
+			"title": "Санкт - Питербург",
+			"val": "spb",
+			"selected": false
+		},
+		{
+			"title": "Екатеринбург",
+			"val": "ekb",
+			"selected": false
+		},
+		{
+			"title": "Тюмень",
+			"val": "tmn",
+			"selected": false
+		}
+	],
+	"shops": {
+		"msk": [
+			{
+				"title": "ТРЦ «Охотный ряд»",
+				"address": "Манежная пл., 1, стр. 2",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			},
+			{
+				"title": "ТЦ «Ривьера»",
+				"address": "ул. Автозаводская, д.18",
+				"tel": "8 (495) 730-98-02",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			}
+		],
+		"spb": [
+			{
+				"title": "ТК Капитолий",
+				"address": "пр. Коломяжский, д.19 к.2",
+				"tel": "8 (812) 449-24-23",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			},
+			{
+				"title": "ТРК МегаДыбенко",
+				"address": "ЛО, Мурманское шоссе, 12-й км",
+				"tel": "8 (812) 449-22-28",
+				"workhours": "Вс.-Чт. с 10:00 до 22:00<br/>Пт.-Сб. с 10:00 до 23:00"
+			},
+			{
+				"title": "ТРК Радуга",
+				"address": "пр. Космонавтов, д. 14Б",
+				"tel": "8 (812) 449-24-28",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			}
+		],
+		"tmn": [
+			{
+				"title": "ТЦ «Кристалл»",
+				"address": "ул. Дмитрия Менделеева, д.1а",
+				"tel": "8 (905) 258-98-74",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			}
+		],
+		"ekb": [
+			{
+				"title": "ТЦ «Гринвич»",
+				"address": "ул. 8 Марта, д.46",
+				"tel": "8 (343) 312-29-77",
+				"workhours": "Ежедневно с 10:00 до 22:00"
+			}
+		]
+	},
+	"company": {
+		"title": "О бренде",
+		"vacancies": [
+			{
+				"title": "Швея – портной",
+				"desc": [
+					{
+						"title": "Требования",
+						"val": "Опыт работы на швейном производстве по легкому женскому ассортименту. Знание методов, приемов и технологии пошива женских платьев, юбок, блузок, трикотажных изделий."
+					},
+					{
+						"title": "Обязанности",
+						"val": "Пошив изделий от начала до конца. Межоперационный контроль."
+					},
+					{
+						"title": "Условия",
+						"val": "Работа в небольшом дружном коллективе в Санкт-Петербурге. Хорошие условия труда, просторное светлое производство, рядом с метро \"Обводный канал\". Стабильная зарплата от 40 т.р. График работы 5/2, 2/2."
+					}
+				],
+				"contacts": [
+					{
+						"title": "Телефон",
+						"val": "8-909-5881559",
+						"href": "telto:89095881559"
+					},
+					{
+						"title": "Email",
+						"val": "podgornova.e@emibrand.ru",
+						"href": "mailto:podgornova.e@emibrand.ru"
+					}
+				]
+			}
+		],
+		"contacts": {
+			"title": "Санкт – Петербург",
+			"content": [
+				{
+					"title": "Адрес",
+					"val": "192007, г.&nbsp;Санкт-Петербург, ул.&nbsp;Курская дом&nbsp;21 литер&nbsp;А<br/>(вход Лиговский&nbsp;пр. дом&nbsp;174)"
+				},
+				{
+					"title": "Время работы офиса:",
+					"val": "С пн по пт с 09:00 - 18:00"
+				},
+				{
+					"title": "Телефон:",
+					"val": "8 (812) 207-59-21",
+					"href": "telto:88122075921"
+				},
+				{
+					"title": "Email:",
+					"val": "office@emibrand.ru",
+					"href": "mailto:office@emibrand.ru"
+				}
+			]
+		}
+	},
+	"faq": [
+		{
+			"title": "Что делать, если пришел неверный или ошибочный товар?"
+		},
+		{
+			"title": "Какие размеры указаны на сайте?"
+		},
+		{
+			"title": "Я отменил заказ, почему мне не вернулись деньги за него?"
+		},
+		{
+			"title": "Как я могу отследить свой заказ?"
+		},
+		{
+			"title": "Как изменить личные данные в моем Личном Кабинете?"
+		},
+		{
+			"title": "Я столкнулся с техническими проблемами"
+		}
+	],
+	"orders": [
+		{
+			"state": "new",
+			"title": "Заказ номер #3456786",
+			"sendingDate": "12 июля 2019",
+			"deliveryDate": "27 июля 2019",
+			"sum": "19 600 ₽",
+			"delivery": {
+				"address": "611 011, Москва, Московская область, Проспект мира д.69 ст 1 кв 768",
+				"receiver": {
+					"name": "Митрофанова Анна",
+					"tel": "+ 7 ( 876 ) 766 88 99"
+				}
+			}
+		},
+		{
+			"state": "sent",
+			"title": "Заказ номер #3456786",
+			"sendingDate": "12 июля 2019",
+			"deliveryDate": "27 июля 2019",
+			"sum": "19 600 ₽",
+			"delivery": {
+				"address": "611 011, Москва, Московская область, Проспект мира д.69 ст 1 кв 768",
+				"receiver": {
+					"name": "Митрофанова Анна",
+					"tel": "+ 7 ( 876 ) 766 88 99"
+				}
+			}
+		},
+		{
+			"state": "done",
+			"title": "Заказ номер #3456786",
+			"sendingDate": "01 мая 2019",
+			"deliveryDate": "13 мая 2019",
+			"sum": "9 200 ₽",
+			"delivery": {
+				"address": "611 011, Москва, Московская область, Проспект мира д.69 ст 1 кв 768",
+				"receiver": {
+					"name": "Митрофанова Анна",
+					"tel": "+ 7 ( 876 ) 766 88 99"
+				}
+			}
+		}
+	],
+	"profile": {
+		"personal": {
+			"title": "Личные данные",
+			"fields": [
+				{
+					"type": "text",
+					"name": "name",
+					"value": "Митрофанова Анна",
+					"placeholder": "Ваше имя"
+				},
+				{
+					"type": "tel",
+					"name": "tel",
+					"value": "+7(876)766 8899",
+					"placeholder": "+7(———)——— ————"
+				},
+				{
+					"type": "email",
+					"name": "email",
+					"value": "nezabudka_96@mail.ru",
+					"placeholder": "Ваш E-mail"
+				}
+			]
+		},
+		"address": {
+			"title": "Адрес",
+			"fields": [
+				{
+					"type": "text",
+					"name": "location",
+					"value": "Москва",
+					"placeholder": "Город"
+				},
+				{
+					"type": "text",
+					"name": "region",
+					"value": "Московская область",
+					"placeholder": "Регион"
+				},
+				{
+					"type": "text",
+					"name": "postal-code",
+					"value": "611 011",
+					"placeholder": "Почтовый индекс"
+				},
+				{
+					"type": "text",
+					"name": "address",
+					"value": "Проспект мира д.69 ст 1 кв 768",
+					"placeholder": "Адрес"
+				}
+			]
+		},
+		"password": {
+			"title": "Изменение пароля",
+			"desc": "Вы в любой момент можете изменить ваш пароль, чтобы обеспечить безопасность вашей учетной записи",
+			"fields": [
+				{
+					"type": "password",
+					"name": "old-password",
+					"placeholder": "Старый пароль"
+				},
+				{
+					"type": "password",
+					"name": "new-password",
+					"placeholder": "Новый пароль"
+				}
+			]
+		}
+	},
+	"states": {
+		"new": {
+			"title": false,
+			"notification": "info"
+		},
+		"sent": {
+			"title": "Отправлен"
+		},
+		"done": {
+			"title": "Доставлен"
+		}
+	},
+	"notifications": {
+		"info": {
+			"icon": "double-check",
+			"title": "Заказ успешно создан.",
+			"text": "Мы свяжемся с вами в ближайшее время для подтверждения заказа"
+		},
+		"success": {
+			"icon": "double-check",
+			"title": "Успешный успех.",
+			"text": "Самый успешный из всех успехов"
+		},
+		"error": {
+			"icon": "double-check",
+			"title": "Произошла ошибка.",
+			"text": "Попробуйте пепезагрузить страницу"
+		}
+	},
+	"signin": {
+		"title": "Авторизация",
+		"alt": {
+			"title": "Регистрация",
+			"target": "#signup-modal"
+		},
+		"desc": "Если Вы ранее совершали покупки на сайте, у Вас уже есть логин и пароль. Вы можете&nbsp; <a class=\"btn-modal-alt\" data-target=\"#reset-modal\" href=\"#\">Восстановить пароль</a>",
+		"fields": [
+			{
+				"type": "email",
+				"name": "email",
+				"placeholder": "Ваш E-mail"
+			},
+			{
+				"type": "password",
+				"name": "password",
+				"placeholder": "Пароль"
+			}
+		]
+	},
+	"signup": {
+		"title": "Регистрация",
+		"alt": {
+			"title": "Авторизация",
+			"target": "#signin-modal"
+		},
+		"desc": "Если Вы ранее совершали покупки на сайте, у Вас уже есть логин и пароль. Вы можете&nbsp; <a class=\"btn-modal-alt\" data-target=\"#\" href=\"#\">Восстановить пароль</a>",
+		"note": "Нажимая кнопку «Регистрация» вы соглашаетесь с&nbsp;<a href=\"#\" data-target=\"#reset-modal\">условиями обработки данных</a>",
+		"fields": [
+			{
+				"type": "text",
+				"name": "name",
+				"placeholder": "Ваше имя"
+			},
+			{
+				"type": "email",
+				"name": "email",
+				"placeholder": "Ваш E-mail"
+			},
+			{
+				"type": "password",
+				"name": "password",
+				"placeholder": "Пароль"
+			}
+		]
+	},
+	"reset": {
+		"title": "Восстановить пароль",
+		"alt": {
+			"title": "Вернуться к авторизации",
+			"target": "#signin-modal"
+		},
+		"desc": "Введите email, указанный при регистрации. На него мы вышлем инструкции по восстановлению пароля.",
+		"fields": [
+			{
+				"type": "email",
+				"name": "email",
+				"placeholder": "Ваш E-mail"
+			}
+		]
+	},
+	"sort": [
+		{
+			"title": "Сначала дешевые",
+			"icon": "sort",
+			"selected": true
+		},
+		{
+			"title": "Сначала дорогие",
+			"icon": "sort-invert",
+			"selected": false
+		}
+	],
+	"filters": {
+		"category": {
+			"title": "Категория",
+			"name": "category",
+			"type": "checkbox",
+			"fields": [
+				{
+					"title": "Праздничное"
+				},
+				{
+					"title": "Повседневное"
+				},
+				{
+					"title": "Коктельное"
+				},
+				{
+					"title": "Деловое"
+				},
+				{
+					"title": "Вечернее"
+				}
+			]
+		},
+		"color": {
+			"title": "Цвет",
+			"type": "checkbox",
+			"name": "color",
+			"fields": [
+				{
+					"title": "Белый"
+				},
+				{
+					"title": "Черный"
+				},
+				{
+					"title": "Красный"
+				},
+				{
+					"title": "Бежевый"
+				},
+				{
+					"title": "Разноцветный"
+				}
+			]
+		},
+		"size": {
+			"title": "Размер",
+			"type": "checkbox",
+			"name": "size",
+			"fields": [
+				{
+					"title": "42(164-80-92)"
+				},
+				{
+					"title": "44(164-88-96)"
+				},
+				{
+					"title": "44(170-88-96)"
+				},
+				{
+					"title": "46(164-90-100)"
+				},
+				{
+					"title": "46(170-90-100)"
+				},
+				{
+					"title": "48(170-99-200)"
+				}
+			]
+		},
+		"price": {
+			"title": "Цена",
+			"type": "range",
+			"name": "price",
+			"min": 0,
+			"max": 30000,
+			"step": 500
+		},
+		"collection": {
+			"title": "Коллекция",
+			"type": "checkbox",
+			"name": "collection",
+			"fields": [
+				{
+					"title": "Aura SS - 19"
+				},
+				{
+					"title": "Blisfull SS - 19"
+				}
+			]
+		},
+		"length": {
+			"title": "Длина",
+			"type": "checkbox",
+			"name": "length",
+			"fields": [
+				{
+					"title": "Миди"
+				},
+				{
+					"title": "Средняя"
+				},
+				{
+					"title": "Выше колена"
+				},
+				{
+					"title": "Мини"
+				}
+			]
+		},
+		"fabric": {
+			"title": "Материал",
+			"type": "checkbox",
+			"name": "fabric",
+			"fields": [
+				{
+					"title": "Хлопок"
+				},
+				{
+					"title": "Лен"
+				},
+				{
+					"title": "Шелк"
+				},
+				{
+					"title": "Шерсть"
+				}
+			]
+		}
+	}
+}

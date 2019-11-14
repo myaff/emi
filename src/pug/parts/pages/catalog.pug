@@ -1,0 +1,28 @@
+include ../../mixins
+.catalog
+  .catalog__filter
+    include ../elements/filter
+  .l-container
+    .catalog__head
+      .l-flex-noBottom-middle
+        .l-col-4_ms-6
+          .catalog__heading
+            h1.tp-heading--large Платья
+        .l-col-4_ms-6
+          .catalog__total
+            .tp-body--base 236 товаров
+        .l-col-4_ms-12_ms-first
+          .catalog__sort
+            +fieldSelect('demo-sort', sort).js-sort(data-theme="sort")
+        .l-col-12
+          .catalog__subcategories
+            for item in subcategories
+              a.subcategory(href="#") !{item}
+    .catalog__grid
+      .l-flex
+        for item in products
+          .l-col-3_sm-6
+            +productCard(item)
+        for item in products
+          .l-col-3_sm-6
+            +productCard(item)

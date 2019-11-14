@@ -1,0 +1,35 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large Профиль
+    .page__nav
+      +accordionNav(navs.profile, 2)
+    .page__content.profile-info
+      for sect, key in profile
+        .profile-info__section.profile-info-section(class=`profile-info__section--${key}`)
+          .profile-info__head
+            .profile-info__title.tp-heading--big !{sect.title}
+            if key !== 'password'
+              .profile-info__change.tp-text--light
+                button.btn.btn--plain.btn-profile-info-change Изменить
+          .profile-info__content
+            .profile-info__block(class= key !== 'password' ? 'section-filling' : '')
+              .profile-info__block-inner
+                if sect.desc
+                  .profile-info__desc
+                    p.tp-body--base !{sect.desc}
+                form.profile-info__form
+                  for item in sect.fields
+                    +fieldInput(`profile-info-${key}-${item.name}`, item.placeholder)(type=item.type, name=item.name, value=item.value)
+                .profile-info__btn
+                  if key === 'password'
+                    .btn.btn-change-pass(disabled) Изменить пароль
+                  else
+                    .btn.btn--full.btn-profile-info-save Сохранить изменения
+            if key !== 'password'
+              .profile-info__block.section-result
+                .profile-info__block-inner
+                  .profile-info__text.tp-body--small
+                    for item in sect.fields
+                      .str-result.tp-body--small(class=item.name) !{item.value}

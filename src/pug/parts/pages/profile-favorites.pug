@@ -1,0 +1,13 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large Профиль
+    .page__nav
+      +accordionNav(navs.profile, 1)
+    .page__content.favorites
+      .favorites__list
+        .l-flex
+          for item in products
+            .l-col-3_sm-6
+              +productCard(item, true).favorite-product

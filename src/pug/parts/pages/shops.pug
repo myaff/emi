@@ -1,0 +1,23 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large Магазины в Москве
+    .page__nav
+      +accordionNav(locations, 0)
+  .page__content.shops
+    .l-container-medium
+      .shops__list
+        .l-flex
+          for item in shops.msk
+            .l-col-3_md-4_sm-6_ms-12
+              .shops__item.shop-item
+                .shop-item__title.tp-body--big !{item.title}
+                .shop-item__address
+                  .title.tp-text--light Адрес
+                  .val !{item.address}
+                .shop-item__workhours
+                  .title.tp-text--light Время работы
+                  .val !{item.workhours}
+    .l-container
+      #shops-map.shops__map

@@ -1,0 +1,13 @@
+extends template
+
+prepend page
+  - var layout = 'default';
+  - var currentPage = 'cart';
+  - var pageTitle = false;
+  - var pageDesc = false;
+  - var pageImg = false;
+
+block content
+  include parts/elements/menu-top
+  .page(class="page--" + currentPage)
+    include parts/pages/cart

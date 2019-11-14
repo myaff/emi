@@ -1,0 +1,82 @@
+$ss = {
+	'vkontakte': #445c80,
+	'facebook': #3e5090,
+	'odnoklassniki': #ef9620
+}
+.ya-share2 {
+	&__list {
+		padding: 0;
+		margin: 0;
+
+		@media $port {
+			flexy(center, center);
+		}
+	}
+	
+	&__item {
+		display: block;
+		margin: vmin(28) 0;
+
+		@media $port {
+			margin: 0 vmin(7, 320);
+		}
+	}
+	&__link {
+		display: block;
+		relative()
+		circle(1em);
+		flex: 0 0 1em;
+		font-size: vmin(45);
+		line-height: 1;
+		color: white;
+		transition: all 0.2s;
+
+		@media $port {
+			font-size: vmin(45, 320);
+		}
+
+		{hover-focus-active} {
+			outline: none;
+			color: $white;
+		}
+
+		for $s, $c in $ss {
+			^[0]__item_service_{$s} & {
+				background: $c;
+
+				&:hover {
+					background: darken($c, 10%);
+				}
+			}
+		}
+	}
+	
+	&__title {
+		display: none;
+	}
+	
+	&__title,
+	&__badge {
+		vertical-align: middle;
+	}
+	&__badge {
+		//background: transparent;
+		flexy(center, center);
+		size(100%)
+	}
+	&__icon,
+	.icon {
+		relative();
+		display: block;
+		size(vmin(24));
+		box-sizing: border-box;
+
+		@media $port {
+			size(vmin(24, 320));
+		}
+	}
+	&__icon {
+		padding: 0;
+	}
+	
+}

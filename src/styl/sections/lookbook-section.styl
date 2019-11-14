@@ -1,0 +1,48 @@
+.lookbook-section {
+  padding: r(48) 0;
+
+  @media $display-breakpoints.md-and-down {
+    padding: r(40) 0;
+  }
+  @media $display-breakpoints.ms-and-down {
+    padding: r(24) 0;
+  }
+
+  &__link {
+    display block;
+    color: $color--black;
+
+    {hover-focus-active} {
+      color: $color--black;
+    }
+  }
+
+  &__imgs {
+    flexy(space-between, stretch);
+  }
+  &__col {
+    width: "calc(50% - %s)" % ($grid-gutter / 2);
+
+    @media $display-breakpoints.md-and-down {
+      width: "calc(50% - %s)" % ($grid-gutter / 4);
+    }
+    @media $display-breakpoints.ms-and-down {
+      width: 50%;
+    }
+  }
+  &__img {
+    padding-bottom: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__heading {
+    font: italic r(120)/1 $font-accent;
+    absolute-center();
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(40);
+    }
+  }
+}

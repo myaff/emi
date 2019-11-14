@@ -1,0 +1,72 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large Профиль
+    .page__nav
+      +accordionNav(navs.profile, 0)
+    .page__content.prodile-orders
+      .profile-orders__list
+        for order in orders
+          .profile-orders__item.profile-order
+            if states[order.state].title
+              .profile-order__state.tp-text--light.tp-body--small !{states[order.state].title}
+            else if states[order.state].notification
+              .profile-order__notification
+                - var notification = notifications[states[order.state].notification];
+                +notification(notification.title, notification.text, false)
+            .profile-order__title.tp-body--medium !{order.title}
+            .profile-order__params.tp-body--small
+              .l-flex-3_ms-1
+                .l-col
+                  .profile-order__sending
+                    .title.tp-text--light Дата отправки
+                    .val !{order.sendingDate}
+                .l-col
+                  .profile-order__delivery
+                    .title.tp-text--light !{order.state === 'done' ? 'Дата доставки' : 'Ожидаемая дата доставки'}
+                    .val !{order.deliveryDate}
+                .l-col
+                  .profile-order__sum
+                    .title.tp-text--light Сумма
+                    .val !{order.sum}
+            .profile-order__actions
+              button.btn.btn--small.btn-order-details Детали заказа
+              if order.state !== 'done'
+                button.btn.btn--text.btn-order-track Отследить заказ
+            .profile-order__details.details
+              .profile-order__details-inner
+                .profile-order__detail.profile-order-detail
+                  .profile-order-detail__title.tp-body--medium Доставка
+                  .profile-order-detail__params
+                    .l-flex-3_sm-2_ms-1
+                      .l-col
+                        .profile-order-detail__param.tp-body--small
+                          .title.tp-text--light Доставка по адресу
+                          .val !{order.delivery.address}
+                      .l-col
+                        .profile-order-detail__param.tp-body--small
+                          .title.tp-text--light Получатель
+                          .val !{order.delivery.receiver.name}
+                          .val !{order.delivery.receiver.tel}
+                .profile-order__detail.profile-order-detail
+                  .profile-order-detail__title.tp-body--medium Товары
+                  .profile-order-detail__products
+                    .l-flex-noBottom
+                      for item in basket.products
+                        .l-col-4_sm-12
+                          .profile-order__product.order-product
+                            .order-product__img(style=`background-image: url("${item.img}")`)
+                              a.order-product__img-link(href=item.url)
+                            .order-product__content
+                              .order-product__info
+                                .order-product__art.tp-body--small.tp-text--light !{item.art}
+                                .order-product__title.tp-heading--medium
+                                  a(href=item.url) !{item.title}
+                                .order-product__price.tp-body--medium !{item.price}
+                              .order-product__actions
+                                .order-product__params
+                                  for param in item.params
+                                    .order-product__param.tp-body--small
+                                      .title.tp-text--light !{param.title}:
+                                      .val !{param.val}

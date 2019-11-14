@@ -1,0 +1,238 @@
+.header {
+	width: 100%;
+  z-index: 90;
+
+  @media $display-breakpoints.ms-and-down {
+    z-index: 5;
+  }
+
+  .layout--lookbook & {
+    @media $display-breakpoints.sm-and-up {
+      color: $color--white;
+    }
+  }
+
+	&__content {
+		flexy(space-between, center);
+  	padding: r(20) 0;
+
+    @media $display-breakpoints.ms-and-down {
+      padding: r(12) 0;
+    }
+	}
+
+  .icon {
+		display: block;
+		font-size: r(24);
+  }
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+		width: 40%;
+
+    @media $display-breakpoints.ms-and-down {
+      width: auto;
+    }
+  }
+	&__center {
+		flexy(flex-start, center);
+	}
+	&__logo {
+		size(r(58), r(32));
+
+    @media $display-breakpoints.ms-and-down {
+      size(r(40), auto);
+    }
+
+		a {
+			flexy(center, center);
+		}
+		img {
+			display: block;
+			width: 100%;
+
+      &.light {
+        display: none;
+      }
+
+      
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          &.light {
+            display block;
+          }
+          &.dark {
+            display none
+          }
+        }
+      }
+		}
+	}
+	&__burger {
+    flexy(center, center);
+		size(r(40));
+    font-size: r(24);
+    line-height: 1;
+		box-sizing: border-box;
+		margin-left: r(-8);
+		margin-right: r(4);
+		cursor: pointer;
+	}
+  &__right {
+		justify-content flex-end;
+    .link {
+			flexy(flex-end, center);
+      @media $display-breakpoints.ms-and-down {
+        margin: 0 r(-8);
+      }
+      &__item {
+        margin-left: r(16);
+        line-height: 1;
+
+        @media $display-breakpoints.sm-and-down {
+          margin-left: r(8);
+        }
+        @media $display-breakpoints.ms-and-down {
+          margin-left: r(4);
+
+          .icon {
+            font-size: r(20);
+          }
+        }
+      }
+    }
+	}
+  
+	&__left {
+    .location {
+      margin-right: r(16);
+      
+      .layout--lookbook & a {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--white;
+        }
+      }
+    }
+  }
+}
+
+.header {
+	.wish {
+    &__link {
+      flexy(center, center);
+      circle(r(40));
+      box-sizing: border-box;
+      
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--white;
+        }
+      }
+    }
+  }
+	.basket {
+    width: auto;
+    min-width: r(40);
+    background-color: rgba(255,255,255,0);
+    border-radius: r(20);
+    color: $color--black;
+    transition: all 0.2s ease-in-out;
+    
+    .layout--lookbook & {
+      @media $display-breakpoints.sm-and-up {
+        color: $color--white;
+      }
+    }
+
+    &__quantity {
+      display: none;
+      opacity: 0;
+      font-size: r(16);
+      margin: auto r(8);
+
+      @media $display-breakpoints.ms-and-down {
+        font-size: r(12);
+        margin: auto r(4);
+      }
+    }
+    &__link {
+      width: auto;
+      min-width: r(40);
+      height: r(40);
+      padding: 0 r(8);
+      border-radius: inherit;
+      box-sizing: border-box;
+      text-decoration: none;
+      flexy(center, center);
+      color: $color--black;
+      cursor: pointer;
+      
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--white;
+        }
+      }
+    }
+    &--not-empty {
+      background-color: $color--black;
+      color: $color--white;
+      
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--black;
+          background: $color--white;
+        }
+      }
+      .basket__link {
+        color: $color--white;
+        
+        .layout--lookbook & {
+          @media $display-breakpoints.sm-and-up {
+            color: $color--black;
+          }
+        }
+      }
+      .icon {
+        margin: auto r(8);
+
+        @media $display-breakpoints.ms-and-down {
+          margin: auto r(4);
+        }
+      }
+      .basket__quantity {
+        display: block;
+        opacity: 1;
+      }
+      &:hover{
+        background-color: $color--black_light;
+        
+        .layout--lookbook & .basket__link {
+          @media $display-breakpoints.sm-and-up {
+            color: $color--white;
+          }
+        }
+      }
+    }
+    &--added {
+      background-color: $color--red;
+    }
+	}
+	.profile {
+		&__link {
+      margin 0
+
+      @media $display-breakpoints.ms-and-down {
+        border: 0;
+      }
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--white;
+          &:hover {
+            background: rgba($color--white, 0.2);
+          }
+        }
+      }
+		}
+	}
+}

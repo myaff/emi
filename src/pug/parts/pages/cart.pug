@@ -1,0 +1,89 @@
+include ../../mixins
+-var self = basket.page;
+.row
+  .l-container
+    .page__heading
+      h1.tp-heading--large !{self.title}
+    .page__content.cart
+      .l-flex-noBottom
+        .l-col-8_sm-12
+          .cart-products
+            for item, index in basket.products
+              .cart-products__item.cart-product
+                .cart-product__img(style=`background-image: url("${item.img}")`)
+                  a.cart-product__img-link(href=item.url)
+                .cart-product__content
+                  .cart-product__info
+                    .cart-product__art.tp-body--small.tp-text--light !{item.art}
+                    .cart-product__title.tp-heading--medium
+                      a(href=item.url) !{item.title}
+                    .cart-product__price.tp-body--medium !{item.price}
+                  .cart-product__actions
+                    .cart-product__params
+                      for param, key in item.params
+                        .cart-product__param.tp-body--small
+                          .title.tp-text--light.l-hidden-ms-down !{param.title}:
+                          if key === 'size'
+                            +fieldSelect(`card-${index}-${key}`, filters.size.fields, false, false, 'l-hidden-ms-down').js-size.js-cart-size(data-theme="small")
+                            .val.js-cart-size-res.l-hidden-sm-up !{param.val}
+                          else if key === 'sum'
+                            +popupField(param.val).l-hidden-ms-down
+                              +fieldIncrement(`card-${index}-${key}`)(value=param.val, min="0").js-cart-sum
+                            .val.js-cart-sum-res.l-hidden-sm-up !{param.val}
+                          else
+                            .val !{param.val}
+                    .cart-product__delete.tp-text--light.l-hidden-ms-down
+                      .btn.btn--plain.btn-cart-product-delete Удалить
+                .cart-product__more.more-menu.l-hidden-sm-up
+                  .more-menu__btn
+                    button.btn.btn--square.btn--text.btn-more-menu
+                      +icon('more')
+                  .more-menu__win.more-menu-win
+                    .more-menu__win-inner
+                      .more-menu__actions
+                        for param, key in item.params
+                          .more-menu__action.mm-action.tp-body--base
+                            if key === 'size'
+                              .mm-action__pan.mm-pan
+                                .val.mm-res.js-cart-size !{param.val}
+                              .mm-action__win.mm-win
+                                .mm-action__win-inner
+                                  .mm-list
+                                    for item in filters.size.fields
+                                      .mm-list__item.mm-apply
+                                        .val !{item.title}
+                            else if key === 'sum'
+                              .mm-action__pan.mm-pan
+                                .title !{param.title}:
+                                .val.mm-res.js-cart-sum !{param.val}
+                              .mm-action__win.mm-win
+                                .mm-action__win-inner
+                                  +fieldIncrement(`card-${index}-${key}`, 'field--big')(value=param.val, min="0")
+                                  button.btn.btn--full.mm-apply Применить
+                            else
+                              .mm-action__pan.mm-pan
+                                .val.mm-res !{param.val}
+                        .more-menu__action.more-menu__delete
+                          .btn.btn--text.btn--full.btn-cart-product-delete Удалить
+        .l-col-4_sm-12
+          .cart-total.bg--light
+            .cart-total__head
+              .cart-total__title.tp-body--big !{self.total.title}
+              .cart-total__sum.tp-body--big !{self.total.sum}
+            .cart-total__body
+              for item in self.total.details
+                .cart-total__details
+                  .title.tp-body--base !{item.title}
+                  .val.tp-body--base !{item.val}
+            .cart-total__foot.l-hidden-sm-down
+              .cart-total__code
+                // promocode
+              .cart-total__action.l-hidden-sm-down
+                a.btn.btn--full(href="#") Оформить заказ
+.cart-result.row.l-hidden-md-up
+  .l-container
+    .cart-result__content
+      .cart-result__title.tp-body--medium !{self.total.titleShort}
+      .cart-result__sum.tp-body--medium !{self.total.sum}
+      .cart-result__action
+        a.btn(href="#") Оформить заказ

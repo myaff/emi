@@ -1,0 +1,245 @@
+.page--about,
+.page--contacts {
+  .page {
+    &__content {
+      margin-bottom: r(80);
+      @media $display-breakpoints.ms-and-down {
+        margin: r(24) 0;
+      }
+    }
+  }
+}
+.page--vacancy {
+  .page {
+    &__content {
+      margin-bottom: r(80);
+      @media $display-breakpoints.ms-and-down {
+        margin: 0;
+      }
+    }
+    &__nav {
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.vacancy {
+
+  .tp-heading--big {
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+    }
+  }
+  &__subtitle {
+    margin-bottom: r(16);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(12);
+    }
+  }
+  &__text {
+    margin: r(16) 0 r(24);
+
+    @media $display-breakpoints.ms-and-down {
+      margin: r(12) 0 r(16);
+    }
+  }
+  &__contacts {
+    margin-top: r(48);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-top: r(24);
+    }
+  }
+  &__contact + &__contact {
+    margin-top: r(32);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-top: 0.5em;
+    }
+  }
+}
+.vacancy-note-section {
+  padding: r(64) 0 r(80);
+  margin: r(-16) 0 -1px;
+
+  &__text {
+    max-width: r(900);
+    margin-bottom: r(64);
+  }
+  &__email {
+    font: italic r(95)/1 $font-accent;
+
+    a {
+      color: $color--white;
+    }
+  }
+}
+
+.company-contacts {
+  &__title {
+    margin-bottom: r(24);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(16);
+    }
+  }
+
+  [class*=l-col] {
+    flex: 0 1 auto;
+
+    @media $display-breakpoints.sm-and-down {
+      flex: 1 1 50%;
+    }
+    @media $display-breakpoints.ms-and-down {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__map {
+    margin: r(8) r(-116);
+    height: r(440);
+
+    @media $display-breakpoints.md-and-down {
+      margin: r(8) (-1 * $grid-gutter-md);
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin: r(4) 0 0;
+    }
+    .map {
+      size(100%);
+      background: $color--light;
+    }
+  }
+}
+.company-contact {
+  @media $display-breakpoints.ms-and-down {
+    font-size: r(14);
+  }
+  &__title {
+    margin-bottom: 1.5em;
+
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: 0;
+      color: $color--grey_dark;
+    }
+  }
+  &__val {
+    max-width: r(320);
+  }
+}
+
+.about {
+  &__section {
+    padding: 1px 0;
+
+    &--2 {
+      padding: r(40) 0 r(32);
+
+      @media $display-breakpoints.sm-and-up {
+        padding: r(52) 0 r(40);
+      }
+      @media $display-breakpoints.lg-and-up {
+        padding: r(64) 0;
+      }
+    }
+    &--3 &-content {
+      @media $display-breakpoints.sm-and-up {
+        flexy(flex-start, center);
+      }
+    }
+  }
+  &__img {
+    margin: r(24) 0 r(32);
+    img {
+      display block
+      max-width: 100%;
+    }
+
+    &--1 {
+      @media $display-breakpoints.sm-and-up {
+        margin: r(32) 0 r(-124) auto;
+        z-index: 2;
+        width: r(534);
+      }
+      @media $display-breakpoints.lg-and-up {
+        margin-top: r(-576);
+        margin-bottom: r(-256);
+        margin-right: r(-116);
+        width: r(554);
+      }
+    }
+    &--2 {
+      @media $display-breakpoints.sm-and-up {
+        margin: r(40) r(24) 0 0;
+        width: r(348);
+        flex: 0 0 r(348);
+      }
+      @media $display-breakpoints.lg-and-up {
+        margin-top: r(64);
+        margin-right: r(148);
+        width: r(554);
+        flex-basis: r(554);
+      }
+    }
+  }
+  &__title {
+    font: italic r(32)/1.5 $font-accent;
+    margin-bottom: r(24);
+    max-width: r(400);
+    z-index: 3;
+
+    @media $display-breakpoints.sm-and-up {
+      font-size: r(48);
+    }
+    @media $display-breakpoints.lg-and-up {
+      font-size: r(95);
+      line-height: r(100);
+      margin-bottom: r(64);
+      max-width: r(780);
+    }
+  }
+  &__text {
+    max-width: r(630);
+    font: 500 r(20)/1.6 $font-accent;
+
+    @media $display-breakpoints.sm-and-up {
+      font-size: r(24);
+
+      &--1 p:last-child {
+        max-width: r(560);
+      }
+      &--3 {
+        margin-top: r(20);
+        flex: 1 1 auto;
+      }
+    }
+    @media $display-breakpoints.lg-and-up {
+      max-width: r(560);
+      line-height: 2;
+
+      &--1 {
+        margin-bottom: r(64);
+        p + p {
+          margin-top: r(80);
+        }
+      }
+
+      &--2 {
+        max-width: r(910);
+        margin: 0 auto;
+
+        p + p {
+          margin-top: 2em;
+        }
+      }
+
+      &--3 {
+        max-width: r(440);
+        margin-top: auto;
+        margin-bottom: r(118);
+      }
+    }
+  }
+}

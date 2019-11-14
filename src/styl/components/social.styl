@@ -1,0 +1,25 @@
+.socials {
+
+	flexy(flex-start, center);
+	
+	&__link {
+		flexy(center, center)
+		font-size: r(16);
+		line-height: 1;
+		circle(r(40));
+		border: 1px solid rgba($color--white, 0.2);
+
+		color: $color--white;
+		transition: border-color 0.2s;
+
+		& + & {
+			margin-left: r(24);
+		}
+		
+		{hover-focus-active} {
+			color: $color--white;
+			border-color: $color--white;
+			text-decoration: none;
+		}
+	}
+}

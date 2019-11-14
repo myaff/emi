@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emi</title>
+    <meta property="og:title" content="Emi">
+    <meta property="og:description" content="OG Description">
+    <meta property="og:image" content="OG Image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i|Rubik:400,400i,500&amp;display=swap" rel="stylesheet">
+    <link href="build/css/main.css" rel="stylesheet">
+    <script src="build/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="build/js/vendor/jquery.ba-throttle-debounce.js"></script>
+    <script src="https://cdn.rawgit.com/iserdmi/afterlag-js/2.0.2/dist/jquery.afterlag.min.js"></script>
+    <script src="build/img/svg/sprite.js"></script>
+  </head>
+  <body>
+    <div class="svg-sprite"></div>
+    <script>$('.svg-sprite').html(SVG_SPRITE);</script>
+    <div class="layout layout--default">
+      <div class="demomenu">
+        <div class="demomenu__inner">
+          <div class="demomenu__menu">
+            <h3>UI</h3>
+            <ul class="demomenu__list">
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html">UI</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html#forms">Forms</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html#buttons">Buttons</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html#grid">Grid</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html#icons">Icons</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="ui.html#notifications">Notifications</a></li>
+            </ul>
+          </div>
+          <div class="demomenu__menu">
+            <h3>Pages</h3>
+            <ul class="demomenu__list">
+              <li class="demomenu__item"><a class="demomenu__link" href="/">Главная</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="catalog.html">Каталог</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="lookbook.html">Lookbook</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="lookbook-catalog.html">Lookbook Каталог</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="product-detail.html">Товар детальная</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="cart.html">Корзина</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="order.html">Офомление заказа</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="about.html">Компания</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="vacancy.html">Вакансии</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="contacts.html">Контакты</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="payment.html">Оплата</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="delivery.html">Доставка</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="refund.html">Возврат</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="faq.html">Помощь</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="shops.html">Магазины</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="profile-orders.html">Мои заказы</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="profile-favorites.html">Избранное</a></li>
+              <li class="demomenu__item"><a class="demomenu__link" href="profile-info.html">Информация</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header separator">
+        <div class="l-container">
+          <div class="header__content">
+            <div class="header__left l-hidden-ms-down">
+              <div class="location"><a href="#">
+                        <svg class="icon">
+                          <use xlink:href="#location"></use>
+                        </svg></a></div>
+                    <nav class="nav header-nav">
+                      <div class="nav__list">
+                        <div class="nav__item"><a class="nav__link" href="#">Магазины</a></div>
+                        <div class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></div>
+                      </div>
+                    </nav>
+            </div>
+            <div class="header__center">
+              <div class="header__burger js-menu--burger l-hidden-sm-up">
+                      <svg class="icon">
+                        <use xlink:href="#burger"></use>
+                      </svg>
+              </div>
+              <div class="header__logo"><a href="/"><img class="light" src="build/img/logo_white.png" alt="Emi"><img class="dark" src="build/img/logo.png" alt="Emi"></a></div>
+            </div>
+            <div class="header__right">
+              <div class="link">
+                <div class="link__item wish"><a class="wish__link" href="#">
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="link__item basket basket--not-empty"><a class="basket__link btn-basket" href="#basket">
+                          <svg class="icon basket__icon">
+                            <use xlink:href="#cart"></use>
+                          </svg>
+                    <div class="basket__quantity">2</div></a>
+                  <div class="basket-popup popup" id="basket-popup">
+                    <div class="popup__inner">
+                      <div class="popup__head">
+                        <div class="popup__title tp-heading--big">В корзине 2 товара</div>
+                        <div class="popup__clear">
+                          <div class="btn btn--plain btn-basket-clear">Очистить</div>
+                        </div>
+                      </div>
+                      <div class="popup__body">
+                        <div class="basket-popup__products basket-products">
+                          <div class="basket-popup__product mini-product">
+                            <div class="mini-product__img" style="background-image: url(&quot;build/img/catalog/1.jpg&quot;)"><a class="mini-product__img-link" href="#"></a></div>
+                            <div class="mini-product__info">
+                              <div class="mini-product__art tp-body--smaller tp-text--light">Артикул: 04.052</div>
+                              <div class="mini-product__title tp-heading--small"><a class="mini-product__title-link" href="#">Короткое хлопковое платье</a></div>
+                              <div class="mini-product__price tp-body--base">9 600 ₽</div>
+                              <div class="mini-product__params tp-body--small tp-text--light">
+                                <div class="param">Разноцветный</div>
+                                <div class="param">XS</div>
+                                <div class="param">1</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="basket-popup__product mini-product">
+                            <div class="mini-product__img" style="background-image: url(&quot;build/img/catalog/2.jpg&quot;)"><a class="mini-product__img-link" href="#"></a></div>
+                            <div class="mini-product__info">
+                              <div class="mini-product__art tp-body--smaller tp-text--light">Артикул: 12.015</div>
+                              <div class="mini-product__title tp-heading--small"><a class="mini-product__title-link" href="#">Льняное платье миди</a></div>
+                              <div class="mini-product__price tp-body--base">12 300 ₽</div>
+                              <div class="mini-product__params tp-body--small tp-text--light">
+                                <div class="param">Белый</div>
+                                <div class="param">XS</div>
+                                <div class="param">1</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basket-popup__total">
+                          <div class="tp-body--base">Товары</div>
+                          <div class="tp-body--base">23 900 ₽</div>
+                        </div>
+                      </div>
+                      <div class="popup__foot"><a class="btn btn--full" href="#">Перейти в корзину</a></div>
+                    </div>
+                  </div>
+                  <div class="basket-popup popup" id="basket-notification">
+                    <div class="popup__inner">
+                      <div class="popup__head">
+                        <div class="popup__title tp-heading--big">Товар добавлен в корзину</div>
+                      </div>
+                      <div class="popup__body">
+                        <div class="basket-popup__products basket-products">
+                          <div class="basket-popup__product mini-product">
+                            <div class="mini-product__img" style="background-image: url(&quot;build/img/catalog/1.jpg&quot;)"><a class="mini-product__img-link" href="#"></a></div>
+                            <div class="mini-product__info">
+                              <div class="mini-product__art tp-body--smaller tp-text--light">Артикул: 04.052</div>
+                              <div class="mini-product__title tp-heading--small">Короткое хлопковое платье</div>
+                              <div class="mini-product__price tp-body--base">9 600 ₽</div>
+                              <div class="mini-product__params tp-body--small tp-text--light">
+                                <div class="param">Разноцветный</div>
+                                <div class="param">XS</div>
+                                <div class="param">1</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="popup__foot"><a class="btn btn--full" href="#">Перейти в корзину</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="link__item profile"><a class="profile__link btn btn--circle btn--light btn-modal" href="#" data-target="#signin-modal">
+                          <svg class="icon">
+                            <use xlink:href="#user"></use>
+                          </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-nav">
+        <div class="general">
+          <div class="top">
+            <div class="top__head"><a class="home l-hidden-sm-up" href="/">На главную</a>
+              <button class="btn-search btn-modal" data-target="#search-modal">
+                      <svg class="icon">
+                        <use xlink:href="#search"></use>
+                      </svg>
+              </button>
+            </div>
+            <div class="top__nav nav">
+              <nav class="nav__list">
+                <div class="nav__item"><a class="nav__link" href="#">
+                    <div class="text">Новинки</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="nav__item current"><a class="nav__link multilevel" href="#clothes">
+                    <div class="text">Одежда</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="nav__item"><a class="nav__link" href="#">
+                    <div class="text">Обувь</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="nav__item"><a class="nav__link multilevel" href="#acsessoirs">
+                    <div class="text">Аксессуары</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="nav__item"><a class="nav__link" href="#">
+                    <div class="text">Коллекции</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+                <div class="nav__item"><a class="nav__link" href="#">
+                    <div class="text">Скидки</div>
+                          <svg class="icon">
+                            <use xlink:href="#heart"></use>
+                          </svg></a></div>
+              </nav>
+            </div>
+          </div>
+          <div class="bottom l-hidden-sm-up">
+                  <nav class="nav bottom__nav">
+                    <div class="nav__list">
+                      <div class="nav__item"><a class="nav__link" href="shops.html">Магазины</a></div>
+                      <div class="nav__item"><a class="nav__link" href="delivery.html">Доставка</a></div>
+                      <div class="nav__item"><a class="nav__link" href="payment.html">Оплата</a></div>
+                      <div class="nav__item"><a class="nav__link" href="refund.html">Возврат</a></div>
+                      <div class="nav__item"><a class="nav__link" href="faq.html">Помощь</a></div>
+                    </div>
+                  </nav>
+                  <nav class="nav bottom__nav">
+                    <div class="nav__list">
+                      <div class="nav__item"><a class="nav__link" href="about.html">О бренде Emi</a></div>
+                      <div class="nav__item"><a class="nav__link" href="vacancy.html">Вакансии</a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">Партнерам</a></div>
+                    </div>
+                  </nav>
+          </div>
+        </div>
+        <div class="deeper">
+          <div class="deeper__inner">
+            <div class="deeper__nav" id="clothes">
+              <div class="deeper__nav-inner">
+                <div class="deeper__head"><a class="nav-back js-menu--back" href="#">
+                          <svg class="icon">
+                            <use xlink:href="#arrow-back"></use>
+                          </svg>
+                    <div class="title">Одежда</div></a></div>
+                <div class="deeper__section nav-section nav-section--cats">
+                  <div class="nav-section__title"><a href="#">Вся одежда</a>
+                  </div>
+                  <div class="nav-section__nav nav">
+                    <div class="nav__list">
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Блузы</div>
+                          <div class="total tp-body--small tp-text--lighter">88</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Топы</div>
+                          <div class="total tp-body--small tp-text--lighter">14</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Брюки</div>
+                          <div class="total tp-body--small tp-text--lighter">68</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Джинсы</div>
+                          <div class="total tp-body--small tp-text--lighter">11</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Платья</div>
+                          <div class="total tp-body--small tp-text--lighter">78</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Трикотаж</div>
+                          <div class="total tp-body--small tp-text--lighter">59</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Футболки</div>
+                          <div class="total tp-body--small tp-text--lighter">0</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Жилеты</div>
+                          <div class="total tp-body--small tp-text--lighter">14</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Куртки</div>
+                          <div class="total tp-body--small tp-text--lighter">34</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Плащи и пальто</div>
+                          <div class="total tp-body--small tp-text--lighter">34</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Свитшоты</div>
+                          <div class="total tp-body--small tp-text--lighter">2</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Жакеты</div>
+                          <div class="total tp-body--small tp-text--lighter">30</div></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="deeper__section nav-section nav-section--cols">
+                  <div class="nav-section__title"><a href="#">Коллекции</a>
+                  </div>
+                  <div class="nav-section__nav nav">
+                    <div class="nav__list">
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Aura SS - 19</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Immersion SS - 19</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Blisfull SS - 19</div></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="deeper__section nav-section nav-section--kits">
+                  <div class="nav-section__title"><span>Подборки</span>
+                  </div>
+                  <div class="nav-section__carousel">
+                          <div class="swiper swiper-kit">
+                            <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="kit" style="background-image: url(&quot;build/img/inst/2.jpg&quot;)"><a class="kit__link" href="#">
+                                      <div class="text">Вечерние платья</div></a></div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="kit" style="background-image: url(&quot;build/img/inst/3.jpg&quot;)"><a class="kit__link" href="#">
+                                      <div class="text">И на пляж и в ресторан</div></a></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="swiper-navigation">
+                              <div class="swiper-button-prev">
+                                      <svg class="icon">
+                                        <use xlink:href="#angle-left"></use>
+                                      </svg>
+                              </div>
+                              <div class="swiper-button-next">
+                                      <svg class="icon">
+                                        <use xlink:href="#angle-right"></use>
+                                      </svg>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="deeper__nav" id="acsessoirs">
+              <div class="deeper__nav-inner">
+                <div class="deeper__head"><a class="nav-back js-menu--back" href="#">
+                          <svg class="icon">
+                            <use xlink:href="#arrow-back"></use>
+                          </svg>
+                    <div class="title">Аксессуары</div></a></div>
+                <div class="deeper__section nav-section nav-section--cats">
+                  <div class="nav-section__title"><a href="#">Все аксессуары</a>
+                  </div>
+                  <div class="nav-section__nav nav">
+                    <div class="nav__list">
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Бижутерия</div>
+                          <div class="total tp-body--small tp-text--lighter">358</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Палантины</div>
+                          <div class="total tp-body--small tp-text--lighter">45</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Ремни</div>
+                          <div class="total tp-body--small tp-text--lighter">30</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Сумки</div>
+                          <div class="total tp-body--small tp-text--lighter">113</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Шапки</div>
+                          <div class="total tp-body--small tp-text--lighter">5</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Шарфы</div>
+                          <div class="total tp-body--small tp-text--lighter">10</div></a></div>
+                      <div class="nav__item"><a class="nav__link" href="#">
+                          <div class="text">Шляпы</div>
+                          <div class="total tp-body--small tp-text--lighter">7</div></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page page--cart">
+        <div class="row">
+          <div class="l-container">
+            <div class="page__heading">
+              <h1 class="tp-heading--large">Моя корзина</h1>
+            </div>
+            <div class="page__content cart">
+              <div class="l-flex-noBottom">
+                <div class="l-col-8_sm-12">
+                  <div class="cart-products">
+                    <div class="cart-products__item cart-product">
+                      <div class="cart-product__img" style="background-image: url(&quot;build/img/catalog/1.jpg&quot;)"><a class="cart-product__img-link" href="#"></a></div>
+                      <div class="cart-product__content">
+                        <div class="cart-product__info">
+                          <div class="cart-product__art tp-body--small tp-text--light">04.052</div>
+                          <div class="cart-product__title tp-heading--medium"><a href="#">Короткое хлопковое платье</a></div>
+                          <div class="cart-product__price tp-body--medium">9 600 ₽</div>
+                        </div>
+                        <div class="cart-product__actions">
+                          <div class="cart-product__params">
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Цвет:</div>
+                              <div class="val">Разноцветный</div>
+                            </div>
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Размер:</div>
+                                      <div class="field form__field field--select l-hidden-ms-down">
+                                        <label class="field__label" for="card-0-size">
+                                          <select class="field__select js-select js-size js-cart-size" id="card-0-size" data-theme="small">
+                                            <option value="" data-icon="">42(164-80-92)</option>
+                                            <option value="" data-icon="">44(164-88-96)</option>
+                                            <option value="" data-icon="">44(170-88-96)</option>
+                                            <option value="" data-icon="">46(164-90-100)</option>
+                                            <option value="" data-icon="">46(170-90-100)</option>
+                                            <option value="" data-icon="">48(170-99-200)</option>
+                                          </select>
+                                        </label>
+                                      </div>
+                              <div class="val js-cart-size-res l-hidden-sm-up">XS</div>
+                            </div>
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Количество:</div>
+                                      <div class="popup-field l-hidden-ms-down">
+                                        <div class="popup-field__selection pf-ctrl">
+                                          <div class="popup-field__res pf-res">1</div>
+                                          <div class="popup-field__arrow">
+                                                    <svg class="icon icon--block">
+                                                      <use xlink:href="#angle-down"></use>
+                                                    </svg>
+                                          </div>
+                                        </div>
+                                        <div class="popup-field__win pf-win">
+                                          <div class="popup-field__win-inner">
+                                                    <div class="field field--increment">
+                                                      <label class="field__label" for="#card-0-sum">
+                                                        <input class="field__input js-cart-sum" id="card-0-sum" type="num" value="1" min="0">
+                                                        <div class="field__btn-minus">
+                                                          <button class="btn btn--square btn--light btn-minus">
+                                                                    <svg class="icon">
+                                                                      <use xlink:href="#minus"></use>
+                                                                    </svg>
+                                                          </button>
+                                                        </div>
+                                                        <div class="field__btn-plus">
+                                                          <button class="btn btn--square btn--light btn-plus">
+                                                                    <svg class="icon">
+                                                                      <use xlink:href="#plus"></use>
+                                                                    </svg>
+                                                          </button>
+                                                        </div>
+                                                      </label>
+                                                    </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                              <div class="val js-cart-sum-res l-hidden-sm-up">1</div>
+                            </div>
+                          </div>
+                          <div class="cart-product__delete tp-text--light l-hidden-ms-down">
+                            <div class="btn btn--plain btn-cart-product-delete">Удалить</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product__more more-menu l-hidden-sm-up">
+                        <div class="more-menu__btn">
+                          <button class="btn btn--square btn--text btn-more-menu">
+                                    <svg class="icon">
+                                      <use xlink:href="#more"></use>
+                                    </svg>
+                          </button>
+                        </div>
+                        <div class="more-menu__win more-menu-win">
+                          <div class="more-menu__win-inner">
+                            <div class="more-menu__actions">
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="val mm-res">Разноцветный</div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="val mm-res js-cart-size">XS</div>
+                                </div>
+                                <div class="mm-action__win mm-win">
+                                  <div class="mm-action__win-inner">
+                                    <div class="mm-list">
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">42(164-80-92)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">44(164-88-96)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">44(170-88-96)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">46(164-90-100)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">46(170-90-100)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">48(170-99-200)</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="title">Количество:</div>
+                                  <div class="val mm-res js-cart-sum">1</div>
+                                </div>
+                                <div class="mm-action__win mm-win">
+                                  <div class="mm-action__win-inner">
+                                            <div class="field field--increment field--big">
+                                              <label class="field__label" for="#card-0-sum">
+                                                <input class="field__input" id="card-0-sum" type="num" value="1" min="0">
+                                                <div class="field__btn-minus">
+                                                  <button class="btn btn--square btn--light btn-minus">
+                                                            <svg class="icon">
+                                                              <use xlink:href="#minus"></use>
+                                                            </svg>
+                                                  </button>
+                                                </div>
+                                                <div class="field__btn-plus">
+                                                  <button class="btn btn--square btn--light btn-plus">
+                                                            <svg class="icon">
+                                                              <use xlink:href="#plus"></use>
+                                                            </svg>
+                                                  </button>
+                                                </div>
+                                              </label>
+                                            </div>
+                                    <button class="btn btn--full mm-apply">Применить</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action more-menu__delete">
+                                <div class="btn btn--text btn--full btn-cart-product-delete">Удалить</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-products__item cart-product">
+                      <div class="cart-product__img" style="background-image: url(&quot;build/img/catalog/2.jpg&quot;)"><a class="cart-product__img-link" href="#"></a></div>
+                      <div class="cart-product__content">
+                        <div class="cart-product__info">
+                          <div class="cart-product__art tp-body--small tp-text--light">12.015</div>
+                          <div class="cart-product__title tp-heading--medium"><a href="#">Льняное платье миди</a></div>
+                          <div class="cart-product__price tp-body--medium">12 300 ₽</div>
+                        </div>
+                        <div class="cart-product__actions">
+                          <div class="cart-product__params">
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Цвет:</div>
+                              <div class="val">Белый</div>
+                            </div>
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Размер:</div>
+                                      <div class="field form__field field--select l-hidden-ms-down">
+                                        <label class="field__label" for="card-1-size">
+                                          <select class="field__select js-select js-size js-cart-size" id="card-1-size" data-theme="small">
+                                            <option value="" data-icon="">42(164-80-92)</option>
+                                            <option value="" data-icon="">44(164-88-96)</option>
+                                            <option value="" data-icon="">44(170-88-96)</option>
+                                            <option value="" data-icon="">46(164-90-100)</option>
+                                            <option value="" data-icon="">46(170-90-100)</option>
+                                            <option value="" data-icon="">48(170-99-200)</option>
+                                          </select>
+                                        </label>
+                                      </div>
+                              <div class="val js-cart-size-res l-hidden-sm-up">XS</div>
+                            </div>
+                            <div class="cart-product__param tp-body--small">
+                              <div class="title tp-text--light l-hidden-ms-down">Количество:</div>
+                                      <div class="popup-field l-hidden-ms-down">
+                                        <div class="popup-field__selection pf-ctrl">
+                                          <div class="popup-field__res pf-res">1</div>
+                                          <div class="popup-field__arrow">
+                                                    <svg class="icon icon--block">
+                                                      <use xlink:href="#angle-down"></use>
+                                                    </svg>
+                                          </div>
+                                        </div>
+                                        <div class="popup-field__win pf-win">
+                                          <div class="popup-field__win-inner">
+                                                    <div class="field field--increment">
+                                                      <label class="field__label" for="#card-1-sum">
+                                                        <input class="field__input js-cart-sum" id="card-1-sum" type="num" value="1" min="0">
+                                                        <div class="field__btn-minus">
+                                                          <button class="btn btn--square btn--light btn-minus">
+                                                                    <svg class="icon">
+                                                                      <use xlink:href="#minus"></use>
+                                                                    </svg>
+                                                          </button>
+                                                        </div>
+                                                        <div class="field__btn-plus">
+                                                          <button class="btn btn--square btn--light btn-plus">
+                                                                    <svg class="icon">
+                                                                      <use xlink:href="#plus"></use>
+                                                                    </svg>
+                                                          </button>
+                                                        </div>
+                                                      </label>
+                                                    </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                              <div class="val js-cart-sum-res l-hidden-sm-up">1</div>
+                            </div>
+                          </div>
+                          <div class="cart-product__delete tp-text--light l-hidden-ms-down">
+                            <div class="btn btn--plain btn-cart-product-delete">Удалить</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-product__more more-menu l-hidden-sm-up">
+                        <div class="more-menu__btn">
+                          <button class="btn btn--square btn--text btn-more-menu">
+                                    <svg class="icon">
+                                      <use xlink:href="#more"></use>
+                                    </svg>
+                          </button>
+                        </div>
+                        <div class="more-menu__win more-menu-win">
+                          <div class="more-menu__win-inner">
+                            <div class="more-menu__actions">
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="val mm-res">Белый</div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="val mm-res js-cart-size">XS</div>
+                                </div>
+                                <div class="mm-action__win mm-win">
+                                  <div class="mm-action__win-inner">
+                                    <div class="mm-list">
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">42(164-80-92)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">44(164-88-96)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">44(170-88-96)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">46(164-90-100)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">46(170-90-100)</div>
+                                      </div>
+                                      <div class="mm-list__item mm-apply">
+                                        <div class="val">48(170-99-200)</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action mm-action tp-body--base">
+                                <div class="mm-action__pan mm-pan">
+                                  <div class="title">Количество:</div>
+                                  <div class="val mm-res js-cart-sum">1</div>
+                                </div>
+                                <div class="mm-action__win mm-win">
+                                  <div class="mm-action__win-inner">
+                                            <div class="field field--increment field--big">
+                                              <label class="field__label" for="#card-1-sum">
+                                                <input class="field__input" id="card-1-sum" type="num" value="1" min="0">
+                                                <div class="field__btn-minus">
+                                                  <button class="btn btn--square btn--light btn-minus">
+                                                            <svg class="icon">
+                                                              <use xlink:href="#minus"></use>
+                                                            </svg>
+                                                  </button>
+                                                </div>
+                                                <div class="field__btn-plus">
+                                                  <button class="btn btn--square btn--light btn-plus">
+                                                            <svg class="icon">
+                                                              <use xlink:href="#plus"></use>
+                                                            </svg>
+                                                  </button>
+                                                </div>
+                                              </label>
+                                            </div>
+                                    <button class="btn btn--full mm-apply">Применить</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="more-menu__action more-menu__delete">
+                                <div class="btn btn--text btn--full btn-cart-product-delete">Удалить</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="l-col-4_sm-12">
+                  <div class="cart-total bg--light">
+                    <div class="cart-total__head">
+                      <div class="cart-total__title tp-body--big">Итого к оплате</div>
+                      <div class="cart-total__sum tp-body--big">23 900 ₽</div>
+                    </div>
+                    <div class="cart-total__body">
+                      <div class="cart-total__details">
+                        <div class="title tp-body--base">Товары</div>
+                        <div class="val tp-body--base">23 900 ₽</div>
+                      </div>
+                      <div class="cart-total__details">
+                        <div class="title tp-body--base">Доставка</div>
+                        <div class="val tp-body--base">Бесплатно</div>
+                      </div>
+                    </div>
+                    <div class="cart-total__foot l-hidden-sm-down">
+                      <div class="cart-total__code">
+                        <!-- promocode-->
+                      </div>
+                      <div class="cart-total__action l-hidden-sm-down"><a class="btn btn--full" href="#">Оформить заказ</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-result row l-hidden-md-up">
+          <div class="l-container">
+            <div class="cart-result__content">
+              <div class="cart-result__title tp-body--medium">Итого</div>
+              <div class="cart-result__sum tp-body--medium">23 900 ₽</div>
+              <div class="cart-result__action"><a class="btn" href="#">Оформить заказ</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer bg--black">
+        <div class="footer__logo l-hidden-lg-up">
+          <div class="l-container"><a href="/"><img src="build/img/logo_white.png" alt="Emi"></a></div>
+        </div>
+        <div class="separator l-hidden-lg-up"></div>
+        <div class="footer__top">
+          <div class="l-container">
+            <div class="l-flex-wrap">
+              <div class="l-col-4_md-12 l-hidden-md-down">
+                <div class="footer__logo"><a href="/"><img src="build/img/logo_white.png" alt="Emi"></a></div>
+                <div class="footer__socials">
+                        <div class="socials"><a class="socials__link" href="#" title="Вконтакте">
+                                  <svg class="icon">
+                                    <use xlink:href="#vk"></use>
+                                  </svg></a><a class="socials__link" href="#" title="Facebook">
+                                  <svg class="icon">
+                                    <use xlink:href="#fb"></use>
+                                  </svg></a><a class="socials__link" href="#" title="Instagram">
+                                  <svg class="icon">
+                                    <use xlink:href="#inst"></use>
+                                  </svg></a>
+                        </div>
+                </div>
+              </div>
+              <div class="l-col-6_md-9_sm-8 l-flex l-hidden-ms-down">
+                <div class="l-col-6">
+                        <nav class="nav footer-nav">
+                          <div class="nav__list">
+                            <div class="nav__item"><a class="nav__link" href="#">Клиентам</a></div>
+                            <div class="nav__item"><a class="nav__link" href="delivery.html">Доставка</a></div>
+                            <div class="nav__item"><a class="nav__link" href="payment.html">Оплата</a></div>
+                            <div class="nav__item"><a class="nav__link" href="refund.html">Возврат</a></div>
+                            <div class="nav__item"><a class="nav__link" href="faq.html">Помощь</a></div>
+                          </div>
+                        </nav>
+                </div>
+                <div class="l-col-6">
+                        <nav class="nav footer-nav">
+                          <div class="nav__list">
+                            <div class="nav__item"><a class="nav__link" href="#">Компания</a></div>
+                            <div class="nav__item"><a class="nav__link" href="about.html">О бренде Emi</a></div>
+                            <div class="nav__item"><a class="nav__link" href="vacancy.html">Вакансии</a></div>
+                            <div class="nav__item"><a class="nav__link" href="#">Партнерам</a></div>
+                          </div>
+                        </nav>
+                </div>
+              </div>
+              <div class="l-col-2_md-3_sm-4_ms-12">
+                <div class="footer__contacts">
+                  <div class="footer__contacts-item phone">
+                          <svg class="icon">
+                            <use xlink:href="#phone"></use>
+                          </svg><a class="phone__link" href="tel:88005505820">8-800-550-58-20</a>
+                  </div>
+                  <div class="footer__contacts-item email">
+                          <svg class="icon">
+                            <use xlink:href="#mail"></use>
+                          </svg><a class="email__link" href="mailto:hello@emibrand.ru">hello@emibrand.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="separator l-hidden-lg-up"></div>
+        <div class="footer__socials l-hidden-lg-up">
+          <div class="l-container">
+                  <div class="socials"><a class="socials__link" href="#" title="Вконтакте">
+                            <svg class="icon">
+                              <use xlink:href="#vk"></use>
+                            </svg></a><a class="socials__link" href="#" title="Facebook">
+                            <svg class="icon">
+                              <use xlink:href="#fb"></use>
+                            </svg></a><a class="socials__link" href="#" title="Instagram">
+                            <svg class="icon">
+                              <use xlink:href="#inst"></use>
+                            </svg></a>
+                  </div>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="footer__bottom tp-body--small">
+          <div class="l-container">
+            <div class="l-flex">
+              <div class="l-col-5_md-6_ms-12">© 2018 Emibrand. Все права защищены</div>
+              <div class="l-col-5_md-6_ms-12"><a href="#">Политика конфиденциальности</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="modal" id="signin-modal">
+              <div class="modal__window bg--dark">
+                <div class="modal__head">
+                  <div class="modal__back">
+                    <button class="btn btn--square btn-modal-back">
+                            <svg class="icon">
+                              <use xlink:href="#arrow-back"></use>
+                            </svg>
+                    </button>
+                  </div>
+                  <div class="modal__headings">
+                    <div class="modal__title">Авторизация</div>
+                    <div class="modal__alt"><a class="btn-modal-alt" href="#" data-target="#signup-modal">Регистрация</a></div>
+                  </div>
+                </div>
+                <div class="modal__content">
+                  <div class="signin auth">
+                    <div class="l-flex">
+                      <div class="l-col-6_md-12">
+                        <form class="auth__form">
+                                <div class="field form__field">
+                                  <label class="field__label" for="signin-modal-email">
+                                    <input class="field__input" id="signin-modal-email" placeholder="Ваш E-mail" type="email" name="email">
+                                  </label>
+                                  <div class="field-error"></div>
+                                </div>
+                                <div class="field form__field">
+                                  <label class="field__label" for="signin-modal-password">
+                                    <input class="field__input" id="signin-modal-password" placeholder="Пароль" type="password" name="password">
+                                  </label>
+                                  <div class="field-error"></div>
+                                </div>
+                        </form>
+                        <div class="auth__actions">
+                          <button class="btn btn--light btn-signin">Войти</button>
+                          <button class="btn btn--big btn--text-light btn-modal" data-target="#signup-modal">Забыли пароль?</button>
+                        </div>
+                      </div>
+                      <div class="l-col-5_md-12_md-first" data-push-left="off-1_md-0">
+                        <div class="auth__desc tp-body--base tp-text--light">
+                          <p>Если Вы ранее совершали покупки на сайте, у Вас уже есть логин и пароль. Вы можете&nbsp; <a class="btn-modal-alt" data-target="#reset-modal" href="#">Восстановить пароль</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="signup-modal">
+              <div class="modal__window bg--dark">
+                <div class="modal__head">
+                  <div class="modal__back">
+                    <button class="btn btn--square btn-modal-back">
+                            <svg class="icon">
+                              <use xlink:href="#arrow-back"></use>
+                            </svg>
+                    </button>
+                  </div>
+                  <div class="modal__headings">
+                    <div class="modal__title">Регистрация</div>
+                    <div class="modal__alt"><a class="btn-modal-alt" href="#" data-target="#signin-modal">Авторизация</a></div>
+                  </div>
+                </div>
+                <div class="modal__content">
+                  <div class="signup auth">
+                    <div class="l-flex">
+                      <div class="l-col-6_md-12">
+                        <form class="auth__form">
+                                <div class="field form__field">
+                                  <label class="field__label" for="signup-modal-name">
+                                    <input class="field__input" id="signup-modal-name" placeholder="Ваше имя" type="text" name="name">
+                                  </label>
+                                  <div class="field-error"></div>
+                                </div>
+                                <div class="field form__field">
+                                  <label class="field__label" for="signup-modal-email">
+                                    <input class="field__input" id="signup-modal-email" placeholder="Ваш E-mail" type="email" name="email">
+                                  </label>
+                                  <div class="field-error"></div>
+                                </div>
+                                <div class="field form__field">
+                                  <label class="field__label" for="signup-modal-password">
+                                    <input class="field__input" id="signup-modal-password" placeholder="Пароль" type="password" name="password">
+                                  </label>
+                                  <div class="field-error"></div>
+                                </div>
+                          <div class="auth__note tp-body--base tp-text--light">
+                            <p>Нажимая кнопку «Регистрация» вы соглашаетесь с&nbsp;<a href="#" data-target="#reset-modal">условиями обработки данных</a></p>
+                          </div>
+                        </form>
+                        <div class="auth__actions">
+                          <button class="btn btn--light btn--full btn-signup">Зарегистрироваться</button>
+                        </div>
+                      </div>
+                      <div class="l-col-5_md-12_md-first" data-push-left="off-1_md-0">
+                        <div class="auth__desc tp-body--base tp-text--light">
+                          <p>Если Вы ранее совершали покупки на сайте, у Вас уже есть логин и пароль. Вы можете&nbsp; <a class="btn-modal-alt" data-target="#" href="#">Восстановить пароль</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="reset-modal">
+              <div class="modal__window bg--dark">
+                <div class="modal__head">
+                  <div class="modal__back">
+                    <button class="btn btn--square btn-modal-back">
+                            <svg class="icon">
+                              <use xlink:href="#arrow-back"></use>
+                            </svg>
+                    </button>
+                  </div>
+                  <div class="modal__headings">
+                    <div class="modal__title">Восстановить пароль</div>
+                    <div class="modal__alt"><a class="btn-modal-alt" href="#" data-target="#signin-modal">Вернуться к авторизации</a></div>
+                  </div>
+                </div>
+                <div class="modal__content">
+                  <div class="reset auth">
+                    <form class="auth__form">
+                      <div class="auth__desc tp-body--base tp-text--light">
+                        <p>Введите email, указанный при регистрации. На него мы вышлем инструкции по восстановлению пароля.</p>
+                      </div>
+                            <div class="field form__field">
+                              <label class="field__label" for="reset-modal-email">
+                                <input class="field__input" id="reset-modal-email" placeholder="Ваш E-mail" type="email" name="email">
+                              </label>
+                              <div class="field-error"></div>
+                            </div>
+                    </form>
+                    <div class="auth__actions">
+                      <button class="btn btn--light btn--full btn-reset">Отправить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="search-modal">
+              <div class="modal__window bg--dark">
+                <div class="modal__head">
+                  <div class="modal__back">
+                    <button class="btn btn--square btn-modal-back">
+                            <svg class="icon">
+                              <use xlink:href="#arrow-back"></use>
+                            </svg>
+                    </button>
+                  </div>
+                  <div class="modal__headings">
+                    <div class="modal__title">Поиск</div>
+                  </div>
+                </div>
+                <div class="modal__content">
+                  <div class="search">
+                          <div class="field form__field search__field">
+                            <label class="field__label" for="search">
+                              <input class="field__input" id="search" placeholder="Просто начните вводить" type="search" name="search">
+                            </label>
+                            <div class="field-error">false</div>
+                            <div class="search__btn">
+                              <button class="btn btn--square btn--light btn-search-field">
+                                      <svg class="icon">
+                                        <use xlink:href="#arrow-forward"></use>
+                                      </svg>
+                              </button>
+                            </div>
+                          </div>
+                    <div class="search__results">
+                      <!-- include ../elements/search-result-products-->
+                      <!-- include ../elements/search-result-products-big-->
+                      <div class="search-results-empty">
+                        <div class="l-flex">
+                          <div class="l-col-5_md-6_sm-12">
+                            <div class="search-results-empty__text tp-heading--big">Похоже у нас такого нет, но может вам понравится что-то в наших подборках, или&nbsp;загляните в каталог</div>
+                            <div class="search-results-empty__btn"><a class="btn btn--light" href="catalog.html">Перейти в каталог</a></div>
+                          </div>
+                          <div class="l-col-7_md-6_sm-12">
+                            <div class="search-results-empty__kits">
+                              <div class="l-flex-2_ms-1">
+                                <div class="l-col">
+                                  <div class="kit" style="background-image: url(&quot;build/img/inst/2.jpg&quot;)"><a class="kit__link" href="#">
+                                      <div class="text tp-heading--medium">Выходные с&nbsp;любимым</div></a></div>
+                                </div>
+                                <div class="l-col">
+                                  <div class="kit" style="background-image: url(&quot;build/img/inst/3.jpg&quot;)"><a class="kit__link" href="#">
+                                      <div class="text tp-heading--medium">И&nbsp;на&nbsp;пляж и&nbsp;в&nbsp;ресторан</div></a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    <script src="build/js/vendor/inputmask.min.js"></script>
+    <script src="build/js/vendor/inputmask.extensions.js"></script>
+    <script src="build/js/vendor/jquery.inputmask.min.js"></script>
+    <script src="build/js/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="build/js/vendor/select2.full.min.js"></script>
+    <script src="build/js/vendor/ion.rangeslider.min.js"></script>
+    <script src="build/js/vendor/swiper.min.js"></script>
+    <script src="build/js/main.js"></script>
+  </body>
+</html>

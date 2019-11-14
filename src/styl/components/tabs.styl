@@ -1,0 +1,40 @@
+.tabs {
+  .tab {
+    &__items {
+      display: flex;
+      justify-content: left;
+    }
+    &__item {
+      line-height: 2.5;
+      font-weight: 500;
+      color: $color--grey_dark;
+      margin-right: r(48);
+      cursor: pointer;
+
+      @media $display-breakpoints.ms-and-down {
+        font-size: r(14);
+        margin-right: r(20);
+      }
+
+      &.active {
+        color: $color--black_light;
+        border-bottom: 2px solid $color--black_light;
+      }
+    }
+    &__sections {
+      margin: r(26) 0;
+      @media $display-breakpoints.ms-and-down {
+        margin: r(12) 0;
+      }
+    }
+    &__section {
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+    &__content {
+      color: $color--black_light;
+    }
+  }
+}

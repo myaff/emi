@@ -1,0 +1,23 @@
+.header-nav {
+  .nav {
+    &__list {
+      flexy(flex-start, center);
+    }
+    &__item {
+      & + .nav__item {
+        margin-left: r(40);
+      }
+    }
+    &__link {
+      font: r(14) $font-base;
+      letter-spacing: 0.1px;
+      color: $color--black_light;
+      
+      .layout--lookbook & {
+        @media $display-breakpoints.sm-and-up {
+          color: $color--white;
+        }
+      }
+    }
+  }
+}

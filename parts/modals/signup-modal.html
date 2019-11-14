@@ -1,0 +1,57 @@
+
+<div class="modal" id="signup-modal">
+  <div class="modal__window bg--dark">
+    <div class="modal__head">
+      <div class="modal__back">
+        <button class="btn btn--square btn-modal-back">
+          <svg class="icon">
+            <use xlink:href="#arrow-back"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__headings">
+        <div class="modal__title">Регистрация</div>
+        <div class="modal__alt"><a class="btn-modal-alt" href="#" data-target="#signin-modal">Авторизация</a></div>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="signup auth">
+        <div class="l-flex">
+          <div class="l-col-6_md-12">
+            <form class="auth__form">
+              <div class="field form__field">
+                <label class="field__label" for="signup-modal-name">
+                  <input class="field__input" id="signup-modal-name" placeholder="Ваше имя" type="text" name="name"/>
+                </label>
+                <div class="field-error"></div>
+              </div>
+              <div class="field form__field">
+                <label class="field__label" for="signup-modal-email">
+                  <input class="field__input" id="signup-modal-email" placeholder="Ваш E-mail" type="email" name="email"/>
+                </label>
+                <div class="field-error"></div>
+              </div>
+              <div class="field form__field">
+                <label class="field__label" for="signup-modal-password">
+                  <input class="field__input" id="signup-modal-password" placeholder="Пароль" type="password" name="password"/>
+                </label>
+                <div class="field-error"></div>
+              </div>
+              <div class="auth__note tp-body--base tp-text--light">
+                <p>Нажимая кнопку «Регистрация» вы соглашаетесь с&nbsp;<a href="#" data-target="#reset-modal">условиями обработки данных</a></p>
+              </div>
+            </form>
+            <div class="auth__actions">
+              <button class="btn btn--light btn--full btn-signup">Зарегистрироваться</button>
+            </div>
+          </div>
+          <div class="l-col-5_md-12_md-first" data-push-left="off-1_md-0">
+            <div class="auth__desc tp-body--base tp-text--light">
+              <p>Если Вы ранее совершали покупки на сайте, у Вас уже есть логин и пароль. Вы можете&nbsp; <a class="btn-modal-alt" data-target="#" href="#">Восстановить пароль</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

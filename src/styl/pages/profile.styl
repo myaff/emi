@@ -1,0 +1,230 @@
+.page--profile-info {
+  .page {
+    &__content {
+      margin-bottom: r(56);
+      @media $display-breakpoints.sm-and-down {
+        margin-bottom: r(8);
+      }
+      @media $display-breakpoints.ms-and-down {
+        margin: 0;
+      }
+    }
+    &__nav {
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.page--profile-favorites {
+  .page {
+    &__content {
+      margin-bottom: r(24);
+      @media $display-breakpoints.sm-and-down {
+        margin: r(32) 0 r(8);
+      }
+      @media $display-breakpoints.ms-and-down {
+        margin: r(24) 0 0;
+      }
+    }
+    &__nav {
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.page--profile-orders {
+  .page {
+    &__content {
+      @media $display-breakpoints.ms-and-down {
+        margin: 0 0 r(8);
+      }
+    }
+    &__nav {
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.profile-orders {
+  &__list {
+    @media $display-breakpoints.sm-and-up {
+      border-top 1px solid $color--grey;
+    }
+  }
+  &__item {
+    border-bottom 1px solid $color--grey;
+  }
+}
+
+.profile-order {
+  padding: r(24) 0 0;
+
+  &__state {
+    font-weight 500;
+    margin-bottom: r(8);
+  }
+  &__notification {
+    margin-bottom: r(24);
+  }
+  &__title {
+    margin-bottom: r(24);
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(16);
+    }
+  }
+  &__params {
+    .title {
+      margin-bottom: r(8);
+
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: r(4);
+      }
+    }
+  }
+  &__actions {
+    padding-bottom: r(24);
+    @media $display-breakpoints.ms-and-down {
+      flexy(space-between, center);
+      .btn {
+        padding-left: r(16);
+        padding-right: r(16);
+        flex: 1 0 auto;
+      }
+      .btn-order-details {
+        flex-basis: r(130);
+        max-width: r(130);
+      }
+    }
+  }
+
+  &__details {
+    display none;
+  }
+  &__details-inner {
+    padding: r(16) 0 r(48);
+
+    @media $display-breakpoints.sm-and-down {
+      padding: 0;
+    }
+  }
+  &-detail {
+    &__title {
+      margin-bottom: r(16);
+    }
+    &__products {
+      margin-top: r(24);
+
+      @media $display-breakpoints.ms-and-down {
+        margin-top: 0;
+      }
+    }
+    &__param {
+      .title {
+        margin-bottom: r(8);
+      }
+      .val {
+        margin-top: r(8);
+        max-width: r(240);
+
+        @media $display-breakpoints.ms-and-down {
+          margin-top: r(4);
+        }
+      }
+    }
+  }
+
+  &__product {
+    @media $display-breakpoints.sm-and-down {
+      padding: $grid-gutter-md 0;
+      border-top 1px solid $color--grey;
+    }
+    @media $display-breakpoints.ms-and-down {
+      padding: $grid-gutter-ms 0;
+    }
+  }
+}
+
+.profile-info {
+  &__section {
+    max-width: r(906);
+    border-top 1px solid $color--grey;
+
+    @media $display-breakpoints.ms-and-down {
+      &:first-child {
+        border-top 0
+      }
+    }
+  }
+  
+  &__head {
+    padding: r(24) 0 0;
+    flexy(space-between, baseline);
+  }
+
+  &__title {
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+    }
+  }
+
+  &__content {
+    max-width: r(554);
+
+    @media $display-breakpoints.sm-and-down {
+      max-width: 100%;
+
+      .field,
+      .btn {
+        max-width: r(440);
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: r(32);
+    max-width: r(500);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(20);
+
+      .tp-body--base {
+        font-size: r(14);
+      }
+    }
+  }
+
+  &__block {
+    &-inner {
+      padding: r(24) 0;
+
+      @media $display-breakpoints.ms-and-down {
+        padding-top: r(12);
+      }
+    }
+    &.section-filling {
+      display: none;
+    }
+  }
+
+  &__change {
+    @media $display-breakpoints.ms-and-down {
+      .btn {
+        font-size: r(12);
+      }
+    }
+  }
+
+  .section-result {
+    .str-result + .str-result {
+      margin-top: r(12);
+
+      @media $display-breakpoints.ms-and-down {
+        margin-top: r(8);
+      }
+    }
+  }
+}

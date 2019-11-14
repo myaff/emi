@@ -1,0 +1,11 @@
+include ../../mixins
++modal('search-modal', 'Поиск')
+  .search
+    +fieldInput('search', 'Просто начните вводить', false, false, 'search__field')(type="search", name="search")
+      .search__btn
+        button.btn.btn--square.btn--light.btn-search-field
+          +icon('arrow-forward')
+    .search__results
+      // include ../elements/search-result-products
+      // include ../elements/search-result-products-big
+      include ../elements/search-result-empty

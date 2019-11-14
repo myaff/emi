@@ -1,0 +1,143 @@
+/* ==========================================================================
+  BASIC - LAYOUT
+   ========================================================================== */
+html, body {
+  background: $color--white;
+  font: normal $font-size-base/1.5 $font-base;
+  color: $color--black;
+  overflow-x: hidden;
+  
+  .is-scrolling {
+    pointer-events: none;
+  }
+}
+body {
+  min-width: initial;
+}
+
+.l-container {
+  relative();
+  margin-right: auto
+  margin-left: auto
+  width: 100%;
+  min-width: $container-widths.min;
+  container();
+}
+.l-container-medium {
+  relative();
+  margin-right: auto
+  margin-left: auto
+  width: 100%;
+  min-width: $container-widths.min;
+  container-medium();
+}
+
+.layout {
+  min-size($container-widths.min, 100vh);
+  width: 100vw;
+  background $color--white;
+  color: inherit;
+
+  
+  flexy(flex-start, center, nowrap, column);
+
+  .page {
+    flex: 1 1 auto;
+    width 100%
+    opacity: 1;
+  }
+
+  &::after {
+    content: '';
+    display block;
+    fixed(0px, 0px);
+    size(100%);
+    background: $color--black;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+
+  &.aside-opened::after {
+    z-index: 90;
+    opacity: 0.9;
+    overflow-y: hidden;
+  }
+
+  @media $display-breakpoints.ms-and-down {
+    &.menu-opened::after,
+    &.filter-opened::after,
+    &.more-menu-opened::after {
+      z-index: 10;
+      opacity: 0.9;
+    }
+  }
+
+}
+
+
+.l-spacer {
+  flex-grow: 1
+}
+
+.l-float {
+  &--left {
+    float: left;
+    
+    ^[0]--outside& {
+      margin-left: -52%;
+    }
+  }
+  &--right {
+    float: right;
+  
+    ^[0]--outside& {
+      margin-right: -52%;
+    }
+  }
+  &--outside {
+    width: 75%;
+  }
+}
+
+.st {
+  position: static;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  width: 100%;
+}
+.separator {
+	border-bottom: solid 1px $color--grey;
+}
+
+.bg {
+  &--black {
+    background: $color--black;
+    color: $color--white;
+    
+    .separator{
+			background-color: $color--white;
+			opacity: 0.2;
+		}
+  }
+  &--dark {
+    background: $color--default;
+    color: $color--white;
+    
+    .separator{
+			background-color: $color--white;
+			opacity: 0.2;
+		}
+  }
+  &--light {
+    background: $color--light;
+  }
+}

@@ -1,0 +1,117 @@
+.product-card {
+  &__link {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $color--black;
+
+      .bg--black &,
+      .bg--dark & {
+        color: $color--white;
+      }
+    }
+  }
+  &__img {
+    padding-bottom: 137.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__info {
+    text-align: center;
+  }
+  &__price {
+    flexy(center, center);
+    font-size: r(24);
+    padding: 1em 0 0.5em;
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(16);
+      justify-content space-between;
+      padding: r(4) 0;
+    }
+
+    .price,
+    .old-price {
+      margin: 0 0.5rem;
+
+      @media $display-breakpoints.ms-and-down {
+        margin 0;
+      }
+    }
+
+    .price {
+      @media $display-breakpoints.ms-and-down {
+        order: -1;
+      }
+    }
+
+    .old-price {
+      position: relative;
+      font-size: 0.6667em;
+      color: $color--grey_dark;
+
+      @media $display-breakpoints.ms-and-down {
+        font-size: 0.75em;
+      }
+      
+      &::before {
+        content: '';
+        display: block;
+        absolute(40%, 0px);
+        size(100%, 1px);
+        background: currentColor;
+      }
+    }
+    .sale-label {
+      absolute(-1em, 50%);
+      transform: translateX(-50%);
+      padding: 0.5em;
+      font-size: r(14);
+      line-height: 1;
+      background: $color--primary;
+      color: $color--white;
+      border-radius: 2px;
+
+      @media $display-breakpoints.ms-and-down {
+        top: r(-32);
+        left: r(8);
+        transform: none;
+        font-size: r(12);
+      }
+    }
+  }
+  &__title {
+    font: 500 r(16) $font-accent;
+    padding: 0.5em 0 1.5em;
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(12);
+      padding: 0;
+      text-align: left
+    }
+  }
+  &__favorite {
+    absolute(r(8));
+    right: r(8);
+    size(r(40));
+    font-size: r(20);
+    line-height 1
+
+    @media $display-breakpoints.ms-and-down {
+      top: 0;
+      right 0;
+      font-size: r(16);
+    }
+
+    .favorite {
+      flexy(center, center);
+      size(100%);
+      font-size: inherit;
+      box-sizing: border-box;
+      color: $color--black;
+    }
+  }
+}

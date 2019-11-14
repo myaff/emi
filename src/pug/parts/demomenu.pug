@@ -1,0 +1,10 @@
+include ../mixins
+.demomenu
+  .demomenu__inner
+    for menu, key in navs.demo
+      .demomenu__menu
+        h3 !{key}
+        ul.demomenu__list
+          for item in menu
+            li.demomenu__item
+              a.demomenu__link(href=item.url) !{item.title}

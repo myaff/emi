@@ -1,0 +1,97 @@
+.popup {
+  fixed(0px, 0px);
+  size(100vw, 100%);
+  z-index: 99;
+  display: none;
+  background: rgba($black, 0.8);
+  overflow-y: auto;
+
+  &__window {
+    width: 100%;
+    max-width: vmin(678);
+    background: #E0AF38;
+    absolute(50%, 50%);
+    transform: translate(-50%, -50%);
+    max-height: 100vh;
+    display: none;
+
+    @media $port {
+      max-width: vmin(280, 360);
+
+      ^[0]--big & {
+        max-width vmin(290, 320);
+        max-height: initial;
+        transform: translate(-50%, 0);
+        margin: vmin(40, 320) auto vmin(16, 320);
+        top: 0;
+      }
+    }
+
+    ^[0]--small & {
+      max-width: vmin(546);
+      background: url('../img/popup-bg.png') center no-repeat;
+      background-size contain;
+
+      sup-webp('../img/popup-bg.webp');
+
+      @media $port {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__close {
+    absolute(0px);
+    right: 0px;
+    z-index: 5;
+    size(vmin(40));
+    padding: vmin(12);
+    color: #A17820;
+    cursor: pointer;
+
+    {hover-focus-active} {
+      color: darken(#A17820, 10%);
+    }
+
+    @media $port {
+      size(vmin(40, 360));
+      padding: vmin(12, 360);
+
+      ^[0]--big & {
+        top: vmin(-40, 360);
+      }
+    }
+
+    ^[0].unclosed & {
+      display: none;
+    }
+  }
+
+  &__inner {
+    overflow-y: auto;
+    overflow-x hidden
+  }
+
+  &__content {
+    width: 100%;
+    padding: vmin(60) vmin(56) vmin(75);
+    @media $port {
+      padding:vmin(36, 360) vmin(10, 360) vmin(40, 360);
+    }
+    ^[0]--video & {
+      padding: 0;
+
+      .video {
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+
+@import './popups/want-gift.styl';
+@import './popups/age-popup.styl';
+@import './popups/info-popup.styl';
+@import './popups/ask-popup.styl';
+@import './popups/delivery-popup.styl';
+@import './popups/auth-popup.styl';

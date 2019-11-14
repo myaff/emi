@@ -1,0 +1,150 @@
+.search {
+  &__field {
+    border-bottom 1px solid transparent;
+    transition: border-color 0.3s;
+
+    &.has-focus,
+    &.has-value {
+      border-bottom-color: $color--white;
+    }
+    .field {
+
+      &__label {
+        width 100%;
+      }
+      &__input {
+        display block;
+        width 100%;
+        font: 500 r(20)/1.6 $font-accent;
+        padding: 0 0 r(24);
+        padding-right: r(64);
+        border: 0;
+        border-bottom: 1px solid $color--white;
+
+        @media $display-breakpoints.ms-and-down {
+          font-size: r(16);
+          line-height: 1;
+          padding-bottom: r(16);
+          padding-right: r(56);
+        }
+      }
+    }
+  }
+  &__btn {
+    absolute(0, 0, r(16), 0px);
+    line-height: 1;
+
+    @media $display-breakpoints.ms-and-down {
+      bottom: r(8);
+    }
+
+    .btn {
+      background: $color--white;
+      color: $color--black_light;
+      margin: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+
+      .field.has-focus &,
+      .field.has-value & {
+        opacity: 1;
+        pointer-events: initial;
+      }
+
+      &:hover {
+        color: $color--black;
+      }
+    }
+  }
+
+  &__results {
+    margin-top: r(72);
+
+    @media $display-breakpoints.md-and-down {
+      margin-top: r(32);
+    }
+  }
+}
+
+.search-results-products {
+
+  @media $display-breakpoints.sm-and-down {
+    padding-bottom: r(32);
+  }
+
+  &__title {
+    margin-bottom: r(40);
+
+    @media $display-breakpoints.sm-and-down {
+      margin-bottom: r(24);
+    }
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(16);
+    }
+  }
+
+  &__list,
+  &__pagination {
+    margin: 0 (r(-150) + $grid-gutter);
+
+    @media $display-breakpoints.md-and-down {
+      margin: 0 (r(-72) + $grid-gutter-md);
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    color: $color--white;
+  }
+}
+
+.search-results-empty {
+  &__text {
+    line-height: 2;
+    margin-bottom: r(32);
+
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(20);
+      font-size: r(16);
+      line-height 1.5
+    }
+  }
+
+  &__kits {
+    @media $display-breakpoints.sm-only {
+      margin: r(20) (r(-72) + $grid-gutter-md);
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin: r(20) 0;
+    }
+  }
+
+  .kit {
+    padding-bottom: 77.5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media $display-breakpoints.ms-and-down {
+      padding-bottom: 42.86%;
+    }
+
+    &__link {
+      absolute(0px, 0px);
+      flexy(flex-start, flex-end);
+      padding: r(12);
+      size(100%);
+      box-sizing: border-box;
+      color: $color--white;
+
+      .text {
+        @media $display-breakpoints.ms-and-down {
+          font-size: r(16);
+        }
+      }
+    }
+  }
+}

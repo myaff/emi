@@ -1,0 +1,244 @@
+mixin icon(iconName)
+	svg&attributes(attributes).icon: use(xlink:href="#" + iconName)
+
+//- social
+mixin socials()
+	.socials&attributes(attributes)
+		for item in settings.socials
+			a.socials__link(href=item.url, title=item.title)
+				+icon(item.icon)
+
+//- share
+mixin share(isInline, hasTitle)
+	.social&attributes(attributes)(class=isInline ? "share--inline" : '')
+		if hasTitle
+			.share__title Поделиться проектом
+		#share(data-services=settings.share)
+
+//- components
+mixin simpleNav(menuList)
+	nav&attributes(attributes).nav
+		.nav__list
+			for item in menuList
+				.nav__item
+					a.nav__link(href=item.url) !{item.title}
+
+mixin accordionNav(menuList, currentIndex)
+	nav&attributes(attributes).nav.accordion-nav
+		.nav__list
+			for item, index in menuList
+				.nav__item(class=index === currentIndex ? 'current' : '')
+					a.nav__link(href=item.url) !{item.title}
+					.nav__arrow
+						+icon('angle-down')
+
+mixin popup(popupID, contentClass)
+	div&attributes(attributes).popup(id=popupID)
+		.popup__window
+			.popup__close.btn-close-popup
+				+icon("cross").icon--block.icon--stroked-2.icon--nofill
+			.popup__inner
+				.popup__content(class=contentClass)
+					block
+
+mixin modal(modalID, title, alt = false)
+	div&attributes(attributes).modal(id=modalID)
+		.modal__window.bg--dark
+			.modal__head
+				.modal__back
+					button.btn.btn--square.btn-modal-back
+						+icon('arrow-back')
+				.modal__headings
+					.modal__title !{title}
+					if alt
+						.modal__alt
+							a.btn-modal-alt(href="#", data-target=alt.target) !{alt.title}
+			.modal__content
+				block
+
+mixin productCard(product, favorite = false)
+	div&attributes(attributes).product-card
+		a.product-card__link(href=product.url)
+			.product-card__img(style=`background-image: url("${product.img}")`, alt=product.title)
+			.product-card__info
+				.product-card__price
+					if product.sale
+						.sale-label !{product.sale}
+					if product.price.old
+						.old-price !{product.price.old}
+					.price !{product.price.current}
+				.product-card__title !{product.title}
+		.product-card__favorite
+			a.favorite(href='#', class=product.favorite || favorite ? 'active' : '')
+				+icon('heart').icon--hover-fill.icon--active-fill
+
+mixin categoryCard(category)
+	div&attributes(attributes).category-card
+		a.category-card__link(href=category.url, title=category.title)
+			.category-card__img(style=`background-image: url("${category.img}")`, alt=category.title)
+			.category-card__title.tp-body--base.tp-text--center !{category.title}
+
+mixin carousel(list, navigations = true, pagination = true)
+	div&attributes(attributes).swiper
+		.swiper-container
+			.swiper-wrapper
+				if list
+					for item, index in list
+						.swiper-slide: img(src=item)
+				else
+					block
+		if pagination
+			.swiper-pagination
+		if navigations
+			.swiper-navigation
+				.swiper-button-prev
+					+icon('angle-left')
+				.swiper-button-next
+					+icon('angle-right')
+
+mixin carouselSection(title, swiperClass, showMore = false)
+	section&attributes(attributes).carousel-section.row
+		.l-container
+			.carousel-section__head
+				.carousel-section__heading.tp-heading--large !{title}
+				if showMore
+					.carousel-section__show-more
+						a.btn.btn--text(href=showMore) Смотреть все
+			+carousel(false, !showMore, false)(class=swiperClass)
+				block
+
+mixin tabs(list)
+	div&attributes(attributes).tabs
+		.tab.tab__items
+			for item, index in list
+				.tab-ctrl.tab__item.tp-body--base(data-tab=`tab${index}`) !{item.title}
+		.tab.tab__sections
+			for item, index in list
+				.tab__section(data-tab=`tab${index}`)
+					.tab__content.tp-body--base !{item.content}
+
+mixin accordion(title)
+	div&attributes(attributes).accordion
+		.accordion__panel
+			.accordion__title !{title}
+			.accordion__arrow
+				+icon('angle-down')
+		.accordion__content
+			.accordion__inner
+				block
+
+mixin notification(title, text = false, close = true, icon = 'double-check', type = 'info')
+	div&attributes(attributes).notification(class=`notification--${type}`)
+		.notification__inner
+			if icon
+				.notification__icon
+					+icon(icon)
+			.notification__title.tp-body--small !{title}
+			if text
+				.notification__text.tp-body--small !{text}
+		if close
+			.notification__close
+				button.btn.btn--square.btn--plain.btn-close
+					+icon('close')
+
+mixin pagination(light = false)
+	div&attributes(attributes).pagination(class= light ? 'pagination--light' : '')
+		.pagination__list
+			for i in [1, 2, 3, 4, 5]
+				a.pagination__link(href="#", class= i === 1 ? 'current' : '')
+					.tp-body--base !{i}
+		.pagination__total
+			.tp-body--small Вы посмотрели 10 из 236 товаров
+		.pagination__btn
+			.btn(class= light ? 'btn--light' : '') Показать еще
+
+//- forms
+mixin fieldInput(inpID, inpPlaceholder, inpLabel, inpError = '', inpClass)
+	.field.form__field(class=inpClass ? inpClass : '', class=inpError ? 'has-error' : '')
+		if inpLabel
+			.field__label-text !{inpLabel}
+		label.field__label(for=inpID)
+			input&attributes(attributes).field__input(id=inpID, placeholder=inpPlaceholder)
+			//- if inpPlaceholder
+				.field__placeholder !{inpPlaceholder}
+		.field-error !{inpError}
+		block
+
+mixin fieldIncrement(inpID, inpClass)
+	div.field.field--increment(class= inpClass ? inpClass : '')
+		label.field__label(for=`#${inpID}`)
+			input&attributes(attributes).field__input(id=inpID, type="num")
+			.field__btn-minus
+				button.btn.btn--square.btn--light.btn-minus
+					+icon('minus')
+			.field__btn-plus
+				button.btn.btn--square.btn--light.btn-plus
+					+icon('plus')
+
+mixin fieldFile(inpID, inpPlaceholder, inpLabel, inpBtn)
+	.field.form__field.field--file
+		if inpLabel
+			.field__label-text !{inpLabel}
+		label.field__label(for=inpID)
+			input&attributes(attributes).field__input(id=inpID, type="file")
+			.field__file
+				.selected
+				if inpPlaceholder
+					.field__placeholder !{inpPlaceholder}
+				if inpBtn
+					.field__btn.btn !{inpBtn}
+		block
+
+mixin fieldSelect(inpID, selOptions, inpPlaceholder, inpLabel, fieldClass)
+	.field.form__field.field--select(class=fieldClass ? fieldClass : '')
+		if inpLabel
+			.field__label-text !{inpLabel}
+		label.field__label(for=inpID)
+			select&attributes(attributes).field__select.js-select(id=inpID, data-placeholder = inpPlaceholder ? inpPlaceholder : false)
+				if inpPlaceholder
+					option
+				for opt in selOptions
+					option(selected=opt.selected, value=opt.val ? opt.val : '', data-icon=opt.icon ? opt.icon : '') !{opt.title}
+		block
+
+mixin fieldTextarea(inpID, inpPlaceholder, inpLabel)
+	.field.form__field.field--textarea
+		if inpLabel
+			.field__label-text !{inpLabel}
+		label.field__label(for=inpID)
+			textarea&attributes(attributes).field__input(id=inpID)
+			//- div&attributes(attributes).field__input(id=inpID, contentEditable="true")
+			if inpPlaceholder
+				.field__placeholder !{inpPlaceholder}
+		block
+
+mixin fieldCheckbox(inpID, inpText, fieldClass = false)
+	.field.form__field.field--checkbox(class=fieldClass ? fieldClass : "")
+		label.field__label(for=inpID)
+			.field__box
+				input&attributes(attributes).field__input(id=inpID, type="checkbox")
+				+icon('check')
+			.field__text !{inpText}
+		block
+
+mixin fieldRadio(inpID, inpText, fieldClass = false)
+	.field.form__field.field--radio(class=fieldClass ? fieldClass : "")
+		label.field__label(for=inpID)
+			.field__box
+				input&attributes(attributes).field__input(id=inpID, type="radio")
+			.field__text !{inpText}
+		block
+
+mixin fieldRange(inpID, fieldClass = false)
+	.field.field--range(class= fieldClass ? fieldClass : '')
+		input&attributes(attributes).field__input.js-rangeslider(type="text")
+
+mixin popupField(inpValue)
+	div&attributes(attributes).popup-field
+		.popup-field__selection.pf-ctrl
+			.popup-field__res.pf-res !{inpValue}
+			.popup-field__arrow
+				+icon('angle-down').icon--block
+		.popup-field__win.pf-win
+			.popup-field__win-inner
+				block

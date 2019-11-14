@@ -1,0 +1,9 @@
+include ../../mixins
++modal('reset-modal', reset.title, reset.alt)
+  .reset.auth
+    form.auth__form
+      .auth__desc.tp-body--base.tp-text--light: p !{reset.desc}
+      for item in reset.fields
+        +fieldInput(`reset-modal-${item.name}`, item.placeholder)(type=item.type, name=item.name)
+    .auth__actions
+      button.btn.btn--light.btn--full.btn-reset Отправить

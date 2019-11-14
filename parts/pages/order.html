@@ -1,0 +1,693 @@
+
+<div class="row">
+  <div class="l-container-medium">
+    <div class="page__heading">
+      <h1 class="tp-heading--large">Офомление заказа</h1>
+    </div>
+    <div class="page__content order">
+      <div class="l-flex-noBottom">
+        <div class="l-col-8_sm-12">
+          <div class="order-step order-step--personal">
+            <div class="order-step__head">
+              <div class="order-step__title tp-heading--big">1. Личные данные</div>
+              <div class="order-step__change tp-text--light">
+                <button class="btn btn--plain btn-order-step-change">Изменить</button>
+              </div>
+            </div>
+            <div class="order-step__content">
+              <div class="order-step__section section-filling">
+                <div class="section-filling__sign">
+                  <div class="order-step__text">
+                    <p class="tp-body--base">Войдите или зарегистриуйтесь, чтобы сохранить информацию о&nbsp;текущем заказе</p>
+                  </div>
+                  <div class="l-flex-2_ms-1-middle-noBottom">
+                    <div class="l-col"><a class="btn btn--full btn-modal" href="#" data-target="#signin-modal">Войти</a></div>
+                    <div class="l-col"><a class="btn btn--text btn--big btn--full btn-modal" href="#" data-target="#signup-modal">Регистрация</a></div>
+                  </div>
+                </div>
+                <div class="separator"></div>
+                <div class="section-filling__form">
+                  <div class="order-step__text">
+                    <p class="tp-body--base">Если Вы ранее не совершали покупки на сайте, мы создадим вам аккаунт и пришлем информацию на указанный адрес электронной почты</p>
+                  </div>
+                  <form class="form">
+                    <div class="field form__field">
+                      <label class="field__label" for="order-first-name">
+                        <input class="field__input" id="order-first-name" placeholder="Ваше имя" type="text" name="first-name"/>
+                      </label>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field form__field">
+                      <label class="field__label" for="order-last-name">
+                        <input class="field__input" id="order-last-name" placeholder="Ваше Фамилия" type="text" name="last-name"/>
+                      </label>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field form__field">
+                      <label class="field__label" for="order-tel">
+                        <input class="field__input" id="order-tel" placeholder="+7(———)——— ————" type="tel" name="tel"/>
+                      </label>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field form__field">
+                      <label class="field__label" for="order-email">
+                        <input class="field__input" id="order-email" placeholder="Ваш E-mail" type="email" name="email"/>
+                      </label>
+                      <div class="field-error"></div>
+                    </div>
+                    <div class="field form__field field--checkbox order-step__text">
+                      <label class="field__label" for="order-agreement">
+                        <div class="field__box">
+                          <input class="field__input" id="order-agreement" type="checkbox" name="agreement"/>
+                          <svg class="icon">
+                            <use xlink:href="#check"></use>
+                          </svg>
+                        </div>
+                        <div class="field__text">Нажимая кнопку «Сохранить и продолжить» вы соглашаетесь с&nbsp;<a href="#"> условиями обработки данных</a></div>
+                      </label>
+                    </div>
+                    <div class="btn btn--full btn-order-step-save">Сохранить и продолжить</div>
+                  </form>
+                </div>
+              </div>
+              <div class="order-step__section section-result">
+                <div class="section-result__inner">
+                  <div class="order-step__text tp-body--small">
+                    <div class="str-result name"><span class="last-name"></span>&nbsp;<span class="first-name"></span></div>
+                    <div class="str-result tel"></div>
+                    <div class="str-result email"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-step order-step--delivery disabled">
+            <div class="order-step__head">
+              <div class="order-step__title tp-heading--big">2. Доставка</div>
+              <div class="order-step__change tp-text--light">
+                <button class="btn btn--plain btn-order-step-change">Изменить</button>
+              </div>
+            </div>
+            <div class="order-step__content">
+              <div class="order-step__section section-filling">
+                <div class="section-filling__form">
+                  <form class="form">
+                    <div class="delivery-variant">
+                      <div class="field form__field field--radio delivery-ctrl">
+                        <label class="field__label" for="order-delivery-0">
+                          <div class="field__box">
+                            <input class="field__input" id="order-delivery-0" type="radio" name="delivery" value="Доставка по адресу"/>
+                          </div>
+                          <div class="field__text">Доствка курьером</div>
+                        </label>
+                        <div class="field__note">Бесплатно, 5 – 7 дней</div>
+                      </div>
+                      <div class="delivery-content">
+                        <div class="delivery-variant__form">
+                          <div class="field form__field">
+                            <label class="field__label" for="order-delivery-location">
+                              <input class="field__input" id="order-delivery-location" placeholder="Город" type="text" name="location"/>
+                            </label>
+                            <div class="field-error"></div>
+                          </div>
+                          <div class="field form__field">
+                            <label class="field__label" for="order-delivery-region">
+                              <input class="field__input" id="order-delivery-region" placeholder="Регион" type="text" name="region"/>
+                            </label>
+                            <div class="field-error"></div>
+                          </div>
+                          <div class="field form__field">
+                            <label class="field__label" for="order-delivery-postal-code">
+                              <input class="field__input" id="order-delivery-postal-code" placeholder="Почтовый индекс" type="text" name="postal-code"/>
+                            </label>
+                            <div class="field-error"></div>
+                          </div>
+                          <div class="field form__field">
+                            <label class="field__label" for="order-delivery-address">
+                              <input class="field__input" id="order-delivery-address" placeholder="Адрес" type="text" name="address"/>
+                            </label>
+                            <div class="field-error"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-variant">
+                      <div class="field form__field field--radio delivery-ctrl">
+                        <label class="field__label" for="order-delivery-1">
+                          <div class="field__box">
+                            <input class="field__input" id="order-delivery-1" type="radio" name="delivery" value="Доставка в пункт самовывоза"/>
+                          </div>
+                          <div class="field__text">Доставка в пункт самовывоза</div>
+                        </label>
+                        <div class="field__note">Бесплатно, 1 – 3 дня</div>
+                      </div>
+                      <div class="delivery-content">
+                        <div class="delivery-shops">
+                          <div class="delivery-shops__location">
+                            <div class="field form__field field--select">
+                              <label class="field__label" for="order-delivery-location-sel-1">
+                                <select class="field__select js-select delivery-location-select" id="order-delivery-location-sel-1" data-placeholder="Выберите город">
+                                  <option></option>
+                                  <option value="msk" data-icon="">Москва</option>
+                                  <option value="spb" data-icon="">Санкт - Питербург</option>
+                                  <option value="ekb" data-icon="">Екатеринбург</option>
+                                  <option value="tmn" data-icon="">Тюмень</option>
+                                </select>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="delivery-shops__content">
+                            <div class="delivery-shops__map delivery-map"></div>
+                            <div class="delivery-shops__list custom-scroll">
+                              <div class="delivery-shops__item delivery-shop" data-location="msk">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРЦ «Охотный ряд»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">Манежная пл., 1, стр. 2</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="msk">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Ривьера»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. Автозаводская, д.18</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТК Капитолий</div>
+                                    <div class="delivery-shop__address tp-body--smaller">пр. Коломяжский, д.19 к.2</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРК МегаДыбенко</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ЛО, Мурманское шоссе, 12-й км</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Вс.-Чт. с 10:00 до 22:00<br/>Пт.-Сб. с 10:00 до 23:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРК Радуга</div>
+                                    <div class="delivery-shop__address tp-body--smaller">пр. Космонавтов, д. 14Б</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="tmn">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Кристалл»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. Дмитрия Менделеева, д.1а</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="ekb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Гринвич»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. 8 Марта, д.46</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-variant">
+                      <div class="field form__field field--radio delivery-ctrl">
+                        <label class="field__label" for="order-delivery-2">
+                          <div class="field__box">
+                            <input class="field__input" id="order-delivery-2" type="radio" name="delivery" value="Доставка в магазин"/>
+                          </div>
+                          <div class="field__text">Забрать в магазине</div>
+                        </label>
+                        <div class="field__note">Бесплатно, 4 июня , Понедельник</div>
+                      </div>
+                      <div class="delivery-content">
+                        <div class="delivery-shops">
+                          <div class="delivery-shops__location">
+                            <div class="field form__field field--select">
+                              <label class="field__label" for="order-delivery-location-sel-2">
+                                <select class="field__select js-select delivery-location-select" id="order-delivery-location-sel-2" data-placeholder="Выберите город">
+                                  <option></option>
+                                  <option value="msk" data-icon="">Москва</option>
+                                  <option value="spb" data-icon="">Санкт - Питербург</option>
+                                  <option value="ekb" data-icon="">Екатеринбург</option>
+                                  <option value="tmn" data-icon="">Тюмень</option>
+                                </select>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="delivery-shops__content">
+                            <div class="delivery-shops__map delivery-map"></div>
+                            <div class="delivery-shops__list custom-scroll">
+                              <div class="delivery-shops__item delivery-shop" data-location="msk">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРЦ «Охотный ряд»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">Манежная пл., 1, стр. 2</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="msk">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Ривьера»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. Автозаводская, д.18</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТК Капитолий</div>
+                                    <div class="delivery-shop__address tp-body--smaller">пр. Коломяжский, д.19 к.2</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРК МегаДыбенко</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ЛО, Мурманское шоссе, 12-й км</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Вс.-Чт. с 10:00 до 22:00<br/>Пт.-Сб. с 10:00 до 23:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="spb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТРК Радуга</div>
+                                    <div class="delivery-shop__address tp-body--smaller">пр. Космонавтов, д. 14Б</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="tmn">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Кристалл»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. Дмитрия Менделеева, д.1а</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="delivery-shops__item delivery-shop" data-location="ekb">
+                                <div class="delivery-shop__content">
+                                  <div class="delivery-shop__info">
+                                    <div class="delivery-shop__title tp-body--base">ТЦ «Гринвич»</div>
+                                    <div class="delivery-shop__address tp-body--smaller">ул. 8 Марта, д.46</div>
+                                    <div class="delivery-shop__terms tp-body--smaller tp-text--light">Срок хранения заказа: 7 дней</div>
+                                    <div class="delivery-shop__conds">
+                                      <div class="delivery-price tp-body--smaller">Бесплатно</div>
+                                      <div class="delivery-date tp-body--smaller tp-text--light">10 июля, вторник</div>
+                                    </div>
+                                    <div class="delivery-shop__check">
+                                      <svg class="icon">
+                                        <use xlink:href="#check"></use>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="delivery-shop__details details">
+                                    <div class="delivery-shop__desc tp-body--smaller">Примерка одежды, Примерка обуви, Оплата картой, Частичный выкуп, Возврат от получателя</div>
+                                    <div class="delivery-shop__workhours">
+                                      <div class="tp-body--smaller tp-text--light">Время работы</div>
+                                      <div class="workhours tp-body--smaller">Ежедневно с 10:00 до 22:00</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-btn">
+                      <div class="btn btn--full btn-order-step-save">Доставить по этому адресу</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="order-step__section section-result">
+                <div class="section-result__inner">
+                  <div class="order-step__text tp-body--small">
+                    <div class="str-result tp-body--base"><b class="delivery"></b></div>
+                    <div class="str-result location"></div>
+                    <div class="str-result region"></div>
+                    <div class="str-result postal-code"></div>
+                    <div class="str-result address"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-step order-step--payment disabled">
+            <div class="order-step__head">
+              <div class="order-step__title tp-heading--big">3. Оплата</div>
+              <div class="order-step__change tp-text--light">
+                <button class="btn btn--plain btn-order-step-change">Изменить</button>
+              </div>
+            </div>
+            <div class="order-step__content">
+              <div class="order-step__section section-filling">
+                <div class="section-filling__form">
+                  <form class="form">
+                    <div class="payment-variant">
+                      <div class="field form__field field--radio payment-ctrl">
+                        <label class="field__label" for="order-payment-0">
+                          <div class="field__box">
+                            <input class="field__input" id="order-payment-0" type="radio" name="payment" value="Оплатить онлайн"/>
+                          </div>
+                          <div class="field__text">Оплатить онлайн</div>
+                        </label>
+                        <div class="field__note">Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем: МИР, VISA, MasterCard</div>
+                      </div>
+                    </div>
+                    <div class="payment-variant">
+                      <div class="field form__field field--radio payment-ctrl">
+                        <label class="field__label" for="order-payment-1">
+                          <div class="field__box">
+                            <input class="field__input" id="order-payment-1" type="radio" name="payment" value="Наличными или картой при получении"/>
+                          </div>
+                          <div class="field__text">Наличными или картой при получении</div>
+                        </label>
+                        <div class="field__note">Оплатить свой заказ вы можете при получении через терминал или наличными курьеру</div>
+                      </div>
+                    </div>
+                    <div class="order-btn">
+                      <div class="btn btn--full btn-order-submit">Оформить заказ</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-col-4_sm-12">
+          <div class="order-basket bg--light">
+            <div class="order-basket__head">
+              <div class="order-basket__title tp-heading--big">2 товара</div>
+            </div>
+            <div class="order-basket__body">
+              <div class="order-basket__products">
+                <div class="order-basket__product order-product">
+                  <div class="order-product__img" style="background-image: url(&quot;build/img/catalog/1.jpg&quot;)"><a class="order-product__img-link" href="#"></a></div>
+                  <div class="order-product__content">
+                    <div class="order-product__info">
+                      <div class="order-product__art tp-body--small tp-text--light">04.052</div>
+                      <div class="order-product__title tp-heading--medium"><a href="#">Короткое хлопковое платье</a></div>
+                      <div class="order-product__price tp-body--medium">9 600 ₽</div>
+                    </div>
+                    <div class="order-product__actions">
+                      <div class="order-product__params">
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Цвет:</div>
+                          <div class="val">Разноцветный</div>
+                        </div>
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Размер:</div>
+                          <div class="val">XS</div>
+                        </div>
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Количество:</div>
+                          <div class="val">1</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-basket__product order-product">
+                  <div class="order-product__img" style="background-image: url(&quot;build/img/catalog/2.jpg&quot;)"><a class="order-product__img-link" href="#"></a></div>
+                  <div class="order-product__content">
+                    <div class="order-product__info">
+                      <div class="order-product__art tp-body--small tp-text--light">12.015</div>
+                      <div class="order-product__title tp-heading--medium"><a href="#">Льняное платье миди</a></div>
+                      <div class="order-product__price tp-body--medium">12 300 ₽</div>
+                    </div>
+                    <div class="order-product__actions">
+                      <div class="order-product__params">
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Цвет:</div>
+                          <div class="val">Белый</div>
+                        </div>
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Размер:</div>
+                          <div class="val">XS</div>
+                        </div>
+                        <div class="order-product__param tp-body--small">
+                          <div class="title tp-text--light">Количество:</div>
+                          <div class="val">1</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-basket__foot">
+              <div class="order-basket__total">
+                <div class="order-basket__details">
+                  <div class="title tp-body--base">Товары</div>
+                  <div class="val tp-body--base">23 900 ₽</div>
+                </div>
+                <div class="order-basket__details">
+                  <div class="title tp-body--base">Доставка</div>
+                  <div class="val tp-body--base">Бесплатно</div>
+                </div>
+              </div>
+            </div>
+            <div class="order-basket__result">
+              <div class="title tp-body--big">Итого к оплате</div>
+              <div class="sum tp-body--big">23 900 ₽</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

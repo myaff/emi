@@ -1,0 +1,13 @@
+// shortcut for flex
+flexy($justify = flex-start, $align = center, $wrap = nowrap, $dir = row) {
+  display: flex;
+  flex-flow: $dir $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+flexyi($justify = flex-start, $align = center, $wrap = nowrap, $dir = row) {
+  display: inline-flex;
+  flex-flow: $dir $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}

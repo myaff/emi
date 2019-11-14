@@ -1,0 +1,117 @@
+.modal {
+  fixed(0px, 0px);
+  size(100vw, 100%);
+  z-index: 999;
+  display: none;
+  background: rgba($color--black, 0.8);
+  overflow-y: auto;
+
+  &__window {
+    size(100%);
+    absolute(0px, 0px);
+    display: none;
+    overflow-y: auto;
+    overflow-x hidden
+    color: $color--white;
+  }
+  &__inner {
+    container();
+  }
+
+  &__head {
+    padding: r(48) 0;
+
+    @media $display-breakpoints.sm-and-down {
+      padding: r(24) 0;
+    }
+    @media $display-breakpoints.ms-and-down {
+      padding: $grid-gutter-ms;
+      border-bottom 1px solid rgba($color--grey, 0.2);
+      flexy(flex-start, center);
+    }
+  }
+
+  &__headings,
+  &__content {
+    padding: 0 r(150);
+
+    @media $display-breakpoints.md-and-down {
+      padding: 0 r(72);
+    }
+    @media $display-breakpoints.ms-and-down {
+      padding: 0 $grid-gutter-ms;
+    }
+  }
+
+  &__headings {
+    flexy(flex-start, center);
+    @media $display-breakpoints.ms-and-down {
+      padding: 0;
+      margin-left: r(6);
+    }
+  }
+
+  &__back {
+    absolute(r(52), r(24));
+    z-index: 3;
+
+    .btn {
+      margin 0;
+    }
+
+    @media $display-breakpoints.sm-and-down {
+      top: r(20);
+      left: r(16);
+    }
+    @media $display-breakpoints.ms-and-down {
+      relative(0px, 0px);
+      margin-left: r(-12);
+    }
+  }
+
+  &__title {
+    font: 500 r(32)/1.5 $font-accent;
+    color: $color--white;
+
+    @media $display-breakpoints.sm-and-down {
+      font-size: r(24);
+    }
+  }
+
+  &__alt {
+    margin-left: r(48);
+    font: 500 r(24)/1.5 $font-accent;
+
+    @media $display-breakpoints.sm-and-down {
+      font-size: r(20);
+    }
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(12);
+      margin-left: r(32);
+
+      #reset-modal & {
+        display none
+      }
+    }
+
+    a {
+      color: $color--grey_dark;
+
+      &:hover {
+        color: $color--white;
+      }
+    }
+    
+  }
+
+  &__content {
+    padding-top: r(32);
+
+    @media $display-breakpoints.sm-and-down {
+      padding-top: r(16);
+    }
+    @media $display-breakpoints.ms-and-down {
+      padding-top: r(24);
+    }
+  }
+}

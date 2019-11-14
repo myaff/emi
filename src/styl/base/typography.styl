@@ -1,0 +1,162 @@
+$text-color = $color--black_light;
+$link-color = $text-color;
+$link-color--active = $color--black;
+
+html, body {
+  font-size: $font-size-base;
+  line-height: 1.5;
+  font-family: $font-base;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  {hover-focus-active} {
+    color: $link-color--active;
+  }
+
+  &, & > * {
+    {hover-focus-active} {
+      outline: 0;
+    }
+  }
+
+  p & {
+    text-decoration underline
+
+    .bg--dark &,
+    .bg--black & {
+      color: $color--white;
+      text-decoration none
+    }
+  }
+}
+
+.tp-heading {
+  &--large {
+    font: 500 r(32)/1.5 $font-accent;
+    h1& {
+      margin 0
+    }
+  }
+  &--big {
+    font: 500 r(24)/1.33 $font-accent;
+    h2& {
+      margin 0
+    }
+  }
+  &--medium {
+    font: 500 r(20)/1.2 $font-accent;
+  }
+  &--small {
+    font: 500 r(16)/1.2 $font-accent;
+  }
+}
+.tp-body {
+  &--large {
+    font: r(32)/1.5 $font-base;
+  }
+  &--big {
+    font: r(24)/1.33 $font-base;
+  }
+  &--medium {
+    font: r(20)/1.2 $font-base;
+  }
+  &--base {
+    font: 1rem/1.5 $font-base;
+  }
+  &--small {
+    font: r(14)/1.43 $font-base;
+  }
+  &--smaller {
+    font: r(12)/1.667 $font-base;
+  }
+}
+b, strong {
+  font: inherit;
+  font-weight: bold;
+}
+.tp-text {
+  for $align in (left right center) {
+    &--{$align} {
+      text-align: $align;
+    }
+  }
+  &--light {
+    color: $color--grey_dark;
+  }
+  &--lighter {
+    color: $color--grey;
+  }
+  &--lightest {
+    opacity: 0.5;
+  }
+  &--upper {
+    text-transform: uppercase;
+  }
+  &--lower {
+    text-transform: lowercase;
+  }
+  &--truncate {
+    truncate();
+  }
+  &--nowrp {
+    white-space: nowrap;
+  }
+}
+
+p {
+  margin: 1em 0;
+  no-childs-margin();
+  max-width: 50em;
+}
+
+table {
+  width: 100%;
+  color: $color--black_light;
+
+  th {
+    padding: r(32) r(6);
+    text-align: center;
+    
+  }
+
+  td {
+    padding: r(12) r(6);
+
+    ^[0].tp-text--center & {
+      text-align: center;
+    }
+  }
+
+  &.striped {
+    border-collapse: collapse;
+    border: 0;
+    thead,
+    thead tr {
+      background: $color--black_light;
+    }
+    th {
+      background: $color--black_light;
+      color: $color--grey_dark;
+      font-weight: normal;
+    }
+    tr:nth-child(even) td {
+      background: $color--light;
+    }
+    tr:nth-child(odd) td {
+      padding: r(20) r(6);
+    }
+  }
+}
+
+code {
+  display block;
+  margin: 1em 0 0.5em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

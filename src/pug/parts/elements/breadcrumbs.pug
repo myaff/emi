@@ -1,0 +1,13 @@
+include ../../mixins
+.row.breadcrumb__wrapper.l-hidden-md-down
+  .l-container
+    .breadcrumb
+      .breadcrumb__item
+        a.home(href='/')
+          +icon('home')
+      .breadcrumb__item
+        a(href='#')
+          | Одежда
+      .breadcrumb__item.current
+        span
+          | Платья

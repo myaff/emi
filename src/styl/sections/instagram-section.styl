@@ -1,0 +1,33 @@
+.instagram-section {
+  padding: r(52) 0 r(24);
+
+  @media $display-breakpoints.ms-and-down {
+    padding: r(24) 0;
+  }
+
+  &__heading {
+    margin-bottom: r(40);
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+      margin-bottom: r(16);
+    }
+  }
+
+  @media $display-breakpoints.ms-and-down {
+    [class*=l-col]:nth-child(5),
+    [class*=l-col]:nth-child(5) ~ [class*=l-col] {
+      display none;
+    }
+  }
+}
+
+.insta {
+  &__link {
+    display block;
+  }
+  &__img {
+    display block;
+    max-size(100%);
+  }
+}

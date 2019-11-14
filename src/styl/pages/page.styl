@@ -1,0 +1,75 @@
+.page {
+  &__heading {
+    margin: r(40) 0;
+
+    @media $display-breakpoints.sm-and-down {
+      margin: r(32) 0;
+      font-size: r(24);
+
+      .tp-heading--large {
+        font-size: inherit;
+      }
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin: 1em 0;
+    }
+  }
+  &__content {
+    margin: r(48) 0 r(140);
+
+    @media $display-breakpoints.sm-and-down {
+      margin: r(32) 0 0;
+    }
+  }
+  &__nav {
+    margin: r(48) 0 r(60);
+
+    @media $display-breakpoints.sm-and-down {
+      margin: r(32) 0 r(24);
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin: r(24) (-1 * $grid-gutter-ms);
+    }
+  }
+  &__text {
+    line-height: 1.75;
+    max-width: r(790);
+
+    @media $display-breakpoints.ms-and-down {
+      line-height: 1.5;
+    }
+
+    p + p {
+      margin-top: 1.75em;
+    }
+    p + [class*=tp-heading] {
+      margin-top: r(40);
+      @media $display-breakpoints.ms-and-down {
+        margin-top: r(16);
+      }
+    }
+    [class*=tp-heading] {
+      margin-bottom: r(16);
+      line-height: 1.5;
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: r(12);
+      }
+    }
+    .tp-heading--large {
+      @media $display-breakpoints.ms-and-down {
+        font-size: r(24);
+      }
+    }
+    .tp-heading--big {
+      @media $display-breakpoints.ms-and-down {
+        font-size: r(20);
+      }
+    }
+  }
+
+  &--ui {
+    .row {
+      padding: 1px 0;
+    }
+  }
+}

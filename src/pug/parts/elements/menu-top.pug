@@ -1,0 +1,58 @@
+include ../../mixins
+.main-nav
+  .general
+    .top
+      .top__head
+        a.home(href="/").l-hidden-sm-up На главную
+        button.btn-search.btn-modal(data-target="#search-modal")
+          +icon('search')
+      .top__nav.nav
+        nav.nav__list
+          for item in navs.main.top
+            .nav__item(class=item.current ? 'current' : '')
+              a.nav__link(href=item.sections ? `#${item.url}` : item.url, class=item.sections ? 'multilevel' : '')
+                .text !{item.title}
+                +icon(item.icon)
+    .bottom.l-hidden-sm-up
+      for items in navs.main.bottom
+        +simpleNav(items).bottom__nav
+  .deeper
+    .deeper__inner
+      for item in navs.main.top
+        if item.sections
+          .deeper__nav(id=item.url)
+            .deeper__nav-inner
+              .deeper__head
+                a.nav-back.js-menu--back(href="#")
+                  +icon('arrow-back')
+                  .title !{item.title}
+              for sect, key in item.sections
+                if key === 'kits'
+                  .deeper__section.nav-section.nav-section--kits
+                    .nav-section__title
+                      if sect.heading.url
+                        a(href=sect.heading.url) !{sect.heading.title}
+                      else
+                        span !{sect.heading.title}
+                    .nav-section__carousel
+                      +carousel(false, true, false).swiper-kit
+                        for i in sect.ls
+                          .swiper-slide
+                            .kit(style=`background-image: url("${i.img}")`)
+                              a.kit__link(href=i.url)
+                                .text !{i.title}
+                else
+                  .deeper__section.nav-section(class=`nav-section--${key}`)
+                    .nav-section__title
+                      if sect.heading.url
+                        a(href=sect.heading.url) !{sect.heading.title}
+                      else
+                        span !{sect.heading.title}
+                    .nav-section__nav.nav
+                      .nav__list
+                        for i in sect.ls
+                          .nav__item
+                            a.nav__link(href=i.url)
+                              .text !{i.title}
+                              if i.total
+                                .total.tp-body--small.tp-text--lighter !{i.total}

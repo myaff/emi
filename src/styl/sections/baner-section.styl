@@ -1,0 +1,154 @@
+.baner-section {
+  .swiper-navigation {
+    absolute(0, 0, r(40), r(32));
+    size(r(48 + 24 + 48), r(48));
+
+    @media $display-breakpoints.md-and-down {
+      bottom: r(20);
+      right: r(24);
+    }
+    @media $display-breakpoints.ms-and-down {
+      bottom: r(28);
+      right: r(20);
+      size(r(32 + 12 + 32), r(32));
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $color--black_light;
+    background: $color--white;
+
+    @media $display-breakpoints.ms-and-down {
+      size(r(32));
+    }
+  }
+}
+.baner {
+  size(100%, r(675));
+
+  @media $display-breakpoints.md-and-down {
+    height: r(436);
+  }
+  @media $display-breakpoints.ms-and-down {
+    height: r(388);
+  }
+
+  &--half {
+    flexy(center, stretch);
+  }
+
+  &__img {
+    height: 100%;
+    background-position center;
+    background-repeat no-repeat;
+    background-size cover;
+
+    ^[0]--full & {
+      width: 100%;
+    }
+
+    ^[0]--half & {
+      width: 50%;
+      order: 2;
+
+      @media $display-breakpoints.ms-and-down {
+        width: 100%;
+        order: 0;
+      }
+    }
+  }
+
+  &__content {
+    height: 100%;
+    flexy(space-between, center);
+    flex-direction: column;
+
+    ^[0]--full & {
+      width: 100%;
+      color: $color--white;
+      absolute(0px, 0px);
+      z-index: 2;
+      padding: r(220) r(16) r(16);
+
+      @media $display-breakpoints.md-and-down {
+        padding: r(135) r(12) r(12);
+      }
+      @media $display-breakpoints.ms-and-down {
+        padding: r(20);
+      }
+    }
+
+    ^[0]--half & {
+      width: 50%;
+      color: $color--black;
+      padding: r(56) r(16) r(40);
+
+      @media $display-breakpoints.md-and-down {
+        padding: r(16) r(12) r(20);
+      }
+      @media $display-breakpoints.ms-and-down {
+        width 100%;
+        absolute(0px, 0px);
+        padding: r(20);
+        z-index: 2;
+      }
+    }
+  }
+
+  &__heading {
+    font: italic r(120)/0.8 $font-accent;
+
+    @media $display-breakpoints.md-and-down {
+      font-size: r(60);
+    }
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(48);
+    }
+
+    ^[0]--full & {
+      margin: 0 auto auto;
+    }
+    ^[0]--half & {
+      margin: auto auto 0;
+
+      @media $display-breakpoints.ms-and-down {
+        margin: 0 auto auto;
+      }
+    }
+  }
+
+  &__collection {
+    font: italic r(24)/1 $font-accent;
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(16);
+      margin: auto auto r(20);
+    }
+  }
+
+  &__desc {
+    max-width: r(540);
+    margin: r(32) auto auto;
+
+    @media $display-breakpoints.ms-and-down {
+      display none;
+    }
+  }
+
+  &__action {
+    @media $display-breakpoints.ms-and-down {
+      margin: auto auto 0 0;
+
+      .btn {
+        font-size: r(12);
+      }
+      .btn--small {
+        padding: r(16) r(40);
+      }
+      .btn--text-light {
+        padding: r(16) $grid-gutter-ms;
+        margin-left: (-1 * $grid-gutter-ms);
+      }
+    }
+  }
+}

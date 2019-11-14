@@ -1,0 +1,34 @@
+extends template
+
+prepend page
+  - var layout = 'default';
+  - var currentPage = 'product-detail';
+  - var pageTitle = false;
+  - var pageDesc = false;
+  - var pageImg = false;
+
+block content
+  include parts/elements/menu-top
+  include parts/elements/breadcrumbs
+  .page(class="page--" + currentPage)
+    include parts/pages/product-detail
+    +carouselSection('Завершите образ', 'swiper-products').bg--light
+      for product in products
+        .swiper-slide
+          +productCard(product)
+      for product in products
+        .swiper-slide
+          +productCard(product)
+      for product in products
+        .swiper-slide
+          +productCard(product)
+    +carouselSection('Вам также может понравиться', 'swiper-products')
+      for product in products
+        .swiper-slide
+          +productCard(product)
+      for product in products
+        .swiper-slide
+          +productCard(product)
+      for product in products
+        .swiper-slide
+          +productCard(product)

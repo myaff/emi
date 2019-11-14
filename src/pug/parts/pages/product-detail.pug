@@ -1,0 +1,59 @@
+include ../../mixins
+.product
+  .l-container
+    .l-flex-2_ms-1.l-flex-noBottom
+      .l-col
+        .product__slider.swiper-detail
+          +carousel(false, false, false).swiper-detail-thumbs
+            for item in detail.imgs
+              .swiper-slide.swiper-lazy(style=`background-image: url(${item})`)
+          +carousel(false, false, true).swiper-detail-big
+            for item in detail.imgs
+              .swiper-slide.swiper-lazy(style=`background-image: url(${item})`)
+      .l-col
+        .product__info
+          .product__article.tp-body--small Артикул: !{detail.art}
+          h1.product__title.tp-heading--large !{detail.title}
+          .product__price
+            .current.tp-body--large !{detail.price.current}
+          +tabs(detail.tabs).product__tabs
+          .product__params
+            for item in detail.params
+              .product__param--item
+                span.product__param--name.tp-text--light !{item.title}
+                span.product__param--value !{item.value}
+          .product__offer
+            for offer, key in detail.offers
+              .product__offer--property.l-flex-noGutter
+                .product__offer--property-name.l-col-2_sm-3
+                  span.tp-text--light !{offer.title}
+                .product__offer--property-list.l-col-6_md-10_sm-9.l-flex
+                  for item in offer.ofs
+                    .item.js--select-offer(data-treevalue=`4_${item.value}` data-onevalue=item.value) !{item.title}
+                if key === 'size'
+                  .product__offer--link.l-col-4_md-12
+                    a.tp-body--smaller.btn-aside(href="#dress-sizes")
+                      span.i ?
+                      span.text Как узнать свой размер
+          .product__buy
+            .product__buy--btn
+              button.btn.btn--full.btn-add-to-basket Добавить в корзину
+            .product__buy--favorite
+              button.btn.btn--circle.btn--light.btn--big.favorite
+                +icon('heart')
+  #dress-sizes.aside.product__aside
+    .sizes
+      .sizes__head
+        .sizes__heading.tp-heading--big !{detail.sizes.title}
+        .sizes__desc.tp-body--small !{detail.sizes.desc}
+      .sizes__body
+        table.striped.tp-body--small.tp-text--center
+          thead
+            tr
+              for item in detail.sizes.cols
+                th !{item}
+          tbody
+            for items in detail.sizes.ls
+              tr
+                for item in items
+                  td !{item}

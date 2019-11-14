@@ -1,0 +1,76 @@
+.carousel-section {
+  padding: r(52) 0 r(24);
+
+  @media $display-breakpoints.ms-and-down {
+    padding: r(24) 0;
+  }
+
+  &__head {
+    flexy(flex-start, baseline);
+    margin-bottom: r(40);
+
+    @media $display-breakpoints.md-and-down {
+      justify-content: space-between;
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin-bottom: r(16);
+    }
+  }
+  &__heading {
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+    }
+  }
+  &__show-more {
+    margin-left: r(32);
+    
+    @media $display-breakpoints.md-and-down {
+      margin-left: auto;
+
+      .btn {
+        padding-left: $grid-gutter-md;
+        padding-right: $grid-gutter-md;
+        margin-right: (-1 * $grid-gutter-md);
+      }
+    }
+    @media $display-breakpoints.ms-and-down {
+      margin-left: auto;
+
+      .btn {
+        padding-left: $grid-gutter-ms;
+        padding-right: $grid-gutter-ms;
+        margin-right: (-1 * $grid-gutter-ms);
+      }
+    }
+  }
+  .swiper-navigation {
+    absolute(r(-88));
+    right: 0;
+    size(r(48 * 2 + 24), r(48));
+  }
+  .swiper-categories .swiper-slide {
+    width: r(202);
+  }
+  @media $display-breakpoints.sm-and-down {
+    .swiper-categories .swiper-container {
+      overflow visible;
+    }
+    .swiper-categories .swiper-navigation {
+      display none;
+    }
+  }
+  @media $display-breakpoints.ms-and-down {
+    .swiper-container {
+      overflow: visible;
+    }
+    .swiper-products .swiper-slide {
+      width: 205px;
+    }
+    .swiper-categories .swiper-slide {
+      width: r(120);
+    }
+    .swiper-navigation {
+      display none;
+    }
+  }
+}

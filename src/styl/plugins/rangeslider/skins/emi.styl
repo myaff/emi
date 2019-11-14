@@ -1,0 +1,105 @@
+.irs--emi {
+
+    $top = 53px;
+    $bottom = 5px;
+    $line_height = 3px;
+    $handle_width = 13px;
+    $handle_height = 13px;
+    $custom_radius = 2px;
+
+    $line_color = $color--light;
+    $bar_color = $color--black_light;
+    $handle_color_1 = $bar_color;
+    $handle_color_2 = $color--black;
+    $minmax_text_color = #999;
+    $minmax_bg_color = #e1e4e9;
+    $label_color_1 = $color--black_light;
+    $grid_color_1 = #e1e4e9;
+    $grid_color_2 = #999;
+
+
+
+    height: 61px;
+
+    &.irs-with-grid {
+        height: 60px;
+    }
+
+    .irs {
+
+        &-line {
+            top: $top;
+            height: $line_height;
+            background-color: $line_color;
+            border-radius: $custom_radius;
+        }
+
+        &-bar {
+            top: $top;
+            height: $line_height;
+            background-color: $bar_color;
+
+            &--single {
+                border-radius: $custom_radius 0 0 $custom_radius;
+            }
+        }
+
+        &-shadow {
+            height: 1px;
+            bottom: $bottom;
+            background-color: $line_color;
+        }
+
+        &-handle {
+            top: 48px;
+            width: $handle_width;
+            height: $handle_height;
+            border-radius: 50%;
+            background-color: $handle_color_1;
+
+            &.state_hover,
+            &:hover {
+                & > i:first-child {
+                    background-color: $handle_color_2;
+                }
+            }
+        }
+
+        &-min,
+        &-max {
+            top: 0;
+            padding: 1px 3px;
+            color: $minmax_text_color;
+            font-size: 10px;
+            line-height: 1.333;
+            text-shadow: none;
+            background-color: $minmax_bg_color;
+            border-radius: $custom_radius;
+        }
+
+        &-from,
+        &-to,
+        &-single {
+            color: $label_color_1;
+            text-shadow: none;
+        }
+        &-from {
+            left: 0!important;
+        }
+        &-to {
+            left: auto!important;
+            right: 0!important;
+            text-align right
+        }
+
+        &-grid {
+            &-pol {
+                background-color: $grid_color_1;
+            }
+
+            &-text {
+                color: $grid_color_2;
+            }
+        }
+    }
+}

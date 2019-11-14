@@ -1,0 +1,15 @@
+include ../../mixins
+.search-results-empty
+  .l-flex
+    .l-col-5_md-6_sm-12
+      .search-results-empty__text.tp-heading--big Похоже у нас такого нет, но может вам понравится что-то в наших подборках, или&nbsp;загляните в каталог
+      .search-results-empty__btn
+        a.btn.btn--light(href="catalog.html") Перейти в каталог
+    .l-col-7_md-6_sm-12
+      .search-results-empty__kits
+        .l-flex-2_ms-1
+          for item in kits.ls
+            .l-col
+              .kit(style=`background-image: url("${item.img}")`)
+                a.kit__link(href=item.url)
+                  .text.tp-heading--medium !{item.title}

@@ -1,0 +1,25 @@
+#basket-popup.basket-popup.popup
+  .popup__inner
+    .popup__head
+      .popup__title.tp-heading--big !{basket.popup.title}
+      .popup__clear
+        .btn.btn--plain.btn-basket-clear Очистить
+    .popup__body
+      .basket-popup__products.basket-products
+        for item in basket.products
+          .basket-popup__product.mini-product
+            .mini-product__img(style=`background-image: url("${item.img}")`)
+              a.mini-product__img-link(href=item.url)
+            .mini-product__info
+              .mini-product__art.tp-body--smaller.tp-text--light Артикул: !{item.art}
+              .mini-product__title.tp-heading--small
+                a.mini-product__title-link(href=item.url) !{item.title}
+              .mini-product__price.tp-body--base !{item.price}
+              .mini-product__params.tp-body--small.tp-text--light
+                for i, index in item.params
+                  .param !{i.val}
+      .basket-popup__total
+        .tp-body--base !{basket.popup.total.title}
+        .tp-body--base !{basket.popup.total.num}
+    .popup__foot
+      a.btn.btn--full(href=basket.popup.link.url) !{basket.popup.link.title}

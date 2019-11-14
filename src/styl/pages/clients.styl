@@ -1,0 +1,33 @@
+.page--payment,
+.page--delivery,
+.page--refund {
+  .page {
+    &__content {
+      margin-bottom: r(80);
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: r(24);
+      }
+    }
+  }
+}
+.page--faq {
+  .page {
+    &__content {
+      margin-bottom: r(80);
+      @media $display-breakpoints.ms-and-down {
+        margin: 0;
+      }
+    }
+    &__nav {
+      @media $display-breakpoints.ms-and-down {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.faq {
+  &__list {
+    max-width: r(906);
+  }
+}

@@ -1,0 +1,25 @@
+include ../mixins
+.catalog
+  .l-container
+    .catalog__head
+      .l-flex-noBottom-middle
+        .l-col-4_sm-6
+          .catalog__heading
+            h1.tp-heading--large Платья
+        .l-col-4_sm-6
+          .catalog__total
+            .tp-body--base 236 товаров
+        .l-col-4
+          .catalog__sort Сначала дешевые
+        .l-col-12
+          .catalog__subcategories
+            for item in subcategories
+              a.subcategory(href="#") !{item}
+    .catalog__grid
+      .l-flex
+        for item in products
+          .l-col-3_sm-6
+            +productCard(item, true)
+        for item in products
+          .l-col-3_sm-6
+            +productCard(item, true)

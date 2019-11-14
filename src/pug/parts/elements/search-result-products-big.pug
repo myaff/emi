@@ -1,0 +1,11 @@
+include ../../mixins
+.search-results-products
+  .search-results-products__title.tp-heading--big Мы нашли 64 похожих товара
+  .search-results-products__list
+    .l-flex
+      for i in [1, 2]
+        for item in products
+          .l-col-3_sm-6
+            +productCard(item).search-results-products__item
+  .search-results-products__pagination
+    +pagination(true)

@@ -1,0 +1,14 @@
+extends template
+
+prepend page
+	- var layout = 'default';
+	- var currentPage = 'faq';
+	- var pageTitle = false;
+	- var pageDesc = false;
+	- var pageImg = false;
+
+block content
+	include parts/elements/menu-top
+	include parts/elements/breadcrumbs
+	.page(class="page--" + currentPage)
+		include parts/pages/faq

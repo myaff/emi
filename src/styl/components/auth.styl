@@ -1,0 +1,53 @@
+.auth {
+  &__desc,
+  &__note {
+    max-width: r(450);
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(14);
+    }
+  }
+  &__form {
+    max-width: r(554);
+  }
+  &__form &__desc {
+    margin-bottom: r(32);
+  }
+  &__actions {
+    margin-top: r(24);
+    .signin & {
+      margin-top: r(32);
+      flexy(flex-start, center);
+    }
+
+    @media $display-breakpoints.ms-and-down {
+      flex-wrap: wrap;
+      margin-top: r(20);
+    }
+
+    .btn {
+      max-width: r(382);
+      @media $display-breakpoints.sm-and-down {
+        max-width: r(554);
+      }
+    }
+
+    .signin & .btn--light {
+      flex: 1 1 auto;
+      max-width: r(380);
+
+      @media $display-breakpoints.ms-and-down {
+        flex-basis: 100%;
+      }
+    }
+    .signin & .btn--text-light {
+      flex: 0 0 auto;
+      margin-left: r(16);
+
+      @media $display-breakpoints.ms-and-down {
+        flex: 1 1 100%;
+        margin: r(4) 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,315 @@
+text-inputs = 'input[type=text], input[type=tel], input[type=email], input[type=password], input[type=num], input[type=url], textarea';
+
+.field {
+  margin-bottom: r(16);
+
+  &__label {
+    relative();
+    display block;
+
+    ^[0].has-error &::after {
+      content: '';
+      display: block;
+      circle(r(20));
+      absolute(r(22), 0, 0, r(22));
+      background-color: $color--red_light;
+      background-image: url('../img/close.svg');
+      box-sizing: border-box;
+      background-size: r(9) r(9);
+      background-repeat: no-repeat;
+      background-position-x: 0.35rem;
+      background-position-y: 0.35rem;
+    }
+  }
+
+  &__label-text {
+    margin-bottom: r(13);
+    font-size: r(20);
+  }
+
+  {text-inputs} {
+    border: 1px solid $color--grey_light;
+    padding: r(22) r(16);
+    border-radius: r(4);
+    font: r(14)/1 $font-base;
+    color: $color--black_light;
+    width: 100%;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all 0.2s;
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(12);
+      padding: r(17) r(12);
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      border: solid r(1) $color--grey_light;
+      background-color: $color--light;
+      pointer-events: none;
+    }
+
+    &:hover {
+      border: solid r(1) $color--grey_dark;
+      background-color: $color--light;
+    }
+
+    &:active,
+    &:focus {
+      border: solid r(1) $color--black_light;
+    }
+
+    .bg--black &,
+    .bg--dark & {
+      color: $color--white;
+
+      &:hover {
+        background: $color--black_light;
+        border-color: $color--white;
+      }
+      &:active,
+      &:focus {
+        border-color: $color--white;
+      }
+    }
+  }
+
+
+  &__placeholder {
+    absolute(1px, 1px);
+    size(100%);
+    padding: r(22) r(16);
+    font: r(14)/1.15 $font-base;
+    color: $color--grey_dark;
+    cursor: text;
+
+    ^[0].has-focus &,
+    ^[0].has-value & {
+      opacity: 0;
+    }
+
+    input:disabled ~ & {
+      pointer-events: none;
+    }
+  }
+
+  &-error {
+    display: none;
+    font-size: r(14);
+    margin-top: r(12);
+    margin-left: r(16);
+    color: $color--error;
+
+    ^[0].has-error & {
+      display block;
+    }
+  }
+  &.has-error &__input,
+  &.has-error &__input:hover {
+    border: solid r(1) $color--error;
+    background-color: $color--red_light;
+  }
+}
+
+
+// Checkbox
+// Radio
+
+.field--checkbox,
+.field--radio {
+  color: $color--black_light;
+
+  &:hover {
+    color: $color--black;
+  }
+
+  .field {
+    &__input {
+      display none;
+    }
+    &__label {
+      flexy(flex-start, flex-start);
+      cursor pointer;
+    }
+    &__text {
+      font: r(16)/1.5 $font-base;
+      margin-left: r(16);
+      user-select none
+
+      @media $display-breakpoints.ms-and-down {
+        font-size: r(14);
+        margin-left: r(12);
+      }
+
+      a {
+        text-decoration underline
+      }
+    }
+    &__box {
+      flex: 0 0 r(24);
+      size(r(24));
+      border: 1px solid currentColor;
+      flexy(center, center);
+
+      @media $display-breakpoints.ms-and-down {
+        flex-basis: r(20);
+        size(r(20));
+      }
+    }
+  }
+}
+.field--checkbox {
+  .field__box {
+    border-radius: r(2);
+
+    .icon {
+      opacity: 0;
+      color: $color--white;
+      transition: opacity 0.2s;
+    }
+
+    ^[0].is-checked & {
+      background: currentColor;
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.is-checked .field__box {
+    background: currentColor;
+
+    .icon {
+      opacity: 1;
+    }
+  }
+}
+.field--radio {
+  .field__box {
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      display: block;
+      circle(r(16));
+      background: currentColor;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &.is-checked .field__box::before {
+    opacity: 1;
+  }
+}
+
+// Select
+
+.field--select {
+  .field__select {
+    display none
+  }
+}
+
+// Increment
+.field--increment {
+  width: r(64 + 32);
+
+  .field {
+    &__label {
+      relative();
+    }
+    &__input[type="num"] {
+      padding: 0 2em;
+      line-height r(24);
+      vertical-align: middle;
+      border: 0;
+      text-align center
+
+      {hover-focus-active} {
+        background: transparent;
+        border: 0;
+      }
+    }
+    &__btn-minus,
+    &__btn-plus {
+      absolute(0px);
+      font-size: r(24);
+      line-height 1
+      height: 1em;
+
+      .btn--square {
+        size(1em);
+        margin: 0;
+        font-size: inherit;
+        vertical-align: bottom;
+      }
+      .icon {
+        font-size: 0.5em;
+      }
+    }
+    &__btn-minus {
+      left: 0;
+    }
+    &__btn-plus {
+      right 0;
+    }
+  }
+
+  &.field--big {
+    width: 100%;
+
+    .field__input {
+      font-size: r(16);
+      padding: r(8) r(60);
+    }
+
+    .field__btn-minus,
+    .field__btn-plus {
+      font-size: r(40);
+    }
+  }
+}
+
+.popup-field {
+  margin-bottom: r(16);
+
+  &__selection {
+    flexyi(flex-start, center);
+    cursor pointer
+  }
+  &__res {
+    font: r(14)/1.5 $font-base;
+    margin-right: r(8);
+  }
+  &__arrow {
+    size(1em);
+    font-size: r(20);
+    line-height 1
+    transform-origin: center;
+    transition: transform 0.3s;
+
+    ^[0].open & {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__win {
+    absolute(100%, 0px);
+    z-index: 9;
+    background: $color--white;
+    border-radius: r(4);
+    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.24);
+    margin-top: r(12);
+    display none
+  }
+  &__win-inner {
+    padding: r(20);
+
+    .field {
+      margin-bottom: 0;
+    }
+  }
+}

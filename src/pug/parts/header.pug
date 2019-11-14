@@ -1,0 +1,30 @@
+include ../mixins
+.header.separator
+  .l-container
+    .header__content
+      .header__left.l-hidden-ms-down
+        .location
+          a(href="#")
+            +icon('location')
+        +simpleNav(navs.top).header-nav
+      .header__center
+        .header__burger.js-menu--burger.l-hidden-sm-up
+          +icon('burger')
+        .header__logo
+          a(href="/")
+            img.light(src=info.logo.srcLight, alt=info.logo.alt)
+            img.dark(src=info.logo.src, alt=info.logo.alt)
+      .header__right
+        .link
+          .link__item.wish
+            a.wish__link(href="#")
+              +icon('heart')
+          .link__item.basket(class=basket.products.length > 0 ? 'basket--not-empty' : '')
+            a.basket__link.btn-basket(href="#basket")
+              +icon('cart').basket__icon
+              .basket__quantity !{basket.products.length}
+            include elements/basket-popup
+            include elements/basket-notification
+          .link__item.profile
+            a.profile__link.btn.btn--circle.btn--light.btn-modal(href="#", data-target="#signin-modal")
+              +icon('user')

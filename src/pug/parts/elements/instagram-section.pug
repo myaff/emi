@@ -1,0 +1,10 @@
+section.instagram-section.row
+  .l-container
+    .instagram-section__heading.tp-heading--large Мы в инстаграм
+    .instagram-section__grid
+      .l-flex
+        for item in instagram
+          .l-col-3_ms-6
+            .insta
+              a.insta__link(href=item.url)
+                img.insta__img(src=item.img)

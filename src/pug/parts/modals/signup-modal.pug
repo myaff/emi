@@ -1,0 +1,13 @@
+include ../../mixins
++modal('signup-modal', signup.title, signup.alt)
+  .signup.auth
+    .l-flex
+      .l-col-6_md-12
+        form.auth__form
+          for item in signup.fields
+            +fieldInput(`signup-modal-${item.name}`, item.placeholder)(type=item.type, name=item.name)
+          .auth__note.tp-body--base.tp-text--light: p !{signup.note}
+        .auth__actions
+          button.btn.btn--light.btn--full.btn-signup Зарегистрироваться
+      .l-col-5_md-12_md-first(data-push-left="off-1_md-0")
+        .auth__desc.tp-body--base.tp-text--light: p !{signup.desc}

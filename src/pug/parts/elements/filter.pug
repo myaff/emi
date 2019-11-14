@@ -1,0 +1,43 @@
+include ../../mixins
+.filter
+  .l-container
+    .filter__content
+      .filter__general.filter-content
+        .filter-content__inner
+          .filter-content__head.l-hidden-sm-up
+            .filter-content__title Фильтры
+          .filter-content__body
+            for item in filters
+              .filter-field
+                .filter-field__pan.ff-pan
+                  .filter-field__pan-content
+                    .filter-field__pan-title !{item.title}
+                    .filter-field__pan-result.ff-result
+                  .filter-field__pan-arrow.l-hidden-sm-up
+                    +icon('angle-right')
+                  .filter-field__pan-btn.l-hidden-ms-down
+                    .btn-filter-add-clear
+                      +icon('plus')
+                .filter-field__win.ff-win
+                  .filter-field__win-inner
+                    .filter-field__win-head.l-hidden-sm-up
+                      .filter-field__win-back.ff-back
+                        +icon('arrow-back')
+                      .filter-field__win-title !{item.title}
+                    .filter-field__win-body
+                      if item.type === 'range'
+                        +fieldRange(`filter-${item.name}`)(data-min=item.min, data-max=item.max, data-step=item.step, data-postfix="&nbsp;₽")
+                      else if item.type === 'checkbox'
+                        for field, i in item.fields
+                          +fieldCheckbox(`filter-${item.name}-${i}`, field.title)(name=item.name, value=field.title)
+                    .filter-field__win-foot
+                      button.btn.btn--small.btn-filter-apply Применить
+                      button.btn.btn--text.btn-filter-clear Очистить
+            .btn-filter-collapse-wrapper
+              .btn-filter-collapse
+                +icon('filter')
+      .filter__btn.btn-filter-wrapper
+        button.btn.btn--small.btn-filter
+          +icon('filter')
+          .text Все фильтры
+          .total-res

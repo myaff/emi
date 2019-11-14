@@ -1,0 +1,55 @@
+.notification {
+  max-width: r(906);
+  border-radius: r(4);
+
+  .page--ui & {
+    margin: r(24) 0;
+  }
+  
+  // types
+  &--info {
+    background: $color--grey_light;
+    color: $color--black_light;
+  }
+  &--success {
+    background: $color--success;
+    color: $color--white;
+  }
+  &--error {
+    background: $color--error;
+    color: $color--white;
+  }
+
+  &__inner {
+    padding: r(12);
+    flexy(flex-start, baseline, wrap);
+  }
+  &__close {
+    absolute(0px, 0, 0, 0px);
+    padding: 0 r(4);
+  }
+  &__icon {
+    font-size: r(24);
+    line-height: 1;
+    flex: 0 0 r(24);
+    margin-right: 0.5em;
+
+    @media $display-breakpoints.ms-and-down {
+      margin-right: r(20);
+    }
+  }
+  &__title {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  &__text {
+    font-weight 500;
+    margin-left: r(4);
+
+    @media $display-breakpoints.ms-and-down {
+      flex: 0 0 100%;
+      margin: r(12) 0 0;
+      font-weight normal;
+    }
+  }
+}

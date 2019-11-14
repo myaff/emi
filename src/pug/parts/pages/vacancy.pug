@@ -1,0 +1,30 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large !{company.title}
+    .page__nav
+      +accordionNav(navs.company, 1)
+    .page__content.vacancies
+      .vacancies__list
+        for item, i in company.vacancies
+          +accordion(item.title).vacancies__item(class=i === 0 ? 'active' : '')
+            .vacancy
+              .vacancy__desc
+                for desc in item.desc
+                  .vacancy__subtitle.tp-heading--big !{desc.title}:
+                  .vacancy__text
+                    p.tp-body--base !{desc.val}
+              .vacancy__contacts
+                for cont in item.contacts
+                  .vacancy__contact
+                    span.title.tp-heading--big !{cont.title}: 
+                    if cont.href
+                      a.val.tp-heading--big(href=cont.href) !{cont.val}
+                    else
+                      span.val.tp-heading--big !{cont.val}
+.vacancy-note-section.bg--dark.l-hidden-sm-down
+  .l-container-medium
+    .vacancy-note-section__text.tp-heading--big.tp-text--light Мы всегда нуждаемся в высококвалифицированных кадрах. Не стесняйтесь и отправьте нам свое резюме, мы обязательно свяжемся с Вами!
+    .vacancy-note-section__email.tp-text--center
+      a(href="mailto:office@emibrand.ru") office@emibrand.ru

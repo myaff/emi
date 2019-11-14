@@ -1,0 +1,59 @@
+.pagination {
+  flexy(space-between, center);
+  margin: r(40) 0;
+
+  &--light {
+    color: $color--white;
+  }
+
+  @media $display-breakpoints.sm-and-down {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__list {
+    flexy(flex-start, stretch);
+
+    @media $display-breakpoints.ms-and-down {
+      width: 100%;
+      order: 1;
+      margin: r(16) 0;
+    }
+  }
+  &__link {
+    flexy(center, center);
+    size(r(64));
+    border-radius: 2px;
+    background: $color--light;
+    color: $color--black_light;
+
+    &:hover,
+    &.current {
+      background: $color--black_light;
+      color: $color--white;
+    }
+  }
+  &__total {
+    color: inherit;
+    text-align center;
+    margin: r(20);
+
+    @media $display-breakpoints.sm-and-down {
+      flex: 1 1 100%;
+      order: -1;
+      margin: r(16) 0;
+    }
+  }
+  &__btn {
+    @media $display-breakpoints.ms-and-down {
+      width: 100%;
+    }
+    .btn {
+      width: r(320);
+
+      @media $display-breakpoints.sm-and-down {
+        width: 100%;
+      }
+    }
+  }
+}

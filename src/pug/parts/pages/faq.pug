@@ -1,0 +1,13 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large Помощь
+    .page__nav
+      +accordionNav(navs.clients, 3)
+    .page__content.faq
+      .faq__list
+        for item in faq
+          +accordion(item.title).faq__item
+            .faq-content
+              p.tp-body--base Если товар доставляется курьером по Москве и Санкт-Петербургу, то оплата осуществляется наличными курьеру в руки. Отправка в регионы осуществляется по 100% предоплате, но также есть возможность наложенного платежа (примерка в данном случае невозможна)

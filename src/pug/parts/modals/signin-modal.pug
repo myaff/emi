@@ -1,0 +1,13 @@
+include ../../mixins
++modal('signin-modal', signin.title, signin.alt)
+  .signin.auth
+    .l-flex
+      .l-col-6_md-12
+        form.auth__form
+          for item in signin.fields
+            +fieldInput(`signin-modal-${item.name}`, item.placeholder)(type=item.type, name=item.name)
+        .auth__actions
+          button.btn.btn--light.btn-signin Войти
+          button.btn.btn--big.btn--text-light.btn-modal(data-target="#signup-modal") Забыли пароль?
+      .l-col-5_md-12_md-first(data-push-left="off-1_md-0")
+        .auth__desc.tp-body--base.tp-text--light: p !{signin.desc}

@@ -1,0 +1,62 @@
+.accordion {
+  border-top 1px solid $color--grey;
+  border-bottom 1px solid $color--grey;
+
+  @media $display-breakpoints.ms-and-down {
+    border: 0;
+  }
+
+  & + & {
+    border-top 0;
+
+    @media $display-breakpoints.ms-and-down {
+      border-top 1px solid $color--grey;
+    }
+  }
+
+  &__panel {
+    flexy(space-between, center);
+    padding: r(24) 0;
+    cursor pointer;
+
+    @media $display-breakpoints.ms-and-down {
+      padding: r(20) 0;
+    }
+  }
+  &__title {
+    font: 500 r(24)/1 $font-accent;
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(16);
+      line-height: 1.5;
+    }
+  }
+  &__arrow {
+    font-size: r(24);
+    line-height 1
+    margin-left: r(12);
+
+    @media $display-breakpoints.ms-and-down {
+      font-size: r(20);
+    }
+
+    .icon {
+      transform-origin: center;
+      transition: transform 0.5s;
+
+      ^[0].active & {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__content {
+    display none
+  }
+  &__inner {
+    padding: r(12) 0 r(36);
+
+    @media $display-breakpoints.ms-and-down {
+      padding: 0 0 r(20);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+include ../../mixins
+.row
+  .l-container-medium
+    .page__heading
+      h1.tp-heading--large !{company.title}
+    .page__nav
+      +accordionNav(navs.company, 2)
+    .page__content.company-contacts
+      .company-contacts__title.tp-body--big !{company.contacts.title}
+      .company-contacts__list
+        .l-flex-spaceBetween-wrap
+          for item, index in company.contacts.content
+            div(class=index === 0 ? 'l-col-4_md-6_ms-12' : 'l-col_md-6_ms-12')
+              .company-contacts__item.company-contact.tp-body--base
+                .company-contact__title !{item.title}
+                .company-contact__val
+                  if item.href
+                    a(href=item.href) !{item.val}
+                  else 
+                    p !{item.val}
+      .company-contacts__map
+        #contact-map.map
